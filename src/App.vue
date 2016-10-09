@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <progress-bar :progress="progress"></progress-bar>
-    <js-logo :logo="currentJsTool.name"></js-logo>
-    <ui-options :options="options" v-on:answer="optionAnswer"></ui-options>
+    <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
+    <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
+    <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
+    <result-page :progress="progress" v-if="testFinished" v-on:restart="restartTest"></result-page>
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import './data/jsTools'
 import ProgressBar from './components/ProgressBar'
 import JsLogo from './components/JsLogo'
 import UiOptions from './components/UiOptions'
+import ResultPage from './components/ResultPage'
 
 export default {
   components: {
     JsLogo,
     UiOptions,
-    ProgressBar
+    ProgressBar,
+    ResultPage
   },
   data () {
     return {
@@ -26,7 +29,8 @@ export default {
       options: Array,
       currentJsTool: Object,
       progress: 0,
-      answeredCount: 0
+      answeredCount: 0,
+      testFinished: false
     }
   },
   created: function () {
@@ -58,10 +62,7 @@ export default {
         this.answeredCount++
         if (this.answeredCount === this.jsTools.length) {
           // test ended
-          this.clearOptions()
-          this.clearLogo()
-          this.updateProgress()
-          this.testSucceed()
+          this.endTest()
         } else {
           this.updateProgress()
           this.updateLogo()
@@ -69,18 +70,21 @@ export default {
         }
       } else {
         // false answer
-        this.clearOptions()
-        this.clearLogo()
-        this.testFailed()
+        this.endTest()
       }
     },
-    testFailed: function () {
-      console.log('failed')
-    },
-    testSucceed: function () {
-      console.log('test end with success')
+    endTest: function () {
+      this.updateProgress()
+      this.testFinished = true
     },
     restartTest: function () {
+      this.tempJsTools = this.shuffle(this.tempJsTools)
+      this.jsTools = this.generateIDs(this.tempJsTools)
+      this.answeredCount = 0
+      this.progress = 0
+      this.updateLogo()
+      this.updateOptions()
+      this.testFinished = false
       console.log('test should be restared')
     },
     updateProgress: function () {
@@ -111,10 +115,6 @@ export default {
     },
     evaluateAnswer: function (id) {
       return id === this.currentJsTool.id
-    },
-    clearOptions: function () {
-    },
-    clearLogo: function () {
     }
   }
 }
@@ -150,5 +150,49 @@ body {
 .logo {
   width: 100px;
   height: 100px
+}
+
+.button{
+  position: relative;
+	display: block;
+	width: 200px;
+	line-height: 60px;
+	text-transform: uppercase;
+	margin: 16px auto;
+  color: #4CAF50;
+  cursor: pointer;
+}
+.button:before, .button:after {
+	width:200px;
+  left: 0px;
+	height:27px;
+  z-index: -1;
+  border: 3px solid #4CAF50;
+}
+
+.button:before{
+  position: absolute;
+  content: '';
+  border-bottom: none;
+  -webkit-transform: perspective(15px) rotateX(5deg);
+  -moz-transform: perspective(15px) rotateX(5deg);
+  transform: perspective(15px) rotateX(5deg);
+}
+.button:after{
+  position: absolute;
+  top: 32px;
+  content: '';
+  border-top: none;
+  -webkit-transform: perspective(15px) rotateX(-5deg);
+  -moz-transform: perspective(15px) rotateX(-5deg);
+  transform: perspective(15px) rotateX(-5deg);
+}
+
+.button:hover:before, .button:hover:after {
+	background: #4CAF50;
+}
+
+.button:hover{
+	color:#FFFFFF;
 }
 </style>
