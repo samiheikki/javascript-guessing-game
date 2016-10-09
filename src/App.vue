@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <js-logo></js-logo>
+    <js-logo :logo="currentFramework.name"></js-logo>
     <ui-options :options="options"></ui-options>
   </div>
 </template>
@@ -18,18 +18,14 @@ export default {
   },
   data () {
     return {
-      frameworks: window.frameworks,
-      options: Array
+      frameworks: frameworks,
+      options: Array,
+      currentFramework: String
     }
   },
   created: function () {
     this.options = this.frameworks.slice(0, 4)
-    setInterval(function () {
-      this.frameworks = this.shuffle(this.frameworks)
-      this.options = this.frameworks.slice(0, 4)
-      console.log(this.options[0].name)
-    }.bind(this), 1000)
-    // random numeroi 0 - frameworks.length välillä ja 3 numeroo, tarkasta että ei samoja
+    this.currentFramework = this.options[0]
   },
   methods: {
     shuffle: function (array) {
@@ -57,6 +53,7 @@ body {
   justify-content: center;
   height: 100%;
   background-color: #000000;
+  margin: 0;
 }
 
 #app {
