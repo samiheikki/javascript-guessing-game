@@ -44,7 +44,7 @@ export default {
   margin-left: 32px;
 }
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .8s
+  transition: opacity 1.5s
 }
 .fade-enter, .fade-leave-active {
   opacity: 0
