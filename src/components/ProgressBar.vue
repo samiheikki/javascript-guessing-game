@@ -19,7 +19,6 @@ export default {
   left: 0;
   width: 100%;
 }
-
 .progress {
   background-color: #4CAF50;
   height: 4px;

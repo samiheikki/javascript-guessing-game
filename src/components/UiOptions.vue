@@ -25,9 +25,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
-
 .button:nth-child(even) {
   margin-left: 32px;
 }
@@ -39,7 +36,6 @@ export default {
   .button:before, .button:after {
     width: 100%;
   }
-
   .button {
     margin-left: 32px !important;
     margin-right: 32px !important;

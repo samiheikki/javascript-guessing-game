@@ -203,6 +203,6 @@ body {
 }
 
 .button:hover{
-	color:#FFFFFF;
+	color: #FFFFFF;
 }
 </style>
