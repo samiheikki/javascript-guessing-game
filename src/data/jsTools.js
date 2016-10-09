@@ -1,4 +1,4 @@
-window.frameworks = [
+window.jsTools = [
   {
     id: 0,
     name: 'Vue'

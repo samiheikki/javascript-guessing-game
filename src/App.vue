@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import './data/frameworks'
+import './data/jsTools'
 
 import JsLogo from './components/JsLogo'
 import UiOptions from './components/UiOptions'
@@ -18,13 +18,13 @@ export default {
   },
   data () {
     return {
-      frameworks: window.frameworks,
+      jsTools: window.jsTools,
       options: Array,
       currentFramework: String
     }
   },
   created: function () {
-    this.options = this.frameworks.slice(0, 4)
+    this.options = this.jsTools.slice(0, 4)
     this.currentFramework = this.options[0]
   },
   methods: {
