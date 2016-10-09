@@ -1,17 +1,28 @@
 <template>
-  <div class="container">
-    <div class="button" v-for="option in options" v-on:click="answer(option.id)">
-      {{ option.name }}
+  <transition name="fade">
+    <div class="container" v-if="show">
+      <div class="button fade" v-for="option in options" v-on:click="answer(option.id)">
+        {{ option.name }}
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
 export default {
   props: ['options'],
+  data () {
+    return {
+      show: true
+    }
+  },
   methods: {
     answer: function (id) {
+      this.show = false
       this.$emit('answer', id)
+      setTimeout(function () {
+        this.show = true
+      }.bind(this), 1)
     }
   }
 }
@@ -27,6 +38,12 @@ export default {
 }
 .button:nth-child(even) {
   margin-left: 32px;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .8s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 
 @media (max-width: 447px) {

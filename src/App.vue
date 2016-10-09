@@ -162,7 +162,7 @@ body {
   height: 100px
 }
 
-.button{
+.button {
   position: relative;
 	display: block;
 	width: 200px;
