@@ -33,14 +33,16 @@ export default {
 }
 
 @media (max-width: 447px) {
-  .button:nth-child(even) {
-    margin-left: 0;
-  }
   .button {
     width: 100%;
   }
   .button:before, .button:after {
     width: 100%;
+  }
+
+  .button {
+    margin-left: 32px !important;
+    margin-right: 32px !important;
   }
 }
 </style>
