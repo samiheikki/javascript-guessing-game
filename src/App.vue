@@ -146,7 +146,7 @@ body {
 
 #app {
   color: #2c3e50;
-  margin-top: -100px;
+  margin-top: -50px;
   max-width: 600px;
   font-family: Source Sans Pro, Helvetica, sans-serif;
   text-align: center;
@@ -198,11 +198,14 @@ body {
   transform: perspective(15px) rotateX(-5deg);
 }
 
-.button:hover:before, .button:hover:after {
-	background: #4CAF50;
+@media screen and (min-width:800px) {
+  .button:hover:before, .button:hover:after {
+  	background: #4CAF50;
+  }
+  .button:hover{
+  	color: #FFFFFF;
+  }
 }
 
-.button:hover{
-	color: #FFFFFF;
-}
+
 </style>
