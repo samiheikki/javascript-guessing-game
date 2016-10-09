@@ -10,6 +10,7 @@
       :score="answeredCount"
       :total="answerCount">
     </result-page>
+    <credits></credits>
   </div>
 </template>
 
@@ -20,13 +21,15 @@ import ProgressBar from './components/ProgressBar'
 import JsLogo from './components/JsLogo'
 import UiOptions from './components/UiOptions'
 import ResultPage from './components/ResultPage'
+import Credits from './components/Credits'
 
 export default {
   components: {
     JsLogo,
     UiOptions,
     ProgressBar,
-    ResultPage
+    ResultPage,
+    Credits
   },
   data () {
     return {
