@@ -1,11 +1,13 @@
 <template>
-  <transition name="fade">
-    <div class="container" v-if="show">
-      <div class="button fade" v-for="option in options" v-on:click="answer(option.id)">
-        {{ option.name }}
+  <div class="container">
+    <transition name="fade">
+      <div class="flex-container" v-if="show">
+        <div class="button fade" v-for="option in options" v-on:click="answer(option.id)">
+          {{ option.name }}
+        </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -32,6 +34,8 @@ export default {
 <style scoped>
 .container {
   max-width: 600px;
+}
+.flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
