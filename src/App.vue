@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <progress-bar :progress="progress"></progress-bar>
     <js-logo :logo="currentJsTool.name"></js-logo>
     <ui-options :options="options" v-on:answer="optionAnswer"></ui-options>
   </div>
@@ -8,17 +9,20 @@
 <script>
 import './data/jsTools'
 
+import ProgressBar from './components/ProgressBar'
 import JsLogo from './components/JsLogo'
 import UiOptions from './components/UiOptions'
 
 export default {
   components: {
     JsLogo,
-    UiOptions
+    UiOptions,
+    ProgressBar
   },
   data () {
     return {
-      jsTools: window.jsTools,
+      tempJsTools: window.jsTools,
+      jsTools: Array,
       options: Array,
       currentJsTool: Object,
       progress: 0,
@@ -26,7 +30,8 @@ export default {
     }
   },
   created: function () {
-    this.jsTools = this.shuffle(this.jsTools)
+    this.tempJsTools = this.shuffle(this.tempJsTools)
+    this.jsTools = this.generateIDs(this.tempJsTools)
     this.updateLogo()
     this.updateOptions()
   },
@@ -39,6 +44,12 @@ export default {
         array[i - 1] = array[j]
         array[j] = x
       }
+      return array
+    },
+    generateIDs: function (array) {
+      array.forEach(function (val, index) {
+        array[index].id = index
+      })
       return array
     },
     optionAnswer: function (id) {
@@ -73,7 +84,7 @@ export default {
       console.log('test should be restared')
     },
     updateProgress: function () {
-      this.progress = 1
+      this.progress = (this.answeredCount / this.jsTools.length) * 100
     },
     updateLogo: function () {
       this.currentJsTool = this.jsTools[this.answeredCount]
