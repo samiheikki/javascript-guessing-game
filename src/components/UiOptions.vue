@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="button" v-for="option in options">
+    <div class="button" v-for="option in options" v-on:click="answer(option.id)">
       {{ option.name }}
     </div>
   </div>
@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  props: ['options']
+  props: ['options'],
+  methods: {
+    answer: function (id) {
+      this.$emit('answer', id)
+    }
+  }
 }
 </script>
 

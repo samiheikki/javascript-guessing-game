@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <js-logo :logo="currentFramework.name"></js-logo>
-    <ui-options :options="options"></ui-options>
+    <js-logo :logo="currentJsTool.name"></js-logo>
+    <ui-options :options="options" v-on:answer="optionAnswer"></ui-options>
   </div>
 </template>
 
@@ -20,12 +20,15 @@ export default {
     return {
       jsTools: window.jsTools,
       options: Array,
-      currentFramework: String
+      currentJsTool: Object,
+      progress: 0,
+      answeredCount: 0
     }
   },
   created: function () {
-    this.options = this.jsTools.slice(0, 4)
-    this.currentFramework = this.options[0]
+    this.jsTools = this.shuffle(this.jsTools)
+    this.updateLogo()
+    this.updateOptions()
   },
   methods: {
     shuffle: function (array) {
@@ -37,6 +40,70 @@ export default {
         array[j] = x
       }
       return array
+    },
+    optionAnswer: function (id) {
+      if (this.evaluateAnswer(id)) {
+        // correct answer
+        this.answeredCount++
+        if (this.answeredCount === this.jsTools.length) {
+          // test ended
+          this.clearOptions()
+          this.clearLogo()
+          this.updateProgress()
+          this.testSucceed()
+        } else {
+          this.updateProgress()
+          this.updateLogo()
+          this.updateOptions()
+        }
+      } else {
+        // false answer
+        this.clearOptions()
+        this.clearLogo()
+        this.testFailed()
+      }
+    },
+    testFailed: function () {
+      console.log('failed')
+    },
+    testSucceed: function () {
+      console.log('test end with success')
+    },
+    restartTest: function () {
+      console.log('test should be restared')
+    },
+    updateProgress: function () {
+      this.progress = 1
+    },
+    updateLogo: function () {
+      this.currentJsTool = this.jsTools[this.answeredCount]
+    },
+    updateOptions: function () {
+      var optionNumbers = []
+      optionNumbers.push(this.currentJsTool.id)
+
+      while (optionNumbers.length < 4) {
+        var randomNumber = Math.floor(Math.random() * this.jsTools.length)
+        if (!optionNumbers.includes(randomNumber)) {
+          optionNumbers.push(randomNumber)
+        }
+      }
+
+      optionNumbers = this.shuffle(optionNumbers)
+
+      this.options = [
+        this.jsTools[optionNumbers[0]],
+        this.jsTools[optionNumbers[1]],
+        this.jsTools[optionNumbers[2]],
+        this.jsTools[optionNumbers[3]]
+      ]
+    },
+    evaluateAnswer: function (id) {
+      return id === this.currentJsTool.id
+    },
+    clearOptions: function () {
+    },
+    clearLogo: function () {
     }
   }
 }
