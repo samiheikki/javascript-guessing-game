@@ -3,7 +3,13 @@
     <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
     <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
     <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
-    <result-page :progress="progress" v-if="testFinished" v-on:restart="restartTest"></result-page>
+    <result-page
+      :progress="progress"
+      v-if="testFinished"
+      v-on:restart="restartTest"
+      :score="answeredCount"
+      :total="answerCount">
+    </result-page>
   </div>
 </template>
 
@@ -30,7 +36,8 @@ export default {
       currentJsTool: Object,
       progress: 0,
       answeredCount: 0,
-      testFinished: false
+      testFinished: false,
+      answerCount: window.jsTools.length
     }
   },
   created: function () {

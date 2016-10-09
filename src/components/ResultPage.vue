@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h1>{{feedback}}</h1>
+    <h2>{{score}} / {{total}}</h2>
     <div class="button" v-on:click="restart">
       Restart
     </div>
@@ -9,7 +10,7 @@
 
 <script>
 export default {
-  props: ['progress'],
+  props: ['progress', 'score', 'total'],
   computed: {
     feedback: function () {
       if (this.progress < 10) {
@@ -47,9 +48,6 @@ export default {
 <style scoped>
 .container {
   max-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 h1 {
   color: #4CAF50;
