@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div class="progress" v-bind:style="{ width: progress + '%' }">
-
     </div>
   </div>
 </template>
