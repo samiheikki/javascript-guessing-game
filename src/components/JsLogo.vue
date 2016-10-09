@@ -9,7 +9,7 @@ export default {
   props: ['logo'],
   computed: {
     logoUrl: function () {
-      return '../static/logos/' + this.logo + '.png'
+      return '../static/logos/' + this.logo.toLowerCase() + '.png'
     }
   }
 }

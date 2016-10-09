@@ -1,4 +1,4 @@
-var frameworks = [
+window.frameworks = [
   {
     id: 0,
     name: 'Vue'

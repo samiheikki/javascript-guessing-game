@@ -18,7 +18,7 @@ export default {
   },
   data () {
     return {
-      frameworks: frameworks,
+      frameworks: window.frameworks,
       options: Array,
       currentFramework: String
     }
