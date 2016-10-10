@@ -177,7 +177,7 @@ body {
   left: 0px;
 	height:27px;
   z-index: -1;
-  border: 3px solid #4CAF50;
+  border: 2px solid #4CAF50;
 }
 
 .button:before{
