@@ -3,7 +3,7 @@
     <h1>{{feedback}}</h1>
     <h2>{{score}} / {{total}}</h2>
     <div class="button" v-on:click="restart">
-      <a href="#" v-on:click="preventDefault">Restart</a>
+      <a href="#" v-on:click="preventDefault" class="button-text">Restart</a>
     </div>
   </div>
 </template>

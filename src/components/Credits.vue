@@ -25,5 +25,7 @@ export default {
 }
 a {
   font-size: 14px;
+  color: #4CAF50;
+  text-decoration: none;
 }
 </style>

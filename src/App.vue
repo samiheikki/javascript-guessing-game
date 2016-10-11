@@ -151,7 +151,7 @@ body {
   text-align: center;
 }
 
-#app a {
+.button-text {
   color: #4CAF50;
   text-decoration: none;
 }
@@ -168,7 +168,6 @@ body {
 	line-height: 60px;
 	text-transform: uppercase;
 	margin: 16px auto;
-  color: #4CAF50;
   cursor: pointer;
 }
 .button:before, .button:after {
@@ -197,12 +196,14 @@ body {
   transform: perspective(15px) rotateX(-5deg);
 }
 
+
+
 @media screen and (min-width:800px) {
+  .button:hover .button-text {
+  	color: #FFFFFF !important;
+  }
   .button:hover:before, .button:hover:after {
   	background: #4CAF50;
-  }
-  .button:hover{
-  	color: #FFFFFF;
   }
 }
 

@@ -3,7 +3,7 @@
     <transition name="fade">
       <div class="flex-container" v-if="show">
         <div class="button fade" v-for="option in options" v-on:click="answer(option.id)">
-          <a href="#" v-on:click="preventDefault">{{ option.name }}</a>
+          <a href="#" v-on:click="preventDefault" class="button-text">{{ option.name }}</a>
         </div>
       </div>
     </transition>
