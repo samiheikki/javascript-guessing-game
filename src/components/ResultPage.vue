@@ -3,7 +3,7 @@
     <h1>{{feedback}}</h1>
     <h2>{{score}} / {{total}}</h2>
     <div class="button" v-on:click="restart">
-      Restart
+      <a href="#" v-on:click="preventDefault">Restart</a>
     </div>
   </div>
 </template>
@@ -39,6 +39,9 @@ export default {
   methods: {
     restart: function () {
       this.$emit('restart')
+    },
+    preventDefault: function (e) {
+      e.preventDefault()
     }
   }
 }

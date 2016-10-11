@@ -3,7 +3,7 @@
     <transition name="fade">
       <div class="flex-container" v-if="show">
         <div class="button fade" v-for="option in options" v-on:click="answer(option.id)">
-          {{ option.name }}
+          <a href="#" v-on:click="preventDefault">{{ option.name }}</a>
         </div>
       </div>
     </transition>
@@ -25,6 +25,9 @@ export default {
       setTimeout(function () {
         this.show = true
       }.bind(this), 1)
+    },
+    preventDefault: function (e) {
+      e.preventDefault()
     }
   }
 }
