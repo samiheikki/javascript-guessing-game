@@ -1,5 +1,8 @@
 window.jsTools = [
   {
+    name: 'Adonis'
+  },
+  {
     name: 'Angular2'
   },
   {
@@ -39,7 +42,16 @@ window.jsTools = [
     name: 'Deku'
   },
   {
+    name: 'Dojo'
+  },
+  {
+    name: 'EchoJS'
+  },
+  {
     name: 'Ember'
+  },
+  {
+    name: 'Enyo'
   },
   {
     name: 'ES6'
@@ -63,10 +75,19 @@ window.jsTools = [
     name: 'JSX'
   },
   {
+    name: 'Karma'
+  },
+  {
+    name: 'KendoUI'
+  },
+  {
     name: 'KeyStone'
   },
   {
     name: 'Knockout'
+  },
+  {
+    name: 'Lodash'
   },
   {
     name: 'Meteor'
@@ -84,7 +105,16 @@ window.jsTools = [
     name: 'npm'
   },
   {
+    name: 'PhantomJS'
+  },
+  {
     name: 'Polymer'
+  },
+  {
+    name: 'Prototype'
+  },
+  {
+    name: 'PyJS'
   },
   {
     name: 'RactiveJS'
@@ -102,12 +132,33 @@ window.jsTools = [
     name: 'RiotJS'
   },
   {
+    name: 'SkateJS'
+  },
+  {
+    name: 'Sproutcore'
+  },
+  {
+    name: 'ThreeJS'
+  },
+  {
+    name: 'Trails'
+  },
+  {
     name: 'TypeScript'
   },
   {
     name: 'Vue'
   },
   {
+    name: 'Wakanda'
+  },
+  {
+    name: 'WebGL'
+  },
+  {
     name: 'Webpack'
+  },
+  {
+    name: 'X-tag'
   }
 ]
