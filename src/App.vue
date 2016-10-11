@@ -95,7 +95,6 @@ export default {
       this.updateLogo()
       this.updateOptions()
       this.testFinished = false
-      console.log('test should be restared')
     },
     updateProgress: function () {
       this.progress = (this.answeredCount / this.jsTools.length) * 100
