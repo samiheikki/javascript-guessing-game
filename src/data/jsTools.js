@@ -3,6 +3,12 @@ window.jsTools = [
     name: 'Adonis'
   },
   {
+    name: 'Ampersand'
+  },
+  {
+    name: 'Angular-meteor'
+  },
+  {
     name: 'Angular2'
   },
   {
@@ -30,10 +36,16 @@ window.jsTools = [
     name: 'Chai'
   },
   {
+    name: 'Chaplin'
+  },
+  {
     name: 'CoffeeScript'
   },
   {
     name: 'CommonJS'
+  },
+  {
+    name: 'CycleJS'
   },
   {
     name: 'D3'
@@ -42,7 +54,13 @@ window.jsTools = [
     name: 'Deku'
   },
   {
+    name: 'Delorean'
+  },
+  {
     name: 'Dojo'
+  },
+  {
+    name: 'Durandal'
   },
   {
     name: 'EchoJS'
@@ -60,6 +78,15 @@ window.jsTools = [
     name: 'ESLint'
   },
   {
+    name: 'Firebase'
+  },
+  {
+    name: 'Flight'
+  },
+  {
+    name: 'Flux'
+  },
+  {
     name: 'Grunt'
   },
   {
@@ -70,6 +97,9 @@ window.jsTools = [
   },
   {
     name: 'jQuery'
+  },
+  {
+    name: 'JSBlocks'
   },
   {
     name: 'JSX'
@@ -88,6 +118,12 @@ window.jsTools = [
   },
   {
     name: 'Lodash'
+  },
+  {
+    name: 'MarionetteJS'
+  },
+  {
+    name: 'Matreshka'
   },
   {
     name: 'Meteor'
@@ -129,7 +165,7 @@ window.jsTools = [
     name: 'Redux'
   },
   {
-    name: 'RiotJS'
+    name: 'Riot'
   },
   {
     name: 'SkateJS'
@@ -159,9 +195,15 @@ window.jsTools = [
     name: 'Webpack'
   },
   {
+    name: 'winJS'
+  },
+  {
     name: 'X-tag'
   },
   {
     name: 'Yarn'
+  },
+  {
+    name: 'Yeoman'
   }
 ]
