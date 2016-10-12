@@ -66,4 +66,7 @@ export default {
 h1 {
   color: #4CAF50;
 }
+.button {
+  margin-bottom: 25px;
+}
 </style>
