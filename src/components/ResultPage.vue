@@ -5,6 +5,16 @@
     <div class="button" v-on:click="restart">
       <a href="#" v-on:click="preventDefault" class="button-text">Restart</a>
     </div>
+    <a class="twitter-share-button"
+        href="https://twitter.com/intent/tweet">Tweet</a>
+
+    <a class="github-button"
+        href="https://github.com/samiheikki/javascript-guessing-game"
+        data-icon="octicon-star"
+        data-count-href="/samiheikki/javascript-guessing-game/stargazers"
+        data-count-api="/repos/samiheikki/javascript-guessing-game#stargazers_count"
+        data-count-aria-label="# stargazers on GitHub"
+        aria-label="Star samiheikki/javascript-guessing-game on GitHub">Star</a>
   </div>
 </template>
 

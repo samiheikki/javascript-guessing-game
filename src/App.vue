@@ -5,7 +5,7 @@
     <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
     <result-page
       :progress="progress"
-      v-if="testFinished"
+      v-show="testFinished"
       v-on:restart="restartTest"
       :score="answeredCount"
       :total="answerCount">
