@@ -160,5 +160,8 @@ window.jsTools = [
   },
   {
     name: 'X-tag'
+  },
+  {
+    name: 'Yarn'
   }
 ]
