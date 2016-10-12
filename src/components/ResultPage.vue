@@ -69,4 +69,9 @@ h1 {
 .button {
   margin-bottom: 25px;
 }
+@media screen and (max-width:620px) {
+  .container {
+    margin: 0 16px 0 16px;
+  }
+}
 </style>
