@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img class="logo" v-bind:src="logoUrl">
+    <img class="logo" v-bind:src="logoUrl" v-bind:alt="logo">
   </div>
 </template>
 
