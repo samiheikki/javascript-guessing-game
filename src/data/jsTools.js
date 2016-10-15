@@ -168,6 +168,9 @@ window.jsTools = [
     name: 'Riot'
   },
   {
+    name: 'RxJS'
+  },
+  {
     name: 'SkateJS'
   },
   {
