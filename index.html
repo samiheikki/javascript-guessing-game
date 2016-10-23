@@ -70,6 +70,7 @@
       height: 100px;
       padding-top: 100px;
       margin: 0 auto;
+      animation: show 0.5s;
     }
 
     .ball {
@@ -81,78 +82,22 @@
 
     .ball:nth-child(1) {
       background: #ff005d;
-      -webkit-animation: right 1s infinite ease-in-out;
-      -moz-animation: right 1s infinite ease-in-out;
       animation: right 1s infinite ease-in-out;
     }
 
     .ball:nth-child(2) {
       background: #35ff99;
-      -webkit-animation: left 1.1s infinite ease-in-out;
-      -moz-animation: left 1.1s infinite ease-in-out;
       animation: left 1.1s infinite ease-in-out;
     }
 
     .ball:nth-child(3) {
       background: #008597;
-      -webkit-animation: right 1.05s infinite ease-in-out;
-      -moz-animation: right 1.05s infinite ease-in-out;
       animation: right 1.05s infinite ease-in-out;
     }
 
     .ball:nth-child(4) {
       background: #ffcc00;
-      -webkit-animation: left 1.15s infinite ease-in-out;
-      -moz-animation: left 1.15s infinite ease-in-out;
       animation: left 1.15s infinite ease-in-out;
-    }
-
-    @-webkit-keyframes right {
-      0% {
-        -webkit-transform: translate(-15px);
-      }
-      50% {
-        -webkit-transform: translate(15px);
-      }
-      100% {
-        -webkit-transform: translate(-15px);
-      }
-    }
-
-    @-webkit-keyframes left {
-      0% {
-        -webkit-transform: translate(15px);
-      }
-      50% {
-        -webkit-transform: translate(-15px);
-      }
-      100% {
-        -webkit-transform: translate(15px);
-      }
-    }
-
-    @-moz-keyframes right {
-      0% {
-        -moz-transform: translate(-15px);
-      }
-      50% {
-        -moz-transform: translate(15px);
-      }
-      100% {
-        -moz-transform: translate(-15px);
-      }
-    }
-
-    @-moz-keyframes left {
-      0% {
-        -moz-transform: translate(15px);
-      }
-      50% {
-        -moz-transform: translate(-15px);
-      }
-      100% {
-        -moz-transform: translate(15px);
-      }
     }
 
     @keyframes right {
@@ -176,6 +121,18 @@
       }
       100% {
         transform: translate(15px);
+      }
+    }
+
+    @keyframes show {
+      0% {
+        opacity: 0;
+      }
+      80% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
       }
     }
   </style>
