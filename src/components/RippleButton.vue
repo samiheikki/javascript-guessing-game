@@ -38,14 +38,12 @@ export default {
       return rippler.setAttribute('style', style)
     },
     cleanUp: function (e) {
-      console.log('clean up')
       var rippleContainer
       if (e.target.tagName === 'SPAN') {
         rippleContainer = e.target.parentNode
       } else if (e.target.tagName === 'BUTTON') {
         rippleContainer = e.target.firstChild
       }
-      console.log(rippleContainer)
       while (rippleContainer.firstChild) {
         rippleContainer.removeChild(rippleContainer.firstChild)
       }
@@ -65,7 +63,6 @@ export default {
       }
     },
     onClick: function () {
-      console.log('on click')
       this.$emit('button-click', this.id)
     }
   }
