@@ -17,6 +17,7 @@ export default {
   methods: {
     onDown: function (e) {
       this.showRipple(e)
+      document.activeElement.blur()
       e.preventDefault()
     },
     showRipple: function (e) {
