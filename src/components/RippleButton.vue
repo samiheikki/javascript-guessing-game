@@ -17,6 +17,7 @@ export default {
   methods: {
     onDown: function (e) {
       this.showRipple(e)
+      e.preventDefault()
     },
     showRipple: function (e) {
       var pos, button, rippler, size, style, x, y
@@ -81,11 +82,11 @@ export default {
   border: 1px solid #4CAF50;
   border-radius: 8px;
   padding: 20px;
-  outline: 0;
+  outline: none;
   cursor: pointer;
 }
-button:active {
-  box-shadow: 0px 2px 6px 0px #000;
+.ripple-button:focus {
+  outline: 2px solid #4CAF50 !important;
 }
 [ripple] {
   position: relative;
