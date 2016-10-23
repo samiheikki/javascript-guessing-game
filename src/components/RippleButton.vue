@@ -76,18 +76,18 @@ export default {
 .ripple-button {
 	width: 200px;
   background-color: #000;
-  color: #4CAF50;
+  color: #66BB6A;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
-  border: 1px solid #4CAF50;
+  border: 1px solid #66BB6A;
   border-radius: 8px;
   padding: 20px;
   outline: none;
   cursor: pointer;
 }
 .ripple-button:focus {
-  outline: 2px solid #4CAF50 !important;
+  outline: 2px solid #66BB6A !important;
 }
 [ripple] {
   position: relative;
@@ -106,7 +106,7 @@ export default {
   border-radius: 100%;
   position: absolute;
   opacity: 0.75;
-  background-color: #81C784;
+  background-color: #4CAF50;
   animation: ripple 1000ms;
 }
 @-moz-keyframes ripple {

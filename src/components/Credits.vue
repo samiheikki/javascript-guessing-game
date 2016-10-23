@@ -19,13 +19,13 @@ export default {
   width: 100%;
 }
 .progress {
-  background-color: #4CAF50;
+  background-color: #66BB6A;
   height: 2px;
   transition: width 1s;
 }
 a {
   font-size: 14px;
-  color: #4CAF50;
+  color: #66BB6A;
   text-decoration: none;
 }
 </style>

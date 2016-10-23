@@ -60,7 +60,7 @@ export default {
   max-width: 600px;
 }
 h1 {
-  color: #4CAF50;
+  color: #66BB6A;
 }
 .button {
   margin: 0 auto 20px;

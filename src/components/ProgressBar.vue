@@ -20,7 +20,7 @@ export default {
   width: 100%;
 }
 .progress {
-  background-color: #4CAF50;
+  background-color: #66BB6A;
   height: 4px;
   transition: width 1s;
 }
