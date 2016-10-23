@@ -40,12 +40,6 @@ export default {
 .button:nth-child(even) {
   margin-left: 32px;
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 2s
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
 .button {
   margin-top: 20px;
 }
