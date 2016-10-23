@@ -2,12 +2,11 @@
   <div class="container">
     <h1>{{feedback}}</h1>
     <h2>{{score}} / {{total}}</h2>
-    <div class="button" v-on:click="restart">
-      <a href="#" v-on:click="preventDefault" class="button-text">Restart</a>
-    </div>
+    <button class="ripple-button button" v-on:click="restart">
+      Restart
+    </button>
     <a class="twitter-share-button"
         href="https://twitter.com/intent/tweet">Tweet</a>
-
     <a class="github-button"
         href="https://github.com/samiheikki/javascript-guessing-game"
         data-icon="octicon-star"
@@ -50,9 +49,6 @@ export default {
   methods: {
     restart: function () {
       this.$emit('restart')
-    },
-    preventDefault: function (e) {
-      e.preventDefault()
     }
   }
 }
@@ -67,7 +63,8 @@ h1 {
   color: #4CAF50;
 }
 .button {
-  margin-bottom: 25px;
+  margin: 0 auto 20px;
+  display: block;
 }
 @media screen and (max-width:620px) {
   .container {

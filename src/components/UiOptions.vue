@@ -1,17 +1,18 @@
 <template>
   <div class="container">
-    <transition name="fade">
-      <div class="flex-container" v-if="show">
-        <div class="button fade" v-for="option in options" v-on:click="answer(option.id)">
-          <a href="#" v-on:click="preventDefault" class="button-text">{{ option.name }}</a>
-        </div>
-      </div>
-    </transition>
+    <div class="flex-container" v-if="show">
+      <ripple-button class="button" v-for="option in options" :text="option.name" :id="option.id" v-on:button-click="answer"></ripple-button>
+    </div>
   </div>
 </template>
 
 <script>
+import RippleButton from './RippleButton'
+
 export default {
+  components: {
+    RippleButton
+  },
   props: ['options'],
   data () {
     return {
@@ -20,14 +21,7 @@ export default {
   },
   methods: {
     answer: function (id) {
-      this.show = false
       this.$emit('answer', id)
-      setTimeout(function () {
-        this.show = true
-      }.bind(this), 1)
-    },
-    preventDefault: function (e) {
-      e.preventDefault()
     }
   }
 }
@@ -52,12 +46,12 @@ export default {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
+.button {
+  margin-top: 20px;
+}
 
 @media (max-width: 447px) {
   .button {
-    width: 100%;
-  }
-  .button:before, .button:after {
     width: 100%;
   }
   .button {

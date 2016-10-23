@@ -22,6 +22,7 @@ import JsLogo from './components/JsLogo'
 import UiOptions from './components/UiOptions'
 import ResultPage from './components/ResultPage'
 import Credits from './components/Credits'
+import RippleButton from './components/RippleButton'
 
 export default {
   components: {
@@ -29,7 +30,8 @@ export default {
     UiOptions,
     ProgressBar,
     ResultPage,
-    Credits
+    Credits,
+    RippleButton
   },
   data () {
     return {
@@ -151,61 +153,8 @@ body {
   text-align: center;
 }
 
-.button-text {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
 .logo {
   width: 100px;
   height: 100px
 }
-
-.button {
-  position: relative;
-	display: block;
-	width: 200px;
-	line-height: 60px;
-	text-transform: uppercase;
-	margin: 16px auto;
-  cursor: pointer;
-}
-.button:before, .button:after {
-	width:200px;
-  left: 0px;
-	height:27px;
-  z-index: -1;
-  border: 3px solid #4CAF50;
-}
-
-.button:before{
-  position: absolute;
-  content: '';
-  border-bottom: none;
-  -webkit-transform: perspective(15px) rotateX(5deg);
-  -moz-transform: perspective(15px) rotateX(5deg);
-  transform: perspective(15px) rotateX(5deg);
-}
-.button:after{
-  position: absolute;
-  top: 32px;
-  content: '';
-  border-top: none;
-  -webkit-transform: perspective(15px) rotateX(-5deg);
-  -moz-transform: perspective(15px) rotateX(-5deg);
-  transform: perspective(15px) rotateX(-5deg);
-}
-
-
-
-@media screen and (min-width:800px) {
-  .button:hover .button-text {
-  	color: #FFFFFF !important;
-  }
-  .button:hover:before, .button:hover:after {
-  	background: #4CAF50;
-  }
-}
-
-
 </style>
