@@ -165,6 +165,9 @@ window.jsTools = [
     name: 'Redux'
   },
   {
+    name: 'RequireJS'
+  },
+  {
     name: 'Riot'
   },
   {
