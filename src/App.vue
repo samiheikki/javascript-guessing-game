@@ -10,7 +10,7 @@
       :score="answeredCount"
       :total="answerCount">
     </result-page>
-    <credits></credits>
+    <credits class="credits"></credits>
   </div>
 </template>
 
@@ -151,10 +151,24 @@ body {
   max-width: 600px;
   font-family: Source Sans Pro, Helvetica, sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
   width: 100px;
   height: 100px
+}
+
+@media screen and (max-height:500px) {
+  .credits {
+    display: none;
+  }
+  #app {
+    margin-top: 0px;
+  }
 }
 </style>
