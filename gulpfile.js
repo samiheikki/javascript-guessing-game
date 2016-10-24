@@ -7,7 +7,11 @@ gulp.task('generate-service-worker', function(callback) {
   var rootDir = 'dist';
 
   swPrecache.write(path.join(rootDir, 'sw.js'), {
-    staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif}'],
-    stripPrefix: rootDir
+    "staticFileGlobs": [rootDir + '/**/*.{html,css,png,ico,js,map}'],
+    "stripPrefix": rootDir,
+    "runtimeCaching": [{
+      "urlPattern": rootDir + '/**/*.{js,map}',
+      "handler": "networkFirst"
+    }]
   }, callback);
 });
