@@ -3,6 +3,9 @@ window.jsTools = [
     name: 'Adonis'
   },
   {
+    name: 'AgilityJS'
+  },
+  {
     name: 'Ampersand'
   },
   {
@@ -15,6 +18,9 @@ window.jsTools = [
     name: 'AngularJS'
   },
   {
+    name: 'anime'
+  },
+  {
     name: 'Aurelia'
   },
   {
@@ -24,6 +30,12 @@ window.jsTools = [
     name: 'Backbone'
   },
   {
+    name: 'BatmanJS'
+  },
+  {
+    name: 'Blaze_CSS'
+  },
+  {
     name: 'Bower'
   },
   {
@@ -31,6 +43,12 @@ window.jsTools = [
   },
   {
     name: 'Browserify'
+  },
+  {
+    name: 'CanJS'
+  },
+  {
+    name: 'Cappuccino'
   },
   {
     name: 'Chai'
@@ -66,6 +84,9 @@ window.jsTools = [
     name: 'EchoJS'
   },
   {
+    name: 'Electron'
+  },
+  {
     name: 'Ember'
   },
   {
@@ -96,6 +117,21 @@ window.jsTools = [
     name: 'Handlebars'
   },
   {
+    name: 'Highcharts'
+  },
+  {
+    name: 'Holmes'
+  },
+  {
+    name: 'Ionic'
+  },
+  {
+    name: 'Jasmine'
+  },
+  {
+    name: 'Jest'
+  },
+  {
     name: 'jQuery'
   },
   {
@@ -117,6 +153,9 @@ window.jsTools = [
     name: 'Knockout'
   },
   {
+    name: 'KrakenJS'
+  },
+  {
     name: 'Lodash'
   },
   {
@@ -135,10 +174,22 @@ window.jsTools = [
     name: 'Mobx'
   },
   {
+    name: 'Modernizr'
+  },
+  {
+    name: 'NativeScript'
+  },
+  {
+    name: 'Nodal'
+  },
+  {
     name: 'NodeJS'
   },
   {
     name: 'npm'
+  },
+  {
+    name: 'OfflineJS'
   },
   {
     name: 'PhantomJS'
@@ -150,7 +201,13 @@ window.jsTools = [
     name: 'Prototype'
   },
   {
+    name: 'PureScript'
+  },
+  {
     name: 'PyJS'
+  },
+  {
+    name: 'Qunit'
   },
   {
     name: 'RactiveJS'
@@ -174,10 +231,22 @@ window.jsTools = [
     name: 'RxJS'
   },
   {
+    name: 'SammyJS'
+  },
+  {
     name: 'SkateJS'
   },
   {
+    name: 'SkelJS'
+  },
+  {
+    name: 'SocketIO'
+  },
+  {
     name: 'Sproutcore'
+  },
+  {
+    name: 'Stapesjs'
   },
   {
     name: 'ThreeJS'
@@ -189,6 +258,9 @@ window.jsTools = [
     name: 'TypeScript'
   },
   {
+    name: 'UnitJS'
+  },
+  {
     name: 'Vue'
   },
   {
@@ -196,6 +268,9 @@ window.jsTools = [
   },
   {
     name: 'WebGL'
+  },
+  {
+    name: 'Webix'
   },
   {
     name: 'Webpack'
@@ -211,5 +286,8 @@ window.jsTools = [
   },
   {
     name: 'Yeoman'
+  },
+  {
+    name: 'Yui'
   }
 ]
