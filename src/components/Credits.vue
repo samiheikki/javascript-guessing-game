@@ -18,11 +18,6 @@ export default {
   left: 0;
   width: 100%;
 }
-.progress {
-  background-color: #66BB6A;
-  height: 2px;
-  transition: width 1s;
-}
 a {
   font-size: 14px;
   color: #66BB6A;
