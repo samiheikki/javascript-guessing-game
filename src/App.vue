@@ -45,8 +45,18 @@ export default {
     }
   },
   created: function () {
-    this.getJSON('static/logos.json', (response, tempJSTools) => {
-      this.tempJSTools = this.shuffle(tempJSTools)
+    this.getJSON('static/logos.json', (error, tempJSTools) => {
+      error = true
+      if (error) {
+        // Fetch from localStorage
+        tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))
+      } else {
+        // Update localStorage
+        window.jsTools = JSON.parse(JSON.stringify(tempJSTools))
+        window.localStorage.setItem('logos', JSON.stringify(window.jsTools))
+      }
+
+      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(tempJSTools)))
       this.totalCount = tempJSTools.length
       this.jsTools = this.generateIDs(this.tempJSTools)
       this.updateLogo()
@@ -92,19 +102,16 @@ export default {
       this.testFinished = true
     },
     restartTest: function () {
-      this.getJSON('static/logos.json', (response, tempJSTools) => {
-        this.answeredCount = 0
-        this.progress = 0
-        this.tempJSTools = this.shuffle(tempJSTools)
-        this.totalCount = tempJSTools.length
-        this.jsTools = this.generateIDs(this.tempJSTools)
-        this.updateLogo()
-        this.updateOptions()
-        this.testFinished = false
+      this.answeredCount = 0
+      this.progress = 0
+      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(window.jsTools)))
+      this.jsTools = this.generateIDs(this.tempJSTools)
+      this.updateLogo()
+      this.updateOptions()
+      this.testFinished = false
 
-        setTimeout(() => {
-          this.restart = !this.restart
-        })
+      setTimeout(() => {
+        this.restart = !this.restart
       })
     },
     updateProgress: function () {
