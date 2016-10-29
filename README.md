@@ -8,7 +8,7 @@ React, Flux, Angular, Aurelia, TypeScript, Flow, oh my! By trying to make things
 
 [Play the game!](https://javascript-game.firebaseapp.com/)
 
-![Demo](https://github.com/samiheikki/javascript-guessing-game/blob/master/static/og_image.png?raw=true)
+![Demo](https://github.com/samiheikki/javascript-guessing-game/blob/master/static/og_image.jpg?raw=true)
 
 Inspired by [How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.6m8kr3ema).
 
