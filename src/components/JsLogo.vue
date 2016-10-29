@@ -8,15 +8,15 @@
 
 <script>
 export default {
-  props: ['logo'],
+  props: ['logo', 'restart'],
   data () {
     return {
-      show: true
+      show: false
     }
   },
   computed: {
     logoUrl: function () {
-      return '../static/logos/' + this.logo.toLowerCase() + '.png'
+      return this.logo ? '../static/logos/' + this.logo.toLowerCase() + '.png' : ''
     }
   },
   watch: {
@@ -25,6 +25,10 @@ export default {
       setTimeout(function () {
         this.show = true
       }.bind(this), 1)
+    },
+    restart: function (val) {
+      console.log('restart')
+      this.show = true
     }
   }
 }

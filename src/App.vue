@@ -1,22 +1,20 @@
 <template>
   <div id="app">
     <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
-    <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
+    <js-logo v-if="!testFinished" :logo="currentJsTool.name" :restart="restart"></js-logo>
     <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
     <result-page
       :progress="progress"
       v-show="testFinished"
       v-on:restart="restartTest"
       :score="answeredCount"
-      :total="answerCount">
+      :total="totalCount">
     </result-page>
     <credits class="credits"></credits>
   </div>
 </template>
 
 <script>
-import './data/jsTools'
-
 import ProgressBar from './components/ProgressBar'
 import JsLogo from './components/JsLogo'
 import UiOptions from './components/UiOptions'
@@ -35,21 +33,38 @@ export default {
   },
   data () {
     return {
-      tempJsTools: window.jsTools,
+      tempJSTools: Array,
       jsTools: Array,
       options: Array,
       currentJsTool: Object,
       progress: 0,
       answeredCount: 0,
       testFinished: false,
-      answerCount: window.jsTools.length
+      totalCount: Number,
+      restart: false
     }
   },
   created: function () {
-    this.tempJsTools = this.shuffle(this.tempJsTools)
-    this.jsTools = this.generateIDs(this.tempJsTools)
-    this.updateLogo()
-    this.updateOptions()
+    this.getJSON('static/logos.json', (error, tempJSTools) => {
+      if (typeof tempJSTools === 'string') { // IE11 fix
+        tempJSTools = JSON.parse(tempJSTools)
+      }
+
+      if (error) {
+        // Fetch from localStorage
+        tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))
+      } else {
+        // Update localStorage
+        window.jsTools = JSON.parse(JSON.stringify(tempJSTools))
+        window.localStorage.setItem('logos', JSON.stringify(window.jsTools))
+      }
+
+      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(tempJSTools)))
+      this.totalCount = tempJSTools.length
+      this.jsTools = this.generateIDs(this.tempJSTools)
+      this.updateLogo()
+      this.updateOptions()
+    })
   },
   methods: {
     shuffle: function (array) {
@@ -63,7 +78,7 @@ export default {
       return array
     },
     generateIDs: function (array) {
-      array.forEach(function (val, index) {
+      array.forEach((val, index) => {
         array[index].id = index
       })
       return array
@@ -90,13 +105,17 @@ export default {
       this.testFinished = true
     },
     restartTest: function () {
-      this.tempJsTools = this.shuffle(this.tempJsTools)
-      this.jsTools = this.generateIDs(this.tempJsTools)
       this.answeredCount = 0
       this.progress = 0
+      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(window.jsTools)))
+      this.jsTools = this.generateIDs(this.tempJSTools)
       this.updateLogo()
       this.updateOptions()
       this.testFinished = false
+
+      setTimeout(() => {
+        this.restart = !this.restart
+      })
     },
     updateProgress: function () {
       this.progress = (this.answeredCount / this.jsTools.length) * 100
@@ -126,6 +145,20 @@ export default {
     },
     evaluateAnswer: function (id) {
       return id === this.currentJsTool.id
+    },
+    getJSON: function (url, callback) {
+      var xhr = new window.XMLHttpRequest()
+      xhr.open('get', url, true)
+      xhr.responseType = 'json'
+      xhr.onload = () => {
+        var status = xhr.status
+        if (status === 200) {
+          callback(null, xhr.response)
+        } else {
+          callback(status)
+        }
+      }
+      xhr.send()
     }
   }
 }

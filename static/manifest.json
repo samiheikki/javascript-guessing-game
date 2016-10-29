@@ -1,0 +1,27 @@
+{
+  "short_name": "JS Game",
+  "name": "JavaScript Guessing Game",
+  "background_color": "#66BB6A",
+  "theme_color": "#000000",
+  "description": "The app that helps you find the best food in town!",
+  "icons": [
+    {
+      "src": "app/app_icon_96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "app/app_icon_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "app/app_icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

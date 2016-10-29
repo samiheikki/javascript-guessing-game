@@ -8,10 +8,6 @@ gulp.task('generate-service-worker', function(callback) {
 
   swPrecache.write(path.join(rootDir, 'sw.js'), {
     "staticFileGlobs": [rootDir + '/**/*.{html,css,png,ico,js,map}'],
-    "stripPrefix": rootDir,
-    "runtimeCaching": [{
-      "urlPattern": rootDir + '/**/*.{js,map}',
-      "handler": "networkFirst"
-    }]
+    "stripPrefix": rootDir
   }, callback);
 });
