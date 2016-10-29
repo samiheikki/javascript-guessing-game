@@ -1,8 +1,8 @@
 {
   "short_name": "JS Game",
   "name": "JavaScript Guessing Game",
-  "background_color": "black",
-  "theme_color": "#66BB6A",
+  "background_color": "#66BB6A",
+  "theme_color": "#000000",
   "description": "The app that helps you find the best food in town!",
   "icons": [
     {
