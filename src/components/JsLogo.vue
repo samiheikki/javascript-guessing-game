@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     logoUrl: function () {
-      return '../static/logos/' + this.logo.toLowerCase() + '.png'
+      return this.logo ? '../static/logos/' + this.logo.toLowerCase() + '.png' : ''
     }
   },
   watch: {

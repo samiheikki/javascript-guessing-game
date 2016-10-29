@@ -46,6 +46,10 @@ export default {
   },
   created: function () {
     this.getJSON('static/logos.json', (error, tempJSTools) => {
+      if (typeof tempJSTools === 'string') { // IE11 fix
+        tempJSTools = JSON.parse(tempJSTools)
+      }
+
       if (error) {
         // Fetch from localStorage
         tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))
