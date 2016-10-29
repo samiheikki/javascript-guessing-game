@@ -46,7 +46,6 @@ export default {
   },
   created: function () {
     this.getJSON('static/logos.json', (error, tempJSTools) => {
-      error = true
       if (error) {
         // Fetch from localStorage
         tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))

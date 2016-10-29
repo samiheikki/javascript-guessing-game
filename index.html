@@ -153,9 +153,9 @@
 </body>
 <script>
   if ('serviceWorker' in navigator && window.location.href.indexOf('localhost') === -1) {
-    /*navigator.serviceWorker.register('sw.js').then(function(registration) {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
       console.log('Service Worker Registered. This app works offline!');
-    });*/
+    });
   }
 
   (function(i, s, o, g, r, a, m) {
