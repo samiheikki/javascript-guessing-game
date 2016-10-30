@@ -36,6 +36,9 @@
     "name": "Blaze_CSS"
   },
   {
+    "name": "Bosonic"
+  },
+  {
     "name": "Bower"
   },
   {
@@ -231,6 +234,9 @@
     "name": "RxJS"
   },
   {
+    "name": "Sails"
+  },
+  {
     "name": "SammyJS"
   },
   {
@@ -289,5 +295,8 @@
   },
   {
     "name": "Yui"
+  },
+  {
+    "name": "ZeptoJS"
   }
 ]
