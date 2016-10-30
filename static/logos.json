@@ -126,6 +126,9 @@
     "name": "Holmes"
   },
   {
+    "name": "Inferno"
+  },
+  {
     "name": "Ionic"
   },
   {
@@ -199,6 +202,9 @@
   },
   {
     "name": "Polymer"
+  },
+  {
+    "name": "Preact"
   },
   {
     "name": "Prototype"
