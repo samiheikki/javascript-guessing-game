@@ -207,6 +207,9 @@
     "name": "Preact"
   },
   {
+    "name": "PrimeNG"
+  },
+  {
     "name": "Prototype"
   },
   {
@@ -301,9 +304,6 @@
   },
   {
     "name": "Yui"
-  },
-  {
-    "name": "PrimeNG"
   },
   {
     "name": "ZeptoJS"
