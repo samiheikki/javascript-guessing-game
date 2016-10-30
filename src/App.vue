@@ -204,4 +204,10 @@ body {
     margin-top: 0px;
   }
 }
+
+@media screen and (max-width:447px) {
+  .credits {
+    display: none;
+  }
+}
 </style>
