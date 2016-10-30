@@ -27,7 +27,6 @@ export default {
       }.bind(this), 1)
     },
     restart: function (val) {
-      console.log('restart')
       this.show = true
     }
   }
