@@ -30,7 +30,14 @@ export default {
         'Your coding methods are so backwards they’ve added it to the school curriculum in Texas!',
         'Your code runs so slow your data brings sleeping bags to camp-out in the cache lines.',
         'More unit tests? No! What your code needs is petrol and a match.',
-        'Imagine an egg hitting a concrete pavement, that’s how hard-wired, inflexible and brittle your code is.'
+        'Imagine an egg hitting a concrete pavement, that’s how hard-wired, inflexible and brittle your code is.',
+        'Don\'t worry about it, I\'ll get someone technical to do this.',
+        'You\'re slower then a Java app.',
+        'You are one tab level off.',
+        'Your code looks as though you have been playing bingo with anti-patterns.',
+        'Your code is so wretched, that hard disks add it to their bad block lists.',
+        'Clean, clear, and under control; three things that will never be said about your code.',
+        'By popular demand, your code backup is in /dev/null/.'
       ]
     }
   },
