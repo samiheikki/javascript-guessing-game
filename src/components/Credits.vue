@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <a href="http://suoheikki.com" style="margin-left: 8px;">Sami Suo-Heikki</a>
+    <a href="http://suoheikki.com">Sami Suo-Heikki</a>
   </div>
 </template>
 
