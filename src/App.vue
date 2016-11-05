@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
+    <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
     <js-logo v-if="!testFinished" :logo="currentJsTool.name" :restart="restart"></js-logo>
     <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
     <result-page
@@ -21,6 +22,9 @@ import UiOptions from './components/UiOptions'
 import ResultPage from './components/ResultPage'
 import Credits from './components/Credits'
 import RippleButton from './components/RippleButton'
+import SoundToggle from './components/SoundToggle'
+import Howler from 'howler'
+const { Howl } = Howler
 
 export default {
   components: {
@@ -29,7 +33,8 @@ export default {
     ProgressBar,
     ResultPage,
     Credits,
-    RippleButton
+    RippleButton,
+    SoundToggle
   },
   data () {
     return {
@@ -41,7 +46,8 @@ export default {
       answeredCount: 0,
       testFinished: false,
       totalCount: Number,
-      restart: false
+      restart: false,
+      sound: false
     }
   },
   created: function () {
@@ -65,6 +71,24 @@ export default {
       this.updateLogo()
       this.updateOptions()
     })
+
+    // Sound default on
+    let localStorageSound = window.localStorage.getItem('sound')
+    this.sound = localStorageSound ? JSON.parse(localStorageSound) : true
+
+    this.gameoverSound = new Howl({
+      src: ['../static/sounds/gameover.mp3', '../static/sounds/gameover.ogg'],
+      rate: 1.3,
+      volume: 0.5
+    })
+    this.correctSound = new Howl({
+      src: ['../static/sounds/correct.mp3', '../static/sounds/correct.ogg'],
+      volume: 0.5
+    })
+    this.finishSound = new Howl({
+      src: ['../static/sounds/finish.mp3', '../static/sounds/finish.ogg'],
+      volume: 0.5
+    })
   },
   methods: {
     shuffle: function (array) {
@@ -77,6 +101,11 @@ export default {
       }
       return array
     },
+    soundChange: function () {
+      this.sound = !this.sound
+
+      window.localStorage.setItem('sound', this.sound)
+    },
     generateIDs: function (array) {
       array.forEach((val, index) => {
         array[index].id = index
@@ -88,14 +117,23 @@ export default {
         // correct answer
         this.answeredCount++
         if (this.answeredCount === this.jsTools.length) {
+          if (this.sound) {
+            this.finishSound.play()
+          }
           // test ended
           this.endTest()
         } else {
+          if (this.sound) {
+            this.correctSound.play()
+          }
           this.updateProgress()
           this.updateLogo()
           this.updateOptions()
         }
       } else {
+        if (this.sound) {
+          this.gameoverSound.play()
+        }
         // false answer
         this.endTest()
       }
