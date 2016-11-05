@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <a href="https://github.com/samiheikki/javascript-guessing-game" style="margin-right: 8px;">Fork me on GitHub</a> |
     <a href="http://suoheikki.com" style="margin-left: 8px;">Sami Suo-Heikki</a>
   </div>
 </template>
