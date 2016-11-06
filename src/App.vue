@@ -72,23 +72,7 @@ export default {
       this.updateOptions()
     })
 
-    // Sound default on
-    let localStorageSound = window.localStorage.getItem('sound')
-    this.sound = localStorageSound ? JSON.parse(localStorageSound) : true
-
-    this.gameoverSound = new Howl({
-      src: ['../static/sounds/gameover.mp3', '../static/sounds/gameover.ogg'],
-      rate: 1.3,
-      volume: 0.5
-    })
-    this.correctSound = new Howl({
-      src: ['../static/sounds/correct.mp3', '../static/sounds/correct.ogg'],
-      volume: 0.5
-    })
-    this.finishSound = new Howl({
-      src: ['../static/sounds/finish.mp3', '../static/sounds/finish.ogg'],
-      volume: 0.5
-    })
+    this.initializeSounds()
   },
   methods: {
     shuffle: function (array) {
@@ -180,6 +164,25 @@ export default {
         this.jsTools[optionNumbers[2]],
         this.jsTools[optionNumbers[3]]
       ]
+    },
+    initializeSounds: function () {
+      // Sound default on
+      let localStorageSound = window.localStorage.getItem('sound')
+      this.sound = localStorageSound ? JSON.parse(localStorageSound) : true
+
+      this.gameoverSound = new Howl({
+        src: ['../static/sounds/gameover.mp3', '../static/sounds/gameover.ogg'],
+        rate: 1.3,
+        volume: 0.5
+      })
+      this.correctSound = new Howl({
+        src: ['../static/sounds/correct.mp3', '../static/sounds/correct.ogg'],
+        volume: 0.5
+      })
+      this.finishSound = new Howl({
+        src: ['../static/sounds/finish.mp3', '../static/sounds/finish.ogg'],
+        volume: 0.5
+      })
     },
     evaluateAnswer: function (id) {
       return id === this.currentJsTool.id
