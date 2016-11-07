@@ -11,6 +11,7 @@
     "build-sw": "gulp generate-service-worker"
   },
   "dependencies": {
+    "howler": "^2.0.1",
     "vue": "^2.0.1"
   },
   "devDependencies": {
