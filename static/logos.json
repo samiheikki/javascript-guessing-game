@@ -117,6 +117,9 @@
     "name": "Gulp"
   },
   {
+    "name": "Gwt"
+  },
+  {
     "name": "Handlebars"
   },
   {
@@ -145,6 +148,9 @@
   },
   {
     "name": "JSX"
+  },
+  {
+    "name": "JSweet"
   },
   {
     "name": "Karma"
