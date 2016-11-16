@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    By <a href="http://suoheikki.com">Sami Suo-Heikki</a> and <a href="https://github.com/samiheikki/javascript-guessing-game/graphs/contributors">Contributors</a>
+    By <a href="https://suoheikki.com">Sami Suo-Heikki</a> and <a href="https://github.com/samiheikki/javascript-guessing-game/graphs/contributors">Contributors</a>
   </div>
 </template>
 
