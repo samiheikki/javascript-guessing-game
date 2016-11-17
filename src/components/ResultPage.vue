@@ -43,12 +43,12 @@ export default {
   },
   computed: {
     feedback: function () {
-      if (this.progress < 3) {
+      if (this.progress < 1) {
         return 'Do you even JavaScript, bro?'
       } else if (this.progress >= 100) {
         return 'You did it! Now you can go back to your desk and start working.'
       } else {
-        // 3 - 99
+        // 1 - 99
         return this.insults[Math.floor(Math.random() * this.insults.length)]
       }
     }
