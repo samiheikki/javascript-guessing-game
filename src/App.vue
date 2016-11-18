@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     shuffle: function (array) {
-      var j, x, i
+      let j, x, i
       for (i = array.length; i; i--) {
         j = Math.floor(Math.random() * i)
         x = array[i - 1]
@@ -146,11 +146,11 @@ export default {
       this.currentJsTool = this.jsTools[this.answeredCount]
     },
     updateOptions: function () {
-      var optionNumbers = []
+      let optionNumbers = []
       optionNumbers.push(this.currentJsTool.id)
 
       while (optionNumbers.length < 4) {
-        var randomNumber = Math.floor(Math.random() * this.jsTools.length)
+        let randomNumber = Math.floor(Math.random() * this.jsTools.length)
         if (!optionNumbers.includes(randomNumber)) {
           optionNumbers.push(randomNumber)
         }
@@ -188,11 +188,11 @@ export default {
       return id === this.currentJsTool.id
     },
     getJSON: function (url, callback) {
-      var xhr = new window.XMLHttpRequest()
+      let xhr = new window.XMLHttpRequest()
       xhr.open('get', url, true)
       xhr.responseType = 'json'
       xhr.onload = () => {
-        var status = xhr.status
+        let status = xhr.status
         if (status === 200) {
           callback(null, xhr.response)
         } else {

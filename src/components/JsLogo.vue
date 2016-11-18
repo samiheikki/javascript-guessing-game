@@ -22,9 +22,9 @@ export default {
   watch: {
     logoUrl: function (val) {
       this.show = false
-      setTimeout(function () {
+      setTimeout(() => {
         this.show = true
-      }.bind(this), 1)
+      }, 1)
     },
     restart: function (val) {
       this.show = true

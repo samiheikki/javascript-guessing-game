@@ -10,9 +10,9 @@
 export default {
   props: ['text', 'id'],
   created: function () {
-    setTimeout(function () {
+    setTimeout(() => {
       this.$el.addEventListener('mouseup', this.debounce(this.cleanUp, 2000))
-    }.bind(this))
+    })
   },
   methods: {
     onDown: function (e) {
@@ -21,7 +21,7 @@ export default {
       e.preventDefault()
     },
     showRipple: function (e) {
-      var pos, button, rippler, size, style, x, y
+      let pos, button, rippler, size, style, x, y
       if (e.target.tagName === 'BUTTON') {
         button = e.target // firefox fix
       } else {
@@ -40,7 +40,7 @@ export default {
       return rippler.setAttribute('style', style)
     },
     cleanUp: function (e) {
-      var rippleContainer
+      let rippleContainer
       if (e.target.tagName === 'SPAN') {
         rippleContainer = e.target.parentNode
       } else if (e.target.tagName === 'BUTTON') {
@@ -51,10 +51,10 @@ export default {
       }
     },
     debounce: function (func, delay) {
-      var inDebounce
+      let inDebounce
       inDebounce = undefined
       return function () {
-        var args, context
+        let args, context
         context = this
         args = arguments
         clearTimeout(inDebounce)
