@@ -1,6 +1,6 @@
 # JavaScript Guessing Game
 
-> You don't know JavaScript
+> You know there are too many JS libraries when there is a game for it
 
 ## Description
 
