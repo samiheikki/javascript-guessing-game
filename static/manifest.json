@@ -3,7 +3,7 @@
   "name": "JavaScript Guessing Game",
   "background_color": "#66BB6A",
   "theme_color": "#000000",
-  "description": "The app that helps you find the best food in town!",
+  "description": "You know there are too many JS libraries when there is a game for it.",
   "icons": [
     {
       "src": "app/app_icon_96.png",
