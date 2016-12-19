@@ -6,17 +6,17 @@
   "description": "You know there are too many JS libraries when there is a game for it.",
   "icons": [
     {
-      "src": "app/app_icon_96.png",
+      "src": "/static/app/app_icon_96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "app/app_icon_144.png",
+      "src": "/static/app/app_icon_144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "app/app_icon_192.png",
+      "src": "/static/app/app_icon_192.png",
       "sizes": "192x192",
       "type": "image/png"
     }
