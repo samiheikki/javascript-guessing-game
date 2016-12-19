@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    By <a href="https://github.com/samiheikki" target="_blank">
+    By <a href="https://github.com/samiheikki" target="_blank" rel="noopener">
       Sami Suo-Heikki
       <svg fill="#66BB6A" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h24v24H0z" fill="none"/>
@@ -8,7 +8,7 @@
       </svg>
     </a>
     and
-    <a href="https://github.com/samiheikki/javascript-guessing-game/graphs/contributors" target="_blank">
+    <a href="https://github.com/samiheikki/javascript-guessing-game/graphs/contributors" target="_blank" rel="noopener">
       Contributors
       <svg fill="#66BB6A" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0h24v24H0z" fill="none"/>
