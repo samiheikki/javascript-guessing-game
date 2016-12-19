@@ -32,43 +32,6 @@
   <meta name="msapplication-TileImage" content="static/app/app_icon_144.png">
   <meta name="msapplication-TileColor" content="#66BB6A">
   <meta name="msapplication-tap-highlight" content="no">
-
-  <script>
-    // Polyfill IE11
-    if (!Array.prototype.includes) {
-      Array.prototype.includes = function(searchElement /*, fromIndex*/ ) {
-        'use strict';
-        if (this == null) {
-          throw new TypeError('Array.prototype.includes called on null or undefined');
-        }
-
-        var O = Object(this);
-        var len = parseInt(O.length, 10) || 0;
-        if (len === 0) {
-          return false;
-        }
-        var n = parseInt(arguments[1], 10) || 0;
-        var k;
-        if (n >= 0) {
-          k = n;
-        } else {
-          k = len + n;
-          if (k < 0) {
-            k = 0;
-          }
-        }
-        var currentElement;
-        while (k < len) {
-          currentElement = O[k];
-          if (searchElement === currentElement || (searchElement !== searchElement && currentElement !== currentElement)) { // NaN !== NaN
-            return true;
-          }
-          k++;
-        }
-        return false;
-      };
-    }
-  </script>
 </head>
 
 <body>
@@ -169,7 +132,7 @@
   </style>
   <!-- built files will be auto injected -->
 </body>
-<script>
+<script async defer>
   if ('serviceWorker' in navigator && window.location.href.indexOf('localhost') === -1) {
     navigator.serviceWorker.register('sw.js').then(function(registration) {
       console.log('Service Worker Registered. This app works offline!');
@@ -207,6 +170,41 @@
 
     return t;
   }(document, "script", "twitter-wjs"));
+
+  // Polyfill IE11
+  if (!Array.prototype.includes) {
+    Array.prototype.includes = function(searchElement /*, fromIndex*/ ) {
+      'use strict';
+      if (this == null) {
+        throw new TypeError('Array.prototype.includes called on null or undefined');
+      }
+
+      var O = Object(this);
+      var len = parseInt(O.length, 10) || 0;
+      if (len === 0) {
+        return false;
+      }
+      var n = parseInt(arguments[1], 10) || 0;
+      var k;
+      if (n >= 0) {
+        k = n;
+      } else {
+        k = len + n;
+        if (k < 0) {
+          k = 0;
+        }
+      }
+      var currentElement;
+      while (k < len) {
+        currentElement = O[k];
+        if (searchElement === currentElement || (searchElement !== searchElement && currentElement !== currentElement)) { // NaN !== NaN
+          return true;
+        }
+        k++;
+      }
+      return false;
+    };
+  }
 </script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
