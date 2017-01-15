@@ -9,16 +9,22 @@
     "name": "Ampersand"
   },
   {
-    "name": "Angular-meteor"
-  },
-  {
     "name": "Angular2"
   },
   {
     "name": "AngularJS"
   },
   {
-    "name": "anime"
+    "name": "Angular-Meteor"
+  },
+  {
+    "name": "animeJS"
+  },
+  {
+    "name": "Appium"
+  },
+  {
+    "name": "Async"
   },
   {
     "name": "Aurelia"
@@ -34,6 +40,12 @@
   },
   {
     "name": "Blaze_CSS"
+  },
+  {
+    "name": "Bluebird"
+  },
+  {
+    "name": "Bootstrap"
   },
   {
     "name": "Bosonic"
@@ -60,10 +72,16 @@
     "name": "Chaplin"
   },
   {
+    "name": "ChartJS"
+  },
+  {
     "name": "CoffeeScript"
   },
   {
     "name": "CommonJS"
+  },
+  {
+    "name": "Cordova"
   },
   {
     "name": "CycleJS"
@@ -114,6 +132,15 @@
     "name": "Flux"
   },
   {
+    "name": "Foundation"
+  },
+  {
+    "name": "Globalize"
+  },
+  {
+    "name": "GnosisJS"
+  },
+  {
     "name": "Grunt"
   },
   {
@@ -132,7 +159,19 @@
     "name": "Holmes"
   },
   {
+    "name": "HowlerJS"
+  },
+  {
+    "name": "Immutable"
+  },
+  {
     "name": "Inferno"
+  },
+  {
+    "name": "InterledgerJS"
+  },
+  {
+    "name": "Intern"
   },
   {
     "name": "Ionic"
@@ -141,10 +180,19 @@
     "name": "Jasmine"
   },
   {
+    "name": "JerryScript"
+  },
+  {
     "name": "Jest"
   },
   {
     "name": "jQuery"
+  },
+  {
+    "name": "jQueryMobile"
+  },
+  {
+    "name": "jQueryUI"
   },
   {
     "name": "JSBlocks"
@@ -153,10 +201,10 @@
     "name": "Jspm"
   },
   {
-    "name": "JSX"
+    "name": "JSweet"
   },
   {
-    "name": "JSweet"
+    "name": "JSX"
   },
   {
     "name": "Jumpsuit"
@@ -180,10 +228,16 @@
     "name": "Leaflet"
   },
   {
+    "name": "Less"
+  },
+  {
     "name": "Lodash"
   },
   {
     "name": "MarionetteJS"
+  },
+  {
+    "name": "Materialize"
   },
   {
     "name": "Matreshka"
@@ -204,16 +258,22 @@
     "name": "Modernizr"
   },
   {
+    "name": "MomentJS"
+  },
+  {
     "name": "NativeScript"
   },
   {
-    "name":"NativeScript-Angular"
+    "name": "NativeScript-Angular"
   },
   {
     "name": "Nodal"
   },
   {
     "name": "NodeJS"
+  },
+  {
+    "name": "Node-RED"
   },
   {
     "name": "npm"
@@ -225,7 +285,19 @@
     "name": "PhantomJS"
   },
   {
+    "name": "Phaser"
+  },
+  {
+    "name": "PixiJS"
+  },
+  {
+    "name": "Pointer-Events_Polyfill"
+  },
+  {
     "name": "Polymer"
+  },
+  {
+    "name": "PostCSS"
   },
   {
     "name": "Preact"
@@ -261,6 +333,9 @@
     "name": "RequireJS"
   },
   {
+    "name": "RevealJS"
+  },
+  {
     "name": "Riot"
   },
   {
@@ -273,10 +348,22 @@
     "name": "SammyJS"
   },
   {
+    "name": "Seneca"
+  },
+  {
+    "name": "Sentry"
+  },
+  {
+    "name": "Sizzle"
+  },
+  {
     "name": "SkateJS"
   },
   {
     "name": "SkelJS"
+  },
+  {
+    "name": "Slick"
   },
   {
     "name": "SocketIO"
@@ -288,6 +375,9 @@
     "name": "Stapesjs"
   },
   {
+    "name": "Stylus"
+  },
+  {
     "name": "SystemJS"
   },
   {
@@ -297,7 +387,13 @@
     "name": "Trails"
   },
   {
+    "name": "TurnJS"
+  },
+  {
     "name": "TypeScript"
+  },
+  {
+    "name": "UnderscoreJS"
   },
   {
     "name": "UnitJS"
