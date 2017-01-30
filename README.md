@@ -4,7 +4,7 @@
 
 ## Description
 
-React, Flux, Angular, Aurelia, TypeScript, Flow, oh my! By trying to make things simpler, I have created this game to stay on top of JavaScript in 2016.
+React, Flux, Angular, Aurelia, TypeScript, Flow, oh my! By trying to make things simpler, I have created this game to stay on top of JavaScript in 2017.
 
 [Play the game!](https://javascript-game.firebaseapp.com/)
 
