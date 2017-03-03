@@ -75,6 +75,9 @@
     "name": "ChartJS"
   },
   {
+    "name": "Code Climate"
+  },
+  {
     "name": "CoffeeScript"
   },
   {
@@ -141,6 +144,9 @@
     "name": "GnosisJS"
   },
   {
+    "name": "GreenSock"
+  },
+  {
     "name": "Grunt"
   },
   {
@@ -196,6 +202,9 @@
   },
   {
     "name": "JSBlocks"
+  },
+  {
+    "name": "JSHint"
   },
   {
     "name": "Jspm"
@@ -366,6 +375,9 @@
     "name": "Slick"
   },
   {
+    "name": "Slush"
+  },
+  {
     "name": "SocketIO"
   },
   {
@@ -385,6 +397,9 @@
   },
   {
     "name": "Trails"
+  },
+  {
+    "name": "TravisCI"
   },
   {
     "name": "TurnJS"
