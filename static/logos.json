@@ -24,7 +24,13 @@
     "name": "Appium"
   },
   {
+    "name": "AriaTemplates"
+  },
+  {
     "name": "Async"
+  },
+  {
+    "name": "AtmaJS"
   },
   {
     "name": "Aurelia"
@@ -87,6 +93,9 @@
     "name": "Cordova"
   },
   {
+    "name": "CujoJS"
+  },
+  {
     "name": "CycleJS"
   },
   {
@@ -105,6 +114,9 @@
     "name": "Dojo"
   },
   {
+    "name": "Duel"
+  },
+  {
     "name": "Durandal"
   },
   {
@@ -112,6 +124,9 @@
   },
   {
     "name": "Electron"
+  },
+  {
+    "name": "Elm"
   },
   {
     "name": "Ember"
@@ -129,6 +144,9 @@
     "name": "ExpressJS"
   },
   {
+    "name": "ExtJS"
+  },
+  {
     "name": "Firebase"
   },
   {
@@ -136,6 +154,9 @@
   },
   {
     "name": "Flux"
+  },
+  {
+    "name": "Foam"
   },
   {
     "name": "Foundation"
@@ -202,6 +223,9 @@
   },
   {
     "name": "jQueryUI"
+  },
+  {
+    "name": "js_of_ocaml"
   },
   {
     "name": "JSBlocks"
@@ -382,6 +406,12 @@
   },
   {
     "name": "SocketIO"
+  },
+  {
+    "name": "SocketStream"
+  },
+  {
+    "name": "Spine"
   },
   {
     "name": "Sproutcore"
