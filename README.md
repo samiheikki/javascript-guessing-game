@@ -30,3 +30,24 @@ npm run dev
 # build for production with minification and service workers
 npm run build
 ```
+## Credits
+
+Thank you to the following awesome people for sending PRs :heart: :
+
+- [@francomontiel](https://github.com/francomontiel)
+- [@sankyavi](https://github.com/sankyavi)
+- [@zoltantothcom](https://github.com/zoltantothcom)
+- [@sis0k0](https://github.com/sis0k0)
+- [@Navajyoth](https://github.com/Navajyoth)
+- [@onursenture](https://github.com/onursenture)
+- [@cosminlupu](https://github.com/cosminlupu)
+- [@manolo](https://github.com/manolo)
+- [@abnersajr](https://github.com/abnersajr)
+- [@limonte](https://github.com/limonte)
+- [@cvuorinen](https://github.com/cvuorinen)
+- [@rjmunro](https://github.com/rjmunro)
+- [@sabareeshkk](https://github.com/sabareeshkk)
+- [@jsonmaur](https://github.com/jsonmaur)
+- [@dapetcu21](https://github.com/dapetcu21)
+- [@ssurve](https://github.com/ssurve)
+- [@pjbaert](https://github.com/pjbaert)
