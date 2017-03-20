@@ -426,6 +426,9 @@
     "name": "SystemJS"
   },
   {
+    "name": "Tape"
+  },
+  {
     "name": "ThreeJS"
   },
   {
