@@ -144,6 +144,9 @@
     "name": "ESLint"
   },
   {
+    "name": "esnext"
+  },
+  {
     "name": "ExpressJS"
   },
   {
