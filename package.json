@@ -6,9 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js && npm run build-sw",
+    "build": "node build/build.js && npm run rename-images && npm run build-sw",
     "lint": "eslint --ext .js,.vue src",
-    "build-sw": "gulp generate-service-worker"
+    "build-sw": "gulp generate-service-worker",
+    "rename-images": "gulp rename-images"
   },
   "dependencies": {
     "howler": "^2.0.1",

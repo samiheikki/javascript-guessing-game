@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <transition name="fade">
-      <img class="logo" v-bind:src="logoUrl" v-bind:alt="logo" v-if="show">
+      <img class="logo" v-bind:src="logoUrl" v-if="show" alt="Guess this logo">
     </transition>
   </div>
 </template>
@@ -11,12 +11,21 @@ export default {
   props: ['logo', 'restart'],
   data () {
     return {
-      show: false
+      show: false,
+      prod: process.env.NODE_ENV === 'production'
     }
   },
   computed: {
     logoUrl: function () {
-      return this.logo && this.logo !== 'Object' ? '../static/logos/' + this.logo.toLowerCase() + '.png' : undefined
+      if (this.logo && this.logo !== 'Object') {
+        if (this.prod) { // Base64 version
+          return '../static/logos/' + window.btoa(this.logo) + '.png'
+        } else {
+          return '../static/logos/' + this.logo.toLowerCase() + '.png'
+        }
+      } else {
+        return undefined
+      }
     }
   },
   mounted: function () {
