@@ -23,8 +23,7 @@ import ResultPage from './components/ResultPage'
 import Credits from './components/Credits'
 import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
-import Howler from 'howler'
-const { Howl } = Howler
+import { Howl } from 'howler'
 
 export default {
   components: {
@@ -167,7 +166,7 @@ export default {
     },
     initializeSounds: function () {
       // Sound default on
-      let localStorageSound = window.localStorage.getItem('sound')
+      const localStorageSound = window.localStorage.getItem('sound')
       this.sound = localStorageSound ? JSON.parse(localStorageSound) : true
 
       this.gameoverSound = new Howl({
