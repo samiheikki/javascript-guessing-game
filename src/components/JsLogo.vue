@@ -16,7 +16,12 @@ export default {
   },
   computed: {
     logoUrl: function () {
-      return this.logo ? '../static/logos/' + this.logo.toLowerCase() + '.png' : ''
+      return this.logo && this.logo !== 'Object' ? '../static/logos/' + this.logo.toLowerCase() + '.png' : undefined
+    }
+  },
+  mounted: function () {
+    if (this.logoUrl) {
+      this.show = true
     }
   },
   watch: {
@@ -25,15 +30,11 @@ export default {
       setTimeout(() => {
         this.show = true
       }, 1)
-    },
-    restart: function (val) {
-      this.show = true
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
   margin-top: 32px;

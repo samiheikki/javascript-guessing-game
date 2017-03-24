@@ -2,7 +2,7 @@
   <div id="app">
     <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
     <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
-    <js-logo v-if="!testFinished" :logo="currentJsTool.name" :restart="restart"></js-logo>
+    <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
     <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
     <result-page
       :progress="progress"
@@ -45,7 +45,6 @@ export default {
       answeredCount: 0,
       testFinished: false,
       totalCount: Number,
-      restart: false,
       sound: false
     }
   },
@@ -126,17 +125,12 @@ export default {
       this.testFinished = true
     },
     restartTest: function () {
-      this.answeredCount = 0
-      this.progress = 0
+      this.answeredCount = this.progress = 0
       this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(window.jsTools)))
       this.jsTools = this.generateIDs(this.tempJSTools)
       this.updateLogo()
       this.updateOptions()
       this.testFinished = false
-
-      setTimeout(() => {
-        this.restart = !this.restart
-      })
     },
     updateProgress: function () {
       this.progress = (this.answeredCount / this.jsTools.length) * 100
@@ -187,15 +181,14 @@ export default {
       return id === this.currentJsTool.id
     },
     getJSON: function (url, callback) {
-      let xhr = new window.XMLHttpRequest()
+      const xhr = new window.XMLHttpRequest()
       xhr.open('get', url, true)
       xhr.responseType = 'json'
       xhr.onload = () => {
-        let status = xhr.status
-        if (status === 200) {
+        if (xhr.status === 200) {
           callback(null, xhr.response)
         } else {
-          callback(status)
+          callback(xhr.status)
         }
       }
       xhr.send()
