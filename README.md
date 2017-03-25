@@ -19,16 +19,16 @@ Inspired by [How it feels to learn JavaScript in 2016](https://hackernoon.com/ho
   3. Create a pull request :)
 
 ## Build Setup
-
+First make sure you have [Yarn](https://yarnpkg.com) installed.
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn run dev
 
 # build for production with minification and service workers
-npm run build
+yarn run build
 ```
 ## Credits
 
