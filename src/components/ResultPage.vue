@@ -37,7 +37,11 @@ export default {
         'Your code looks as though you have been playing bingo with anti-patterns.',
         'Your code is so wretched, that hard disks add it to their bad block lists.',
         'Clean, clear, and under control; three things that will never be said about your code.',
-        'By popular demand, your code backup is in /dev/null/.'
+        'By popular demand, your code backup is in /dev/null/.',
+        'Your webpages only render in IE 5.5.',
+        '*Knock, knock* "Who\'s there?" *long pause* Your init method.',
+        'There may be no I in TEAM, but I can\'t spell B GS, without U.',
+        'If Perl scripts could carry coffee around, I could replace you with a one-liner.'
       ]
     }
   },
