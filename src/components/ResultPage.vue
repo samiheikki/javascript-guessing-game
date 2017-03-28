@@ -23,14 +23,14 @@ export default {
   data () {
     return {
       insults: [
-        'Why don’t you go back to your desk and tail call yourself?',
+        'Why don\'t you go back to your desk and tail call yourself?',
         'I never believed in chaos theory until I saw your variable naming convention!',
-        'Your commit is writing checks your merge can’t cash.',
+        'Your commit is writing checks your merge can\'t cash.',
         'Your code, just like C. Has no class!',
-        'Your coding methods are so backwards they’ve added it to the school curriculum in Texas!',
+        'Your coding methods are so backwards they\'ve added it to the school curriculum in Texas!',
         'Your code runs so slow your data brings sleeping bags to camp-out in the cache lines.',
         'More unit tests? No! What your code needs is petrol and a match.',
-        'Imagine an egg hitting a concrete pavement, that’s how hard-wired, inflexible and brittle your code is.',
+        'Imagine an egg hitting a concrete pavement, that\'s how hard-wired, inflexible and brittle your code is.',
         'Don\'t worry about it, I\'ll get someone technical to do this.',
         'You\'re slower than a Java app.',
         'You are one tab level off.',
