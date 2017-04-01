@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+    <login-service></login-service>
     <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
     <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
+    <login-button></login-button>
     <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
     <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
     <result-page
@@ -23,6 +25,10 @@ import ResultPage from './components/ResultPage'
 import Credits from './components/Credits'
 import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
+import LoginButton from './components/LoginButton'
+
+import LoginService from './services/LoginService'
+
 import { Howl } from 'howler'
 
 export default {
@@ -33,7 +39,9 @@ export default {
     ResultPage,
     Credits,
     RippleButton,
-    SoundToggle
+    SoundToggle,
+    LoginButton,
+    LoginService
   },
   data () {
     return {
