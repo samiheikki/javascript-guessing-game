@@ -228,13 +228,13 @@
     "name": "Gwt"
   },
   {
-    "name": "Haul"
-  },
-  {
     "name": "Handlebars"
   },
   {
     "name": "Handsontable"
+  },
+  {
+    "name": "Haul"
   },
   {
     "name": "Highcharts"
