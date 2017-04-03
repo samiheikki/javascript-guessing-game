@@ -123,6 +123,9 @@
     "name": "Cyclow"
   },
   {
+    "name": "Cypress"
+  },
+  {
     "name": "D3"
   },
   {
@@ -157,6 +160,9 @@
   },
   {
     "name": "Elm"
+  },
+  {
+    "name": "EmailJS"
   },
   {
     "name": "Ember"
@@ -226,6 +232,9 @@
   },
   {
     "name": "Handlebars"
+  },
+  {
+    "name": "Handsontable"
   },
   {
     "name": "Highcharts"
@@ -358,6 +367,9 @@
   },
   {
     "name": "NativeScript-Angular"
+  },
+  {
+    "name": "Nightwatch"
   },
   {
     "name": "Nodal"
