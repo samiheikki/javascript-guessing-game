@@ -31,8 +31,9 @@ export default {
       })
     },
     loginWithGitHub: function () {
-      const provider = new firebase.auth.GithubAuthProvider()
-      firebase.auth().signInWithRedirect(provider)
+      // const provider = new firebase.auth.GithubAuthProvider()
+      // firebase.auth().signInWithRedirect(provider)
+      console.log('hre')
     }
   }
 }

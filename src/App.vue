@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <login-service></login-service>
     <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
     <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
-    <login-button></login-button>
+    <login-view></login-view>
     <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
     <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
     <result-page
@@ -18,6 +17,8 @@
 </template>
 
 <script>
+import { Howl } from 'howler'
+
 import ProgressBar from './components/ProgressBar'
 import JsLogo from './components/JsLogo'
 import UiOptions from './components/UiOptions'
@@ -25,11 +26,7 @@ import ResultPage from './components/ResultPage'
 import Credits from './components/Credits'
 import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
-import LoginButton from './components/LoginButton'
-
-import LoginService from './services/LoginService'
-
-import { Howl } from 'howler'
+import LoginView from './components/LoginView'
 
 export default {
   components: {
@@ -40,8 +37,7 @@ export default {
     Credits,
     RippleButton,
     SoundToggle,
-    LoginButton,
-    LoginService
+    LoginView
   },
   data () {
     return {
@@ -79,6 +75,7 @@ export default {
     })
 
     this.initializeSounds()
+    this.$store.dispatch('startListeningToAuth')
   },
   methods: {
     shuffle: function (array) {
