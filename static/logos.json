@@ -450,6 +450,9 @@
     "name": "Redux"
   },
   {
+    "name": "Redux_Offline"
+  },
+  {
     "name": "RequireJS"
   },
   {
