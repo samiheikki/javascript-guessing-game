@@ -78,7 +78,7 @@ export default {
       }
     },
     twitterText: function () {
-      return `You know there are too many JS libraries when there is a game for it 🎯 \n I've got score ${this.score}/${this.total}. Try it out!`
+      return `You know there are too many JS libraries when there is a game for it 🎯 \n I've got score ${this.score}/${this.total}. Try it out! https://javascript-game.firebaseapp.com`
     }
   },
   methods: {
