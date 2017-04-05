@@ -14,9 +14,19 @@ Inspired by [How it feels to learn JavaScript in 2016](https://hackernoon.com/ho
 
 ## Contributing
 
-  1. Add a new object of a JavaScript tool to `/static/logos.json` JSON file.
+  1. Add a new object* of a JavaScript tool to [/static/logos.json](static/logos.json) JSON file.
   2. Add `100x100` .png image to `/static/logos/` directory with the tool's name in lowercase as the file's name.
   3. Create a pull request :)
+
+* Object must contain required `name` and optional `repo`, `description` and `url` keys. Example:
+```json 
+{
+  "name": "Vue",
+  "repo": "vuejs/vue",
+  "url": "https://vuejs.org",
+  "description": "The Progressive JavaScript Framework"
+}
+```
 
 ## Build Setup
 First make sure you have [Yarn](https://yarnpkg.com) installed.

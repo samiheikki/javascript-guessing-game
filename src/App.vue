@@ -9,7 +9,9 @@
       v-show="testFinished"
       v-on:restart="restartTest"
       :score="answeredCount"
-      :total="totalCount">
+      :total="totalCount"
+      :current-js-tool="currentJsTool"
+    >
     </result-page>
     <credits class="credits"></credits>
   </div>
