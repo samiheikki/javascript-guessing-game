@@ -8,7 +8,8 @@ const state = {
   answerCount: 0,
   progress: 0,
   amount: 0,
-  currentLogo: {}
+  currentLogo: {},
+  options: []
 }
 
 // getters
@@ -16,7 +17,8 @@ const getters = {
   progress: state => state.progress,
   logos: state => state.logos,
   answerCount: state => state.answerCount,
-  currentLogo: state => state.currentLogo
+  currentLogo: state => state.currentLogo,
+  options: state => state.options
 }
 
 // actions
@@ -38,7 +40,6 @@ const actions = {
 
       const amount = tempLogos.length
       const logos = api.generateIDs(api.shuffle(JSON.parse(JSON.stringify(tempLogos))))
-      // const currentLogo = logos[0]
 
       commit(types.SET_TEMP_LOGOS, { tempLogos })
       commit(types.SET_AMOUNT, { amount })
@@ -52,6 +53,9 @@ const actions = {
   },
   setCurrentLogo ({ commit }, currentLogo) {
     commit(types.SET_CURRENT_LOGO, { currentLogo })
+  },
+  setOptions ({ commit }, options) {
+    commit(types.SET_OPTIONS, { options })
   }
 }
 
@@ -71,6 +75,9 @@ const mutations = {
   },
   [types.SET_CURRENT_LOGO] (state, { currentLogo }) {
     state.currentLogo = currentLogo
+  },
+  [types.SET_OPTIONS] (state, { options }) {
+    state.options = options
   }
 }
 

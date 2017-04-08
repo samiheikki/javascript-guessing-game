@@ -28,6 +28,8 @@ import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
 import LoginView from './components/LoginView'
 
+import appApi from './api/app'
+
 export default {
   components: {
     JsLogo,
@@ -55,32 +57,11 @@ export default {
   created: function () {
     this.$store.dispatch('initializeLogos', () => {
       this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
-      console.log('valmiina')
+      this.setOptions()
     })
-    // this.$store.dispatch('initializeSounds') // TODO
-    // this.getJSON('static/logos.json', (error, tempJSTools) => {
-    //   if (typeof tempJSTools === 'string') { // IE11 fix
-    //     tempJSTools = JSON.parse(tempJSTools)
-    //   }
-    //
-    //   if (error) {
-    //     // Fetch from localStorage
-    //     tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))
-    //   } else {
-    //     // Update localStorage
-    //     window.jsTools = JSON.parse(JSON.stringify(tempJSTools))
-    //     window.localStorage.setItem('logos', JSON.stringify(window.jsTools))
-    //   }
-    //
-    //   this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(tempJSTools)))
-    //   this.totalCount = tempJSTools.length
-    //   this.jsTools = this.generateIDs(this.tempJSTools)
-    //   this.updateLogo()
-    //   this.updateOptions()
-    // })
+    this.$store.dispatch('startListeningToAuth')
 
     this.initializeSounds()
-    this.$store.dispatch('startListeningToAuth')
   },
   methods: {
     shuffle: function (array) {
@@ -148,6 +129,28 @@ export default {
     },
     updateLogo: function () {
       this.currentJsTool = this.jsTools[this.answeredCount]
+    },
+    setOptions: function () {
+      let optionNumbers = []
+      optionNumbers.push(this.$store.state.app.currentLogo.id)
+
+      while (optionNumbers.length < 4) {
+        let randomNumber = Math.floor(Math.random() * this.$store.state.app.amount)
+        if (!optionNumbers.includes(randomNumber)) {
+          optionNumbers.push(randomNumber)
+        }
+      }
+
+      optionNumbers = appApi.shuffle(optionNumbers)
+
+      const options = [
+        this.$store.state.app.logos[optionNumbers[0]],
+        this.$store.state.app.logos[optionNumbers[1]],
+        this.$store.state.app.logos[optionNumbers[2]],
+        this.$store.state.app.logos[optionNumbers[3]]
+      ]
+
+      this.$store.dispatch('setOptions', options)
     },
     updateOptions: function () {
       let optionNumbers = []
