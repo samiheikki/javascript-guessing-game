@@ -16,6 +16,9 @@ const actions = {
   logIn ({ commit }) {
     user.loginWithGitHub()
   },
+  logOut ({ commit }) {
+    user.logOut()
+  },
   startListeningToAuth ({ commit }) {
     user.startListeningToAuth(user => {
       commit(types.SET_USER, { user })
