@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
+    <progress-bar></progress-bar>
     <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
     <login-view></login-view>
     <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
@@ -53,26 +53,31 @@ export default {
     }
   },
   created: function () {
-    this.getJSON('static/logos.json', (error, tempJSTools) => {
-      if (typeof tempJSTools === 'string') { // IE11 fix
-        tempJSTools = JSON.parse(tempJSTools)
-      }
-
-      if (error) {
-        // Fetch from localStorage
-        tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))
-      } else {
-        // Update localStorage
-        window.jsTools = JSON.parse(JSON.stringify(tempJSTools))
-        window.localStorage.setItem('logos', JSON.stringify(window.jsTools))
-      }
-
-      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(tempJSTools)))
-      this.totalCount = tempJSTools.length
-      this.jsTools = this.generateIDs(this.tempJSTools)
-      this.updateLogo()
-      this.updateOptions()
+    this.$store.dispatch('initializeLogos', () => {
+      this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
+      console.log('valmiina')
     })
+    // this.$store.dispatch('initializeSounds') // TODO
+    // this.getJSON('static/logos.json', (error, tempJSTools) => {
+    //   if (typeof tempJSTools === 'string') { // IE11 fix
+    //     tempJSTools = JSON.parse(tempJSTools)
+    //   }
+    //
+    //   if (error) {
+    //     // Fetch from localStorage
+    //     tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))
+    //   } else {
+    //     // Update localStorage
+    //     window.jsTools = JSON.parse(JSON.stringify(tempJSTools))
+    //     window.localStorage.setItem('logos', JSON.stringify(window.jsTools))
+    //   }
+    //
+    //   this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(tempJSTools)))
+    //   this.totalCount = tempJSTools.length
+    //   this.jsTools = this.generateIDs(this.tempJSTools)
+    //   this.updateLogo()
+    //   this.updateOptions()
+    // })
 
     this.initializeSounds()
     this.$store.dispatch('startListeningToAuth')
@@ -130,7 +135,8 @@ export default {
       this.testFinished = true
     },
     restartTest: function () {
-      this.answeredCount = this.progress = 0
+      this.answeredCount = 0
+      this.$store.dispatch('setProgress', 0)
       this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(window.jsTools)))
       this.jsTools = this.generateIDs(this.tempJSTools)
       this.updateLogo()
@@ -138,7 +144,7 @@ export default {
       this.testFinished = false
     },
     updateProgress: function () {
-      this.progress = (this.answeredCount / this.jsTools.length) * 100
+      this.$store.dispatch('setProgress', (this.answeredCount / this.jsTools.length) * 100)
     },
     updateLogo: function () {
       this.currentJsTool = this.jsTools[this.answeredCount]

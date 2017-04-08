@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   props: ['logo', 'restart'],
   data () {
@@ -16,15 +17,17 @@ export default {
     }
   },
   computed: {
+    ...mapGetters({
+      currentLogo: 'currentLogo'
+    }),
     logoUrl: function () {
-      if (this.logo && this.logo !== 'Object') {
-        if (this.prod) { // Base64 version
-          return '../static/logos/' + window.btoa(this.logo) + '.png'
-        } else {
-          return '../static/logos/' + this.logo.toLowerCase() + '.png'
-        }
-      } else {
+      if (!this.currentLogo.name) {
         return undefined
+      }
+      if (this.prod) { // Base64 version
+        return '../static/logos/' + window.btoa(this.currentLogo.name) + '.png'
+      } else {
+        return '../static/logos/' + this.currentLogo.name.toLowerCase() + '.png'
       }
     }
   },

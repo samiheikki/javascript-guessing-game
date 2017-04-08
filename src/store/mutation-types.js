@@ -1,2 +1,6 @@
-// export const LOG_IN = 'LOG_IN'
 export const SET_USER = 'SET_USER'
+export const SET_PROGRESS = 'SET_PROGRESS'
+export const SET_TEMP_LOGOS = 'SET_TEMP_LOGOS'
+export const SET_AMOUNT = 'SET_AMOUNT'
+export const SET_LOGOS = 'SET_LOGOS'
+export const SET_CURRENT_LOGO = 'SET_CURRENT_LOGO'
