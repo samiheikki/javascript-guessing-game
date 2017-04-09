@@ -6,19 +6,22 @@ const state = {
   logos: [],
   tempLogos: [],
   answerCount: 0,
-  progress: 0,
   amount: 0,
   currentLogo: {},
-  options: []
+  options: [],
+  answer: 0,
+  testFinished: false
 }
 
 // getters
 const getters = {
-  progress: state => state.progress,
   logos: state => state.logos,
   answerCount: state => state.answerCount,
   currentLogo: state => state.currentLogo,
-  options: state => state.options
+  options: state => state.options,
+  answer: state => state.answer,
+  testFinished: state => state.testFinished,
+  amount: state => state.amount
 }
 
 // actions
@@ -48,22 +51,23 @@ const actions = {
       callback()
     })
   },
-  setProgress ({ commit }, progress) {
-    commit(types.SET_PROGRESS, { progress })
-  },
   setCurrentLogo ({ commit }, currentLogo) {
     commit(types.SET_CURRENT_LOGO, { currentLogo })
   },
   setOptions ({ commit }, options) {
     commit(types.SET_OPTIONS, { options })
+  },
+  answer ({ commit }, answer) {
+    console.log(answer)
+    commit(types.SET_ANSWER, { answer })
+  },
+  increaseAnswerCount ({ commit }) {
+    commit(types.INCREASE_ANSWER_COUNT)
   }
 }
 
 // mutations
 const mutations = {
-  [types.SET_PROGRESS] (state, { progress }) {
-    state.progress = progress
-  },
   [types.SET_TEMP_LOGOS] (state, { tempLogos }) {
     state.tempLogos = tempLogos
   },
@@ -78,6 +82,15 @@ const mutations = {
   },
   [types.SET_OPTIONS] (state, { options }) {
     state.options = options
+  },
+  [types.SET_ANSWER] (state, { answer }) {
+    state.answer = answer
+  },
+  [types.INCREASE_ANSWER_COUNT] (state) {
+    state.answerCount++
+  },
+  [types.SET_ANSWER_COUNT] (state, { count }) {
+    state.answerCount = count
   }
 }
 

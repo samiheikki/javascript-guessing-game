@@ -3,8 +3,8 @@
     <progress-bar></progress-bar>
     <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
     <login-view></login-view>
-    <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
-    <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
+    <js-logo v-if="!testFinished"></js-logo>
+    <ui-options v-if="!testFinished"></ui-options>
     <result-page
       :progress="progress"
       v-show="testFinished"
@@ -18,6 +18,7 @@
 
 <script>
 import { Howl } from 'howler'
+import { mapGetters } from 'vuex'
 
 import ProgressBar from './components/ProgressBar'
 import JsLogo from './components/JsLogo'
@@ -29,6 +30,7 @@ import SoundToggle from './components/SoundToggle'
 import LoginView from './components/LoginView'
 
 import appApi from './api/app'
+import * as types from './store/mutation-types'
 
 export default {
   components: {
@@ -49,7 +51,6 @@ export default {
       currentJsTool: Object,
       progress: 0,
       answeredCount: 0,
-      testFinished: false,
       totalCount: Number,
       sound: false
     }
@@ -61,29 +62,44 @@ export default {
     })
     this.$store.dispatch('startListeningToAuth')
 
+    this.$store.subscribe((mutation, state) => {
+      if (mutation.type === types.SET_ANSWER) { // siirra omaan funktioon tä sisältö
+        const answerId = mutation.payload.answer
+
+        if (answerId === this.$store.state.app.currentLogo.id) {
+          if (this.$store.state.app.answerCount === this.$store.state.app.amount) { // test finish
+            console.log('finish test')
+            if (this.sound) {
+              this.finishSound.play()
+            }
+          } else {
+            if (this.sound) {
+              this.correctSound.play()
+              this.$store.dispatch('increaseAnswerCount')
+            }
+          }
+          console.log('oikee vastaus')
+        } else {
+          console.log('vaara')
+          if (this.sound) { // refactor vuexiin
+            this.gameoverSound.play()
+          }
+        }
+      }
+    })
+
     this.initializeSounds()
   },
+  computed: {
+    ...mapGetters({
+      testFinished: 'testFinished'
+    })
+  },
   methods: {
-    shuffle: function (array) {
-      let j, x, i
-      for (i = array.length; i; i--) {
-        j = Math.floor(Math.random() * i)
-        x = array[i - 1]
-        array[i - 1] = array[j]
-        array[j] = x
-      }
-      return array
-    },
     soundChange: function () {
       this.sound = !this.sound
 
       window.localStorage.setItem('sound', this.sound)
-    },
-    generateIDs: function (array) {
-      array.forEach((val, index) => {
-        array[index].id = index
-      })
-      return array
     },
     optionAnswer: function (id) {
       if (this.evaluateAnswer(id)) {
@@ -117,7 +133,7 @@ export default {
     },
     restartTest: function () {
       this.answeredCount = 0
-      this.$store.dispatch('setProgress', 0)
+      // this.$store.dispatch('setProgress', 0)
       this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(window.jsTools)))
       this.jsTools = this.generateIDs(this.tempJSTools)
       this.updateLogo()
@@ -125,7 +141,7 @@ export default {
       this.testFinished = false
     },
     updateProgress: function () {
-      this.$store.dispatch('setProgress', (this.answeredCount / this.jsTools.length) * 100)
+      // this.$store.dispatch('setProgress', (this.answeredCount / this.jsTools.length) * 100)
     },
     updateLogo: function () {
       this.currentJsTool = this.jsTools[this.answeredCount]
@@ -152,26 +168,6 @@ export default {
 
       this.$store.dispatch('setOptions', options)
     },
-    updateOptions: function () {
-      let optionNumbers = []
-      optionNumbers.push(this.currentJsTool.id)
-
-      while (optionNumbers.length < 4) {
-        let randomNumber = Math.floor(Math.random() * this.jsTools.length)
-        if (!optionNumbers.includes(randomNumber)) {
-          optionNumbers.push(randomNumber)
-        }
-      }
-
-      optionNumbers = this.shuffle(optionNumbers)
-
-      this.options = [
-        this.jsTools[optionNumbers[0]],
-        this.jsTools[optionNumbers[1]],
-        this.jsTools[optionNumbers[2]],
-        this.jsTools[optionNumbers[3]]
-      ]
-    },
     initializeSounds: function () {
       // Sound default on
       const localStorageSound = window.localStorage.getItem('sound')
@@ -193,19 +189,6 @@ export default {
     },
     evaluateAnswer: function (id) {
       return id === this.currentJsTool.id
-    },
-    getJSON: function (url, callback) {
-      const xhr = new window.XMLHttpRequest()
-      xhr.open('get', url, true)
-      xhr.responseType = 'json'
-      xhr.onload = () => {
-        if (xhr.status === 200) {
-          callback(null, xhr.response)
-        } else {
-          callback(xhr.status)
-        }
-      }
-      xhr.send()
     }
   }
 }

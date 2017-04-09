@@ -8,9 +8,16 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  computed: mapGetters({
-    progress: 'progress'
-  })
+  computed: {
+    ...mapGetters({
+      answerCount: 'answerCount',
+      amount: 'amount'
+    }),
+    progress: function () {
+      return (this.answerCount / this.amount) * 100
+    }
+  }
+
 }
 </script>
 

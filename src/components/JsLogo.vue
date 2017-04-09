@@ -9,7 +9,6 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  props: ['logo', 'restart'],
   data () {
     return {
       show: false,
