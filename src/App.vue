@@ -35,18 +35,6 @@ export default {
     SoundToggle,
     LoginView
   },
-  data () {
-    return {
-      tempJSTools: Array,
-      jsTools: Array,
-      options: Array,
-      currentJsTool: Object,
-      progress: 0,
-      answeredCount: 0,
-      totalCount: Number,
-      sound: false
-    }
-  },
   created: function () {
     this.$store.dispatch('initializeLogos', () => {
       this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
