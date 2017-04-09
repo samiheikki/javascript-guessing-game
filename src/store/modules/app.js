@@ -10,7 +10,9 @@ const state = {
   currentLogo: {},
   options: [],
   answer: 0,
-  gameFinished: false
+  gameFinished: false,
+  startTime: new Date().getTime(),
+  endTime: 0
 }
 
 // getters
@@ -64,10 +66,8 @@ const actions = {
   increaseAnswerCount ({ commit }) {
     commit(types.INCREASE_ANSWER_COUNT)
   },
-  startGame ({ commit }) {
-    commit(types.START_GAME)
-  },
   finishGame ({ commit }) {
+    commit(types.FINISH_GAME)
     commit(types.FINISH_GAME)
   },
   restartGame ({ commit, state }) {
@@ -114,9 +114,12 @@ const mutations = {
   },
   [types.START_GAME] (state) {
     state.gameFinished = false
+    state.startTime = new Date().getTime()
+    state.endTime = 0
   },
   [types.FINISH_GAME] (state) {
     state.gameFinished = true
+    state.endTime = new Date().getTime()
   }
 }
 
