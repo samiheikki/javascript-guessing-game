@@ -154,23 +154,6 @@
   ga('create', 'UA-78958708-2', 'auto');
   ga('send', 'pageview');
 
-  window.twttr = (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-      t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
-
-    t._e = [];
-    t.ready = function(f) {
-      t._e.push(f);
-    };
-
-    return t;
-  }(document, "script", "twitter-wjs"));
-
   // Polyfill IE11
   if (!Array.prototype.includes) {
     Array.prototype.includes = function(searchElement /*, fromIndex*/ ) {
@@ -206,6 +189,5 @@
     };
   }
 </script>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 </html>
