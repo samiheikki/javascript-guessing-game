@@ -5,13 +5,7 @@
     <login-view></login-view>
     <js-logo v-if="!gameFinished"></js-logo>
     <ui-options v-if="!gameFinished"></ui-options>
-    <result-page
-      :progress="progress"
-      v-show="gameFinished"
-      v-on:restart="restartTest"
-      :score="answeredCount"
-      :total="totalCount">
-    </result-page>
+    <result-page v-if="gameFinished"></result-page>
     <credits class="credits"></credits>
   </div>
 </template>
@@ -74,12 +68,12 @@ export default {
   methods: {
     answer: function (answerId) {
       if (answerId === this.$store.state.app.currentLogo.id) {
+        this.$store.dispatch('increaseAnswerCount')
         if (this.$store.state.app.answerCount === this.$store.state.app.amount) { // test finish
           this.$store.dispatch('playSound', 'game-end')
           this.$store.dispatch('finishGame')
         } else {
           this.$store.dispatch('playSound', 'correct')
-          this.$store.dispatch('increaseAnswerCount')
           this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
           this.$store.dispatch('setOptions')
         }
@@ -87,15 +81,6 @@ export default {
         this.$store.dispatch('playSound', 'wrong')
         this.$store.dispatch('finishGame')
       }
-    },
-    restartTest: function () {
-      this.answeredCount = 0
-      // this.$store.dispatch('setProgress', 0)
-      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(window.jsTools)))
-      this.jsTools = this.generateIDs(this.tempJSTools)
-      this.updateLogo()
-      this.updateOptions()
-      this.gameFinished = false
     }
   }
 }

@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <h1>{{feedback}}</h1>
-    <h2>{{score}} / {{total}}</h2>
-    <button class="ripple-button button" v-on:click="restart">
+    <h2>{{answerCount}} / {{amount}}</h2>
+    <button class="ripple-button button" v-on:click="restartGame">
       Restart
     </button>
     <a class="twitter-share-button"
@@ -18,8 +18,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 export default {
-  props: ['progress', 'score', 'total'],
   data () {
     return {
       insults: [
@@ -42,10 +42,15 @@ export default {
     }
   },
   computed: {
+    ...mapGetters({
+      amount: 'amount',
+      answerCount: 'answerCount'
+    }),
     feedback: function () {
-      if (this.progress < 1) {
+      const progress = (this.answerCount / this.amount) * 100 || 0
+      if (progress < 1) {
         return 'Do you even JavaScript, bro?'
-      } else if (this.progress >= 100) {
+      } else if (progress >= 100) {
         return 'You did it! Now you can go back to your desk and start working.'
       } else {
         // 1 - 99
@@ -53,11 +58,9 @@ export default {
       }
     }
   },
-  methods: {
-    restart: function () {
-      this.$emit('restart')
-    }
-  }
+  methods: mapActions([
+    'restartGame'
+  ])
 }
 </script>
 

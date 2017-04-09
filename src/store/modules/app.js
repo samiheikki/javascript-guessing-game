@@ -69,6 +69,20 @@ const actions = {
   },
   finishGame ({ commit }) {
     commit(types.FINISH_GAME)
+  },
+  restartGame ({ commit, state }) {
+    const logos = api.generateIDs(api.shuffle(JSON.parse(JSON.stringify(state.tempLogos))))
+    const count = 0
+    const amount = logos.length
+    const currentLogo = logos[count]
+    const options = api.getAnswerOptions(logos, amount, currentLogo.id)
+
+    commit(types.SET_LOGOS, { logos })
+    commit(types.SET_AMOUNT, { amount })
+    commit(types.SET_ANSWER_COUNT, { count })
+    commit(types.SET_CURRENT_LOGO, { currentLogo })
+    commit(types.SET_OPTIONS, { options })
+    commit(types.START_GAME)
   }
 }
 
