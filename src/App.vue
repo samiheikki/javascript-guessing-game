@@ -3,11 +3,11 @@
     <progress-bar></progress-bar>
     <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
     <login-view></login-view>
-    <js-logo v-if="!testFinished"></js-logo>
-    <ui-options v-if="!testFinished"></ui-options>
+    <js-logo v-if="!gameFinished"></js-logo>
+    <ui-options v-if="!gameFinished"></ui-options>
     <result-page
       :progress="progress"
-      v-show="testFinished"
+      v-show="gameFinished"
       v-on:restart="restartTest"
       :score="answeredCount"
       :total="totalCount">
@@ -72,11 +72,14 @@ export default {
             if (this.sound) {
               this.finishSound.play()
             }
+            this.$store.dispatch('finishGame')
           } else {
             if (this.sound) {
               this.correctSound.play()
-              this.$store.dispatch('increaseAnswerCount')
             }
+            this.$store.dispatch('increaseAnswerCount')
+            this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
+            this.setOptions()
           }
           console.log('oikee vastaus')
         } else {
@@ -84,6 +87,7 @@ export default {
           if (this.sound) { // refactor vuexiin
             this.gameoverSound.play()
           }
+          this.$store.dispatch('finishGame')
         }
       }
     })
@@ -92,7 +96,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      testFinished: 'testFinished'
+      gameFinished: 'gameFinished'
     })
   },
   methods: {
@@ -129,7 +133,7 @@ export default {
     },
     endTest: function () {
       this.updateProgress()
-      this.testFinished = true
+      this.gameFinished = true
     },
     restartTest: function () {
       this.answeredCount = 0
@@ -138,7 +142,7 @@ export default {
       this.jsTools = this.generateIDs(this.tempJSTools)
       this.updateLogo()
       this.updateOptions()
-      this.testFinished = false
+      this.gameFinished = false
     },
     updateProgress: function () {
       // this.$store.dispatch('setProgress', (this.answeredCount / this.jsTools.length) * 100)

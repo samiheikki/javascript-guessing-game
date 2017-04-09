@@ -10,7 +10,7 @@ const state = {
   currentLogo: {},
   options: [],
   answer: 0,
-  testFinished: false
+  gameFinished: false
 }
 
 // getters
@@ -20,7 +20,7 @@ const getters = {
   currentLogo: state => state.currentLogo,
   options: state => state.options,
   answer: state => state.answer,
-  testFinished: state => state.testFinished,
+  gameFinished: state => state.gameFinished,
   amount: state => state.amount
 }
 
@@ -58,11 +58,16 @@ const actions = {
     commit(types.SET_OPTIONS, { options })
   },
   answer ({ commit }, answer) {
-    console.log(answer)
     commit(types.SET_ANSWER, { answer })
   },
   increaseAnswerCount ({ commit }) {
     commit(types.INCREASE_ANSWER_COUNT)
+  },
+  startGame ({ commit }) {
+    commit(types.START_GAME)
+  },
+  finishGame ({ commit }) {
+    commit(types.FINISH_GAME)
   }
 }
 
@@ -91,6 +96,12 @@ const mutations = {
   },
   [types.SET_ANSWER_COUNT] (state, { count }) {
     state.answerCount = count
+  },
+  [types.START_GAME] (state) {
+    state.gameFinished = false
+  },
+  [types.FINISH_GAME] (state) {
+    state.gameFinished = true
   }
 }
 

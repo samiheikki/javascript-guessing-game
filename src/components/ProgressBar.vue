@@ -14,10 +14,9 @@ export default {
       amount: 'amount'
     }),
     progress: function () {
-      return (this.answerCount / this.amount) * 100
+      return (this.answerCount / this.amount) * 100 || 0
     }
   }
-
 }
 </script>
 
