@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <progress-bar></progress-bar>
-    <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
+    <sound-toggle></sound-toggle>
     <login-view></login-view>
     <js-logo v-if="!gameFinished"></js-logo>
     <ui-options v-if="!gameFinished"></ui-options>
@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import { Howl } from 'howler'
 import { mapGetters } from 'vuex'
 
 import ProgressBar from './components/ProgressBar'
@@ -29,7 +28,6 @@ import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
 import LoginView from './components/LoginView'
 
-import appApi from './api/app'
 import * as types from './store/mutation-types'
 
 export default {
@@ -58,41 +56,15 @@ export default {
   created: function () {
     this.$store.dispatch('initializeLogos', () => {
       this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
-      this.setOptions()
+      this.$store.dispatch('setOptions')
     })
     this.$store.dispatch('startListeningToAuth')
 
     this.$store.subscribe((mutation, state) => {
-      if (mutation.type === types.SET_ANSWER) { // siirra omaan funktioon tä sisältö
-        const answerId = mutation.payload.answer
-
-        if (answerId === this.$store.state.app.currentLogo.id) {
-          if (this.$store.state.app.answerCount === this.$store.state.app.amount) { // test finish
-            console.log('finish test')
-            if (this.sound) {
-              this.finishSound.play()
-            }
-            this.$store.dispatch('finishGame')
-          } else {
-            if (this.sound) {
-              this.correctSound.play()
-            }
-            this.$store.dispatch('increaseAnswerCount')
-            this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
-            this.setOptions()
-          }
-          console.log('oikee vastaus')
-        } else {
-          console.log('vaara')
-          if (this.sound) { // refactor vuexiin
-            this.gameoverSound.play()
-          }
-          this.$store.dispatch('finishGame')
-        }
+      if (mutation.type === types.SET_ANSWER) {
+        this.answer(mutation.payload.answer)
       }
     })
-
-    this.initializeSounds()
   },
   computed: {
     ...mapGetters({
@@ -100,40 +72,21 @@ export default {
     })
   },
   methods: {
-    soundChange: function () {
-      this.sound = !this.sound
-
-      window.localStorage.setItem('sound', this.sound)
-    },
-    optionAnswer: function (id) {
-      if (this.evaluateAnswer(id)) {
-        // correct answer
-        this.answeredCount++
-        if (this.answeredCount === this.jsTools.length) {
-          if (this.sound) {
-            this.finishSound.play()
-          }
-          // test ended
-          this.endTest()
+    answer: function (answerId) {
+      if (answerId === this.$store.state.app.currentLogo.id) {
+        if (this.$store.state.app.answerCount === this.$store.state.app.amount) { // test finish
+          this.$store.dispatch('playSound', 'game-end')
+          this.$store.dispatch('finishGame')
         } else {
-          if (this.sound) {
-            this.correctSound.play()
-          }
-          this.updateProgress()
-          this.updateLogo()
-          this.updateOptions()
+          this.$store.dispatch('playSound', 'correct')
+          this.$store.dispatch('increaseAnswerCount')
+          this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
+          this.$store.dispatch('setOptions')
         }
       } else {
-        if (this.sound) {
-          this.gameoverSound.play()
-        }
-        // false answer
-        this.endTest()
+        this.$store.dispatch('playSound', 'wrong')
+        this.$store.dispatch('finishGame')
       }
-    },
-    endTest: function () {
-      this.updateProgress()
-      this.gameFinished = true
     },
     restartTest: function () {
       this.answeredCount = 0
@@ -143,56 +96,6 @@ export default {
       this.updateLogo()
       this.updateOptions()
       this.gameFinished = false
-    },
-    updateProgress: function () {
-      // this.$store.dispatch('setProgress', (this.answeredCount / this.jsTools.length) * 100)
-    },
-    updateLogo: function () {
-      this.currentJsTool = this.jsTools[this.answeredCount]
-    },
-    setOptions: function () {
-      let optionNumbers = []
-      optionNumbers.push(this.$store.state.app.currentLogo.id)
-
-      while (optionNumbers.length < 4) {
-        let randomNumber = Math.floor(Math.random() * this.$store.state.app.amount)
-        if (!optionNumbers.includes(randomNumber)) {
-          optionNumbers.push(randomNumber)
-        }
-      }
-
-      optionNumbers = appApi.shuffle(optionNumbers)
-
-      const options = [
-        this.$store.state.app.logos[optionNumbers[0]],
-        this.$store.state.app.logos[optionNumbers[1]],
-        this.$store.state.app.logos[optionNumbers[2]],
-        this.$store.state.app.logos[optionNumbers[3]]
-      ]
-
-      this.$store.dispatch('setOptions', options)
-    },
-    initializeSounds: function () {
-      // Sound default on
-      const localStorageSound = window.localStorage.getItem('sound')
-      this.sound = localStorageSound ? JSON.parse(localStorageSound) : true
-
-      this.gameoverSound = new Howl({
-        src: ['../static/sounds/gameover.mp3', '../static/sounds/gameover.ogg'],
-        rate: 1.3,
-        volume: 0.5
-      })
-      this.correctSound = new Howl({
-        src: ['../static/sounds/correct.mp3', '../static/sounds/correct.ogg'],
-        volume: 0.5
-      })
-      this.finishSound = new Howl({
-        src: ['../static/sounds/finish.mp3', '../static/sounds/finish.ogg'],
-        volume: 0.5
-      })
-    },
-    evaluateAnswer: function (id) {
-      return id === this.currentJsTool.id
     }
   }
 }

@@ -54,7 +54,8 @@ const actions = {
   setCurrentLogo ({ commit }, currentLogo) {
     commit(types.SET_CURRENT_LOGO, { currentLogo })
   },
-  setOptions ({ commit }, options) {
+  setOptions ({ commit, state }) {
+    const options = api.getAnswerOptions(state.logos, state.amount, state.currentLogo.id)
     commit(types.SET_OPTIONS, { options })
   },
   answer ({ commit }, answer) {

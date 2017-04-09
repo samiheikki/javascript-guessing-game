@@ -111,6 +111,7 @@ svg {
   margin-right: 8px;
   text-align: left;
   font-size: 14px;
+  border: 1px solid rgba(128, 117, 117, 0.42);
 }
 .dropdown-menu::after{
   top: -14px;

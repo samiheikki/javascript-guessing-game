@@ -28,6 +28,24 @@ export default {
     })
     return array
   },
-  getAnswerOptions: function () {
+  getAnswerOptions: function (logos, amount, currentId) {
+    let optionNumbers = []
+    optionNumbers.push(currentId)
+
+    while (optionNumbers.length < 4) {
+      let randomNumber = Math.floor(Math.random() * amount)
+      if (!optionNumbers.includes(randomNumber)) {
+        optionNumbers.push(randomNumber)
+      }
+    }
+
+    optionNumbers = this.shuffle(optionNumbers)
+
+    return [
+      logos[optionNumbers[0]],
+      logos[optionNumbers[1]],
+      logos[optionNumbers[2]],
+      logos[optionNumbers[3]]
+    ]
   }
 }
