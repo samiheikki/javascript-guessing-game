@@ -1,7 +1,6 @@
 import * as firebase from 'firebase'
 import 'firebase/auth'
 
-// import firebaseapi from '../../api/firebase'
 import * as types from '../mutation-types'
 
 const _config = {

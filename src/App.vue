@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 import ProgressBar from './components/ProgressBar'
 import JsLogo from './components/JsLogo'
@@ -36,11 +36,11 @@ export default {
     LoginView
   },
   created: function () {
-    this.$store.dispatch('initializeLogos', () => {
-      this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
-      this.$store.dispatch('setOptions')
+    this.initializeLogos(() => {
+      this.setCurrentLogo(this.logos[this.answerCount])
+      this.setOptions()
     })
-    this.$store.dispatch('startListeningToAuth')
+    this.startListeningToAuth()
 
     this.$store.subscribe((mutation, state) => {
       if (mutation.type === types.SET_ANSWER) {
@@ -50,24 +50,37 @@ export default {
   },
   computed: {
     ...mapGetters({
-      gameFinished: 'gameFinished'
+      gameFinished: 'gameFinished',
+      amount: 'amount',
+      answerCount: 'answerCount',
+      logos: 'logos',
+      currentLogo: 'currentLogo'
     })
   },
   methods: {
+    ...mapActions([
+      'initializeLogos',
+      'setCurrentLogo',
+      'setOptions',
+      'startListeningToAuth',
+      'increaseAnswerCount',
+      'playSound',
+      'finishGame'
+    ]),
     answer: function (answerId) {
-      if (answerId === this.$store.state.app.currentLogo.id) {
-        this.$store.dispatch('increaseAnswerCount')
-        if (this.$store.state.app.answerCount === this.$store.state.app.amount) { // test finish
-          this.$store.dispatch('playSound', 'game-end')
-          this.$store.dispatch('finishGame')
+      if (answerId === this.currentLogo.id) {
+        this.increaseAnswerCount()
+        if (this.answerCount === this.amount) { // test finish
+          this.playSound('game-end')
+          this.finishGame()
         } else {
-          this.$store.dispatch('playSound', 'correct')
-          this.$store.dispatch('setCurrentLogo', this.$store.state.app.logos[this.$store.state.app.answerCount])
-          this.$store.dispatch('setOptions')
+          this.playSound('correct')
+          this.setCurrentLogo(this.logos[this.answerCount])
+          this.setOptions()
         }
       } else {
-        this.$store.dispatch('playSound', 'wrong')
-        this.$store.dispatch('finishGame')
+        this.playSound('wrong')
+        this.finishGame()
       }
     }
   }
