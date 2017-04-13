@@ -2,11 +2,29 @@
   <div class="container">
     <h1>{{feedback}}</h1>
     <h2>{{score}} / {{total}}</h2>
+
+    <br>
+
+    <a class="ripple-button button" :href="`https://twitter.com/intent/tweet?text=${(twitterText)}`" target="_blank">
+      Tweet Your Score
+    </a>
+
     <button class="ripple-button button" v-on:click="restart">
       Restart
     </button>
-    <a class="twitter-share-button"
-        href="https://twitter.com/intent/tweet">Tweet</a>
+
+    <js-logo :logo="currentJsTool.name"></js-logo>
+    {{currentJsTool.name}}
+    <span v-if="currentJsTool.description"><br> {{currentJsTool.description}}</span>
+    <br><br>
+
+    <a :href="`https://github.com/${currentJsTool.repo}`" v-if="currentJsTool.repo" target="_blank">View On GitHub</a>
+    &nbsp;	&nbsp;	&nbsp;
+    <a :href="currentJsTool.url" v-if="currentJsTool.url" target="_blank">{{currentJsTool.url}}</a>
+    <br>
+
+    <br>
+    <br>
     <a class="github-button"
         href="https://github.com/samiheikki/javascript-guessing-game"
         data-icon="octicon-star"
@@ -18,8 +36,11 @@
 </template>
 
 <script>
+import JsLogo from '../components/JsLogo'
+
 export default {
-  props: ['progress', 'score', 'total'],
+  components: {JsLogo},
+  props: ['progress', 'score', 'total', 'currentJsTool'],
   data () {
     return {
       insults: [
@@ -55,6 +76,9 @@ export default {
         // 1 - 99
         return this.insults[Math.floor(Math.random() * this.insults.length)]
       }
+    },
+    twitterText: function () {
+      return `You know there are too many JS libraries when there is a game for it 🎯 \n I've got score ${this.score}/${this.total}. Try it out! https://javascript-game.firebaseapp.com`
     }
   },
   methods: {
@@ -80,5 +104,8 @@ h1 {
   .container {
     margin: 0 16px 0 16px;
   }
+}
+a.ripple-button {
+  text-decoration: none;
 }
 </style>
