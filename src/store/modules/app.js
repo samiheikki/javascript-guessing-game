@@ -47,8 +47,6 @@ const actions = {
       const logos = api.generateIDs(api.shuffle(JSON.parse(JSON.stringify(tempLogos))))
 
       commit(types.SET_TEMP_LOGOS, { tempLogos })
-      commit(types.SET_AMOUNT, { amount })
-      commit(types.SET_LOGOS, { logos })
 
       callback()
     })

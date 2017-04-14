@@ -30,8 +30,7 @@ export default {
   },
   created: function () {
     this.initializeLogos(() => {
-      this.setCurrentLogo(this.logos[this.answerCount])
-      this.setOptions()
+      this.restartGame()
     })
   },
   methods: {
@@ -41,7 +40,8 @@ export default {
       'setOptions',
       'increaseAnswerCount',
       'playSound',
-      'finishGame'
+      'finishGame',
+      'restartGame'
     ]),
     answer: function (answerId) {
       // this.$emit('answer', id)
