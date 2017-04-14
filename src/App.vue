@@ -61,7 +61,8 @@ export default {
   methods: {
     ...mapActions([
       'setUser',
-      'setHighScores'
+      'setHighScores',
+      'setFirebaseFeedback'
     ]),
     logIn: function () {
       firebase.auth().signInWithRedirect(new firebase.auth.GithubAuthProvider())
@@ -82,7 +83,10 @@ export default {
             photo_url: user.photoURL
           }).then(() => {
             this.setUser(user)
+            this.setFirebaseFeedback()
           })
+        } else {
+          this.setFirebaseFeedback()
         }
       })
     },

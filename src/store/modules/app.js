@@ -12,7 +12,8 @@ const state = {
   gameFinished: false,
   startTime: new Date().getTime(),
   endTime: 0,
-  highScores: []
+  highScores: [],
+  firebaseFeedback: false
 }
 
 // getters
@@ -25,7 +26,8 @@ const getters = {
   amount: state => state.amount,
   startTime: state => state.startTime,
   endTime: state => state.endTime,
-  highScores: state => state.highScores
+  highScores: state => state.highScores,
+  firebaseFeedback: state => state.firebaseFeedback
 }
 
 // actions
@@ -79,6 +81,10 @@ const actions = {
   },
   setHighScores ({ commit }, scores) {
     commit(types.SET_HIGH_SCORES, { scores })
+  },
+  setFirebaseFeedback ({ commit }) {
+    const feedback = true
+    commit(types.SET_FIREBASE_FEEDBACK, { feedback })
   }
 }
 
@@ -116,6 +122,9 @@ const mutations = {
   },
   [types.SET_HIGH_SCORES] (state, { scores }) {
     state.highScores = scores
+  },
+  [types.SET_FIREBASE_FEEDBACK] (state, { feedback }) {
+    state.firebaseFeedback = feedback
   }
 }
 

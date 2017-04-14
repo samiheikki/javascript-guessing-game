@@ -1,5 +1,5 @@
 <template>
-  <div class="login-root">
+  <div class="login-root" v-if="firebaseFeedback">
     <button type="button" name="button" v-on:click="logIn" v-if="!user">Sign in with GitHub</button>
     <a href="#" v-on:click="openDropdown" v-if="user">
       <img :src="user.photoURL" :alt="displayName">
@@ -43,7 +43,8 @@ export default {
   },
   computed: mapGetters([
     'user',
-    'routePath'
+    'routePath',
+    'firebaseFeedback'
   ]),
   methods: {
     openDropdown: function (e) {
