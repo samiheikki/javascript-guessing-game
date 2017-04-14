@@ -19,10 +19,7 @@ const wrong = new Howl({
 
 // initial state
 const state = {
-  sound: window.localStorage.getItem('sound') ? JSON.parse(window.localStorage.getItem('sound')) : true,
-  gameEnd: undefined,
-  correct: undefined,
-  wrong: undefined
+  sound: window.localStorage.getItem('sound') ? JSON.parse(window.localStorage.getItem('sound')) : true
 }
 
 // getters

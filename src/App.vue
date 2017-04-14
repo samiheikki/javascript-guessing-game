@@ -2,15 +2,17 @@
   <div id="app">
     <progress-bar></progress-bar>
     <sound-toggle></sound-toggle>
-    <login-view></login-view>
+    <login-view v-on:log-in="logIn" v-on:log-out="logOut"></login-view>
     <js-logo v-if="!gameFinished"></js-logo>
-    <ui-options v-if="!gameFinished"></ui-options>
+    <ui-options v-if="!gameFinished" v-on:answer="answer"></ui-options>
     <result-page v-if="gameFinished"></result-page>
     <credits class="credits"></credits>
   </div>
 </template>
 
 <script>
+import * as firebase from 'firebase'
+import 'firebase/auth'
 import { mapGetters, mapActions } from 'vuex'
 
 import ProgressBar from './components/ProgressBar'
@@ -22,7 +24,13 @@ import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
 import LoginView from './components/LoginView'
 
-import * as types from './store/mutation-types'
+const firebaseConfig = {
+  apiKey: 'AIzaSyDzKhNG-bafYPDTbAFFGqSscGJ7a-rdB9M',
+  authDomain: 'javascript-game.firebaseapp.com',
+  databaseURL: 'https://javascript-game.firebaseio.com',
+  storageBucket: 'javascript-game.appspot.com',
+  messagingSenderId: '853137885896'
+}
 
 export default {
   components: {
@@ -40,22 +48,20 @@ export default {
       this.setCurrentLogo(this.logos[this.answerCount])
       this.setOptions()
     })
-    this.startListeningToAuth()
 
-    this.$store.subscribe((mutation, state) => {
-      if (mutation.type === types.SET_ANSWER) {
-        this.answer(mutation.payload.answer)
-      }
-    })
+    this.firebase()
   },
   computed: {
-    ...mapGetters({
-      gameFinished: 'gameFinished',
-      amount: 'amount',
-      answerCount: 'answerCount',
-      logos: 'logos',
-      currentLogo: 'currentLogo'
-    })
+    ...mapGetters([
+      'gameFinished',
+      'amount',
+      'answerCount',
+      'logos',
+      'currentLogo',
+      'startTime',
+      'endTime',
+      'user'
+    ])
   },
   methods: {
     ...mapActions([
@@ -65,14 +71,16 @@ export default {
       'startListeningToAuth',
       'increaseAnswerCount',
       'playSound',
-      'finishGame'
+      'finishGame',
+      'setUser'
     ]),
     answer: function (answerId) {
       if (answerId === this.currentLogo.id) {
         this.increaseAnswerCount()
-        if (this.answerCount === this.amount) { // test finish
+        if (this.answerCount === this.amount) { // game finish
           this.playSound('game-end')
           this.finishGame()
+          this.saveScore()
         } else {
           this.playSound('correct')
           this.setCurrentLogo(this.logos[this.answerCount])
@@ -81,7 +89,56 @@ export default {
       } else {
         this.playSound('wrong')
         this.finishGame()
+        this.saveScore()
       }
+    },
+    logIn: function () {
+      firebase.auth().signInWithRedirect(new firebase.auth.GithubAuthProvider())
+    },
+    logOut: function () {
+      firebase.auth().signOut().then(function () {
+        this.setUser(null)
+      })
+    },
+    firebase: function () {
+      firebase.initializeApp(firebaseConfig)
+
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          firebase.database().ref('users/' + user.uid).set({
+            name: user.displayName,
+            email: user.email,
+            photo_url: user.photoURL
+          }).then(() => {
+            this.setUser(user)
+          })
+        }
+      })
+    },
+    saveScore: function () {
+      // Save only logged in users scores
+      if (this.user) {
+        // Make object of values as it might change before saving
+        const objToDb = {
+          answerCount: this.answerCount,
+          amount: this.amount,
+          startTime: this.startTime,
+          endTime: this.endTime
+        }
+        // See if there is a previous score
+        firebase.database().ref('/scores/' + this.user.uid).once('value').then((snapshot) => {
+          const previousScore = snapshot.val()
+          if (!previousScore || (previousScore && this.shouldSaveNewScore(objToDb, previousScore))) {
+            firebase.database().ref('scores/' + this.user.uid).set(objToDb)
+          }
+        })
+      }
+    },
+    shouldSaveNewScore: function (newScore, oldScore) {
+      const higherScore = newScore.answerCount > oldScore.answerCount
+      const sameScore = newScore.answerCount === oldScore.answerCount
+      const betterTime = (newScore.endTime - newScore.startTime) < (oldScore.endTime - oldScore.startTime)
+      return higherScore || (sameScore && betterTime)
     }
   }
 }

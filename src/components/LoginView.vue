@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -41,9 +41,6 @@ export default {
     user: 'user'
   }),
   methods: {
-    ...mapActions([
-      'logIn', 'logOut'
-    ]),
     openDropdown: function (e) {
       e.preventDefault()
       if (!this.dropdownOpen) {
@@ -57,6 +54,12 @@ export default {
       if (typeof e.target.className === 'object' || e.target.className.indexOf('dropdown') < 0) {
         this.dropdownOpen = false
       }
+    },
+    logIn: function () {
+      this.$emit('log-in')
+    },
+    logOut: function () {
+      this.$emit('log-out')
     }
   }
 }

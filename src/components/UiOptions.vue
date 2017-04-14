@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     answer: function (id) {
-      this.$store.dispatch('answer', id)
+      this.$emit('answer', id)
     }
   }
 }

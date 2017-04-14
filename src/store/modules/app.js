@@ -9,7 +9,6 @@ const state = {
   amount: 0,
   currentLogo: {},
   options: [],
-  answer: 0,
   gameFinished: false,
   startTime: new Date().getTime(),
   endTime: 0
@@ -21,9 +20,10 @@ const getters = {
   answerCount: state => state.answerCount,
   currentLogo: state => state.currentLogo,
   options: state => state.options,
-  answer: state => state.answer,
   gameFinished: state => state.gameFinished,
-  amount: state => state.amount
+  amount: state => state.amount,
+  startTime: state => state.startTime,
+  endTime: state => state.endTime
 }
 
 // actions
@@ -60,14 +60,10 @@ const actions = {
     const options = api.getAnswerOptions(state.logos, state.amount, state.currentLogo.id)
     commit(types.SET_OPTIONS, { options })
   },
-  answer ({ commit }, answer) {
-    commit(types.SET_ANSWER, { answer })
-  },
   increaseAnswerCount ({ commit }) {
     commit(types.INCREASE_ANSWER_COUNT)
   },
   finishGame ({ commit }) {
-    commit(types.FINISH_GAME)
     commit(types.FINISH_GAME)
   },
   restartGame ({ commit, state }) {
@@ -102,9 +98,6 @@ const mutations = {
   },
   [types.SET_OPTIONS] (state, { options }) {
     state.options = options
-  },
-  [types.SET_ANSWER] (state, { answer }) {
-    state.answer = answer
   },
   [types.INCREASE_ANSWER_COUNT] (state) {
     state.answerCount++
