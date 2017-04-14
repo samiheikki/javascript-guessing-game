@@ -53,7 +53,7 @@ export default {
       firebase.auth().signInWithRedirect(new firebase.auth.GithubAuthProvider())
     },
     logOut: function () {
-      firebase.auth().signOut().then(function () {
+      firebase.auth().signOut().then(() => {
         this.setUser(null)
       })
     },
