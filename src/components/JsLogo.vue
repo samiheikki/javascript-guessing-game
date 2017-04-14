@@ -57,4 +57,8 @@ export default {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
+img {
+  z-index: 1;
+  position: relative;
+}
 </style>
