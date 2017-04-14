@@ -43,9 +43,6 @@ const actions = {
         window.localStorage.setItem('logos', JSON.stringify(tempLogos))
       }
 
-      const amount = tempLogos.length
-      const logos = api.generateIDs(api.shuffle(JSON.parse(JSON.stringify(tempLogos))))
-
       commit(types.SET_TEMP_LOGOS, { tempLogos })
 
       callback()
