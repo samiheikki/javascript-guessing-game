@@ -6,13 +6,26 @@ import VueRouter from 'vue-router'
 import store from './store'
 
 import App from './App'
-import Ranking from './Ranking'
+import Game from './components/Game'
+import Ranking from './components/Ranking'
 
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: App },
-  { path: '/ranking', component: Ranking }
+  {
+    path: '/',
+    component: App,
+    children: [
+      {
+        path: '',
+        component: Game
+      },
+      {
+        path: 'ranking',
+        component: Ranking
+      }
+    ]
+  }
 ]
 
 const router = new VueRouter({

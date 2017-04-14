@@ -3,9 +3,7 @@
     <progress-bar></progress-bar>
     <sound-toggle></sound-toggle>
     <login-view v-on:log-in="logIn" v-on:log-out="logOut"></login-view>
-    <js-logo v-if="!gameFinished"></js-logo>
-    <ui-options v-if="!gameFinished" v-on:answer="answer"></ui-options>
-    <result-page v-if="gameFinished"></result-page>
+    <router-view v-on:save-score="saveScore"></router-view>
     <credits class="credits"></credits>
   </div>
 </template>
@@ -16,11 +14,7 @@ import 'firebase/auth'
 import { mapGetters, mapActions } from 'vuex'
 
 import ProgressBar from './components/ProgressBar'
-import JsLogo from './components/JsLogo'
-import UiOptions from './components/UiOptions'
-import ResultPage from './components/ResultPage'
 import Credits from './components/Credits'
-import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
 import LoginView from './components/LoginView'
 
@@ -34,30 +28,18 @@ const firebaseConfig = {
 
 export default {
   components: {
-    JsLogo,
-    UiOptions,
     ProgressBar,
-    ResultPage,
     Credits,
-    RippleButton,
     SoundToggle,
     LoginView
   },
   created: function () {
-    this.initializeLogos(() => {
-      this.setCurrentLogo(this.logos[this.answerCount])
-      this.setOptions()
-    })
-
     this.firebase()
   },
   computed: {
     ...mapGetters([
-      'gameFinished',
       'amount',
       'answerCount',
-      'logos',
-      'currentLogo',
       'startTime',
       'endTime',
       'user'
@@ -65,33 +47,8 @@ export default {
   },
   methods: {
     ...mapActions([
-      'initializeLogos',
-      'setCurrentLogo',
-      'setOptions',
-      'startListeningToAuth',
-      'increaseAnswerCount',
-      'playSound',
-      'finishGame',
       'setUser'
     ]),
-    answer: function (answerId) {
-      if (answerId === this.currentLogo.id) {
-        this.increaseAnswerCount()
-        if (this.answerCount === this.amount) { // game finish
-          this.playSound('game-end')
-          this.finishGame()
-          this.saveScore()
-        } else {
-          this.playSound('correct')
-          this.setCurrentLogo(this.logos[this.answerCount])
-          this.setOptions()
-        }
-      } else {
-        this.playSound('wrong')
-        this.finishGame()
-        this.saveScore()
-      }
-    },
     logIn: function () {
       firebase.auth().signInWithRedirect(new firebase.auth.GithubAuthProvider())
     },
