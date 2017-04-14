@@ -15,7 +15,8 @@
         </div>
         <div class="dropdown-divider">
         </div>
-        <router-link to="/ranking" class="dropdown-item">Ranking</router-link>
+        <router-link to="/ranking" class="dropdown-item" v-if="routePath === '/'">Ranking</router-link>
+        <router-link to="/" class="dropdown-item" v-else>Play the game</router-link>
         <a href="#" class="dropdown-item" v-on:click="logOut">Sign out</a>
       </div>
     </div>
@@ -37,9 +38,10 @@ export default {
       }
     }
   },
-  computed: mapGetters({
-    user: 'user'
-  }),
+  computed: mapGetters([
+    'user',
+    'routePath'
+  ]),
   methods: {
     openDropdown: function (e) {
       e.preventDefault()

@@ -16,7 +16,8 @@
     "howler": "^2.0.1",
     "vue": "^2.0.1",
     "vue-router": "^2.3.0",
-    "vuex": "^2.2.1"
+    "vuex": "^2.2.1",
+    "vuex-router-sync": "^4.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

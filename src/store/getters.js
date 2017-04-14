@@ -1,3 +1,6 @@
-// export const getUser = state => {
-//   return state.user
-// }
+export const route = state => {
+  return state.route
+}
+export const routePath = state => {
+  return state.route.path
+}

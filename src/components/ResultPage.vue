@@ -17,6 +17,15 @@
         <span class="btn-text">Star on GitHub</span>
       </a>
     </div>
+    <router-link to="ranking" class="ranking-link">
+      <h2>
+        <svg fill="#66BB6A" height="24" viewBox="0 0 24 12" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M10 20h4V4h-4v16zm-6 0h4v-8H4v8zM16 9v11h4V9h-4z"/>
+        </svg>
+        View ranking
+      </h2>
+    </router-link>
   </div>
 </template>
 
@@ -146,6 +155,16 @@ h1 {
 .custom-tweet-button a .btn-text, .custom-github-button a .btn-text {
   display: inline-block;
   padding: 2px 3px 0 20px;
+}
+.ranking-link {
+  text-decoration: none;
+  color: #66BB6A;
+}
+.ranking-link > h2 {
+  margin: 0;
+}
+.ranking-link:hover {
+  text-decoration: underline;
 }
 @media screen and (max-width:620px) {
   .container {
