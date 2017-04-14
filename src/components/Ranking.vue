@@ -19,6 +19,9 @@
           <span class="extra-detail">{{score.answerCount}} / {{score.amount}}</span>
         </div>
       </div>
+      <div v-if="highScores.length === 0">
+        <h3>Loading...</h3>
+      </div>
     </div>
   </div>
 </template>

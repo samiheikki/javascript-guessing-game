@@ -15,8 +15,8 @@
         </div>
         <div class="dropdown-divider">
         </div>
-        <router-link to="/ranking" class="dropdown-item" v-if="routePath === '/'">High scores</router-link>
-        <router-link to="/" class="dropdown-item" v-else>Play the game</router-link>
+        <router-link to="/ranking" class="dropdown-item" v-if="routePath === '/'" v-on:click.native="closeDropdown">High scores</router-link>
+        <router-link to="/" class="dropdown-item" v-else v-on:click.native="closeDropdown">Play the game</router-link>
         <a href="#" class="dropdown-item" v-on:click="logOut">Sign out</a>
         <div class="dropdown-divider">
         </div>
@@ -65,6 +65,9 @@ export default {
     },
     logOut: function () {
       this.$emit('log-out')
+    },
+    closeDropdown: function () {
+      this.dropdownOpen = false
     }
   }
 }
