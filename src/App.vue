@@ -4,7 +4,7 @@
     <sound-toggle></sound-toggle>
     <login-view v-on:log-in="logIn" v-on:log-out="logOut"></login-view>
     <router-view v-on:save-score="saveScore"></router-view>
-    <credits class="credits"></credits>
+    <credits class="credits" v-if="routePath === '/'"></credits>
   </div>
 </template>
 
@@ -35,6 +35,10 @@ export default {
   },
   created: function () {
     this.firebase()
+
+    if (this.routePath === '/ranking') {
+      this.getHighScores()
+    }
   },
   computed: {
     ...mapGetters([
@@ -42,12 +46,22 @@ export default {
       'answerCount',
       'startTime',
       'endTime',
-      'user'
+      'user',
+      'routePath',
+      'highScores'
     ])
+  },
+  watch: {
+    routePath: function (path) {
+      if (path === '/ranking' && this.highScores.length === 0) {
+        this.getHighScores()
+      }
+    }
   },
   methods: {
     ...mapActions([
-      'setUser'
+      'setUser',
+      'setHighScores'
     ]),
     logIn: function () {
       firebase.auth().signInWithRedirect(new firebase.auth.GithubAuthProvider())
@@ -80,7 +94,8 @@ export default {
           answerCount: this.answerCount,
           amount: this.amount,
           startTime: this.startTime,
-          endTime: this.endTime
+          endTime: this.endTime,
+          name: this.user.displayName
         }
         // See if there is a previous score
         firebase.database().ref('/scores/' + this.user.uid).once('value').then((snapshot) => {
@@ -96,6 +111,30 @@ export default {
       const sameScore = newScore.answerCount === oldScore.answerCount
       const betterTime = (newScore.endTime - newScore.startTime) < (oldScore.endTime - oldScore.startTime)
       return higherScore || (sameScore && betterTime)
+    },
+    getHighScores: function () {
+      firebase.database()
+        .ref('/scores')
+        .orderByChild('answerCount')
+        .limitToLast(10)
+        .once('value')
+        .then((snapshot) => {
+          if (snapshot.val()) {
+            const highScores = Object.keys(snapshot.val())
+              .map((k) => snapshot.val()[k])
+              .sort((a, b) => {
+                if (a.answerCount > b.answerCount) {
+                  return -1
+                } else if (b.answerCount > a.answerCount) {
+                  return 1
+                } else {
+                  return 0
+                }
+              })
+            this.setHighScores(highScores)
+          }
+        }
+      )
     }
   }
 }

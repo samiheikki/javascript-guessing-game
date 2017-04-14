@@ -15,9 +15,12 @@
         </div>
         <div class="dropdown-divider">
         </div>
-        <router-link to="/ranking" class="dropdown-item" v-if="routePath === '/'">Ranking</router-link>
+        <router-link to="/ranking" class="dropdown-item" v-if="routePath === '/'">High scores</router-link>
         <router-link to="/" class="dropdown-item" v-else>Play the game</router-link>
         <a href="#" class="dropdown-item" v-on:click="logOut">Sign out</a>
+        <div class="dropdown-divider">
+        </div>
+        <a href="https://github.com/samiheikki/javascript-guessing-game" class="dropdown-item">Source code</a>
       </div>
     </div>
   </div>

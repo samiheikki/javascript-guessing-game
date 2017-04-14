@@ -11,7 +11,8 @@ const state = {
   options: [],
   gameFinished: false,
   startTime: new Date().getTime(),
-  endTime: 0
+  endTime: 0,
+  highScores: []
 }
 
 // getters
@@ -23,7 +24,8 @@ const getters = {
   gameFinished: state => state.gameFinished,
   amount: state => state.amount,
   startTime: state => state.startTime,
-  endTime: state => state.endTime
+  endTime: state => state.endTime,
+  highScores: state => state.highScores
 }
 
 // actions
@@ -74,6 +76,9 @@ const actions = {
     commit(types.SET_CURRENT_LOGO, { currentLogo })
     commit(types.SET_OPTIONS, { options })
     commit(types.START_GAME)
+  },
+  setHighScores ({ commit }, scores) {
+    commit(types.SET_HIGH_SCORES, { scores })
   }
 }
 
@@ -108,6 +113,9 @@ const mutations = {
   [types.FINISH_GAME] (state) {
     state.gameFinished = true
     state.endTime = new Date().getTime()
+  },
+  [types.SET_HIGH_SCORES] (state, { scores }) {
+    state.highScores = scores
   }
 }
 
