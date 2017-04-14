@@ -6,8 +6,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  props: ['progress']
+  computed: {
+    ...mapGetters({
+      answerCount: 'answerCount',
+      amount: 'amount'
+    }),
+    progress: function () {
+      return (this.answerCount / this.amount) * 100 || 0
+    }
+  }
 }
 </script>
 

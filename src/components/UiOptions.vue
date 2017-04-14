@@ -7,17 +7,22 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import RippleButton from './RippleButton'
 
 export default {
   components: {
     RippleButton
   },
-  props: ['options'],
   data () {
     return {
       show: true
     }
+  },
+  computed: {
+    ...mapGetters({
+      options: 'options'
+    })
   },
   methods: {
     answer: function (id) {

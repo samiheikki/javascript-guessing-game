@@ -1,197 +1,144 @@
 <template>
   <div id="app">
-    <progress-bar v-if="!testFinished" :progress="progress"></progress-bar>
-    <sound-toggle :sound="sound" v-on:sound-toggle="soundChange"></sound-toggle>
-    <js-logo v-if="!testFinished" :logo="currentJsTool.name"></js-logo>
-    <ui-options v-if="!testFinished" :options="options" v-on:answer="optionAnswer"></ui-options>
-    <result-page
-      :progress="progress"
-      v-show="testFinished"
-      v-on:restart="restartTest"
-      :score="answeredCount"
-      :total="totalCount">
-    </result-page>
-    <credits class="credits"></credits>
+    <progress-bar></progress-bar>
+    <sound-toggle></sound-toggle>
+    <login-view v-on:log-in="logIn" v-on:log-out="logOut"></login-view>
+    <router-view v-on:save-score="saveScore"></router-view>
+    <credits class="credits" v-if="routePath === '/'"></credits>
   </div>
 </template>
 
 <script>
+import * as firebase from 'firebase'
+import 'firebase/auth'
+import { mapGetters, mapActions } from 'vuex'
+
 import ProgressBar from './components/ProgressBar'
-import JsLogo from './components/JsLogo'
-import UiOptions from './components/UiOptions'
-import ResultPage from './components/ResultPage'
 import Credits from './components/Credits'
-import RippleButton from './components/RippleButton'
 import SoundToggle from './components/SoundToggle'
-import { Howl } from 'howler'
+import LoginView from './components/LoginView'
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDzKhNG-bafYPDTbAFFGqSscGJ7a-rdB9M',
+  authDomain: 'javascript-game.firebaseapp.com',
+  databaseURL: 'https://javascript-game.firebaseio.com',
+  storageBucket: 'javascript-game.appspot.com',
+  messagingSenderId: '853137885896'
+}
 
 export default {
   components: {
-    JsLogo,
-    UiOptions,
     ProgressBar,
-    ResultPage,
     Credits,
-    RippleButton,
-    SoundToggle
-  },
-  data () {
-    return {
-      tempJSTools: Array,
-      jsTools: Array,
-      options: Array,
-      currentJsTool: Object,
-      progress: 0,
-      answeredCount: 0,
-      testFinished: false,
-      totalCount: Number,
-      sound: false
-    }
+    SoundToggle,
+    LoginView
   },
   created: function () {
-    this.getJSON('static/logos.json', (error, tempJSTools) => {
-      if (typeof tempJSTools === 'string') { // IE11 fix
-        tempJSTools = JSON.parse(tempJSTools)
+    this.firebase()
+
+    if (this.routePath === '/ranking') {
+      this.getHighScores()
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'amount',
+      'answerCount',
+      'startTime',
+      'endTime',
+      'user',
+      'routePath',
+      'highScores'
+    ])
+  },
+  watch: {
+    routePath: function (path) {
+      if (path === '/ranking' && this.highScores.length === 0) {
+        this.getHighScores()
       }
-
-      if (error) {
-        // Fetch from localStorage
-        tempJSTools = window.jsTools = JSON.parse(window.localStorage.getItem('logos'))
-      } else {
-        // Update localStorage
-        window.jsTools = JSON.parse(JSON.stringify(tempJSTools))
-        window.localStorage.setItem('logos', JSON.stringify(window.jsTools))
-      }
-
-      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(tempJSTools)))
-      this.totalCount = tempJSTools.length
-      this.jsTools = this.generateIDs(this.tempJSTools)
-      this.updateLogo()
-      this.updateOptions()
-    })
-
-    this.initializeSounds()
+    }
   },
   methods: {
-    shuffle: function (array) {
-      let j, x, i
-      for (i = array.length; i; i--) {
-        j = Math.floor(Math.random() * i)
-        x = array[i - 1]
-        array[i - 1] = array[j]
-        array[j] = x
-      }
-      return array
+    ...mapActions([
+      'setUser',
+      'setHighScores',
+      'setFirebaseFeedback'
+    ]),
+    logIn: function () {
+      firebase.auth().signInWithRedirect(new firebase.auth.GithubAuthProvider())
     },
-    soundChange: function () {
-      this.sound = !this.sound
-
-      window.localStorage.setItem('sound', this.sound)
-    },
-    generateIDs: function (array) {
-      array.forEach((val, index) => {
-        array[index].id = index
+    logOut: function () {
+      firebase.auth().signOut().then(() => {
+        this.setUser(null)
       })
-      return array
     },
-    optionAnswer: function (id) {
-      if (this.evaluateAnswer(id)) {
-        // correct answer
-        this.answeredCount++
-        if (this.answeredCount === this.jsTools.length) {
-          if (this.sound) {
-            this.finishSound.play()
-          }
-          // test ended
-          this.endTest()
+    firebase: function () {
+      firebase.initializeApp(firebaseConfig)
+
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          firebase.database().ref('users/' + user.uid).set({
+            name: user.displayName,
+            email: user.email,
+            photo_url: user.photoURL
+          }).then(() => {
+            this.setUser(user)
+            this.setFirebaseFeedback()
+          })
         } else {
-          if (this.sound) {
-            this.correctSound.play()
+          this.setFirebaseFeedback()
+        }
+      })
+    },
+    saveScore: function () {
+      // Save only logged in users scores
+      if (this.user) {
+        // Make object of values as it might change before saving
+        const objToDb = {
+          answerCount: this.answerCount,
+          amount: this.amount,
+          startTime: this.startTime,
+          endTime: this.endTime,
+          name: this.user.displayName
+        }
+        // See if there is a previous score
+        firebase.database().ref('/scores/' + this.user.uid).once('value').then((snapshot) => {
+          const previousScore = snapshot.val()
+          if (!previousScore || (previousScore && this.shouldSaveNewScore(objToDb, previousScore))) {
+            firebase.database().ref('scores/' + this.user.uid).set(objToDb)
           }
-          this.updateProgress()
-          this.updateLogo()
-          this.updateOptions()
-        }
-      } else {
-        if (this.sound) {
-          this.gameoverSound.play()
-        }
-        // false answer
-        this.endTest()
+        })
       }
     },
-    endTest: function () {
-      this.updateProgress()
-      this.testFinished = true
+    shouldSaveNewScore: function (newScore, oldScore) {
+      const higherScore = newScore.answerCount > oldScore.answerCount
+      const sameScore = newScore.answerCount === oldScore.answerCount
+      const betterTime = (newScore.endTime - newScore.startTime) < (oldScore.endTime - oldScore.startTime)
+      return higherScore || (sameScore && betterTime)
     },
-    restartTest: function () {
-      this.answeredCount = this.progress = 0
-      this.tempJSTools = this.shuffle(JSON.parse(JSON.stringify(window.jsTools)))
-      this.jsTools = this.generateIDs(this.tempJSTools)
-      this.updateLogo()
-      this.updateOptions()
-      this.testFinished = false
-    },
-    updateProgress: function () {
-      this.progress = (this.answeredCount / this.jsTools.length) * 100
-    },
-    updateLogo: function () {
-      this.currentJsTool = this.jsTools[this.answeredCount]
-    },
-    updateOptions: function () {
-      let optionNumbers = []
-      optionNumbers.push(this.currentJsTool.id)
-
-      while (optionNumbers.length < 4) {
-        let randomNumber = Math.floor(Math.random() * this.jsTools.length)
-        if (!optionNumbers.includes(randomNumber)) {
-          optionNumbers.push(randomNumber)
+    getHighScores: function () {
+      firebase.database()
+        .ref('/scores')
+        .orderByChild('answerCount')
+        .limitToLast(10)
+        .once('value')
+        .then((snapshot) => {
+          if (snapshot.val()) {
+            const highScores = Object.keys(snapshot.val())
+              .map((k) => snapshot.val()[k])
+              .sort((a, b) => {
+                if (a.answerCount > b.answerCount) {
+                  return -1
+                } else if (b.answerCount > a.answerCount) {
+                  return 1
+                } else {
+                  return 0
+                }
+              })
+            this.setHighScores(highScores)
+          }
         }
-      }
-
-      optionNumbers = this.shuffle(optionNumbers)
-
-      this.options = [
-        this.jsTools[optionNumbers[0]],
-        this.jsTools[optionNumbers[1]],
-        this.jsTools[optionNumbers[2]],
-        this.jsTools[optionNumbers[3]]
-      ]
-    },
-    initializeSounds: function () {
-      // Sound default on
-      const localStorageSound = window.localStorage.getItem('sound')
-      this.sound = localStorageSound ? JSON.parse(localStorageSound) : true
-
-      this.gameoverSound = new Howl({
-        src: ['../static/sounds/gameover.mp3', '../static/sounds/gameover.ogg'],
-        rate: 1.3,
-        volume: 0.5
-      })
-      this.correctSound = new Howl({
-        src: ['../static/sounds/correct.mp3', '../static/sounds/correct.ogg'],
-        volume: 0.5
-      })
-      this.finishSound = new Howl({
-        src: ['../static/sounds/finish.mp3', '../static/sounds/finish.ogg'],
-        volume: 0.5
-      })
-    },
-    evaluateAnswer: function (id) {
-      return id === this.currentJsTool.id
-    },
-    getJSON: function (url, callback) {
-      const xhr = new window.XMLHttpRequest()
-      xhr.open('get', url, true)
-      xhr.responseType = 'json'
-      xhr.onload = () => {
-        if (xhr.status === 200) {
-          callback(null, xhr.response)
-        } else {
-          callback(xhr.status)
-        }
-      }
-      xhr.send()
+      )
     }
   }
 }
