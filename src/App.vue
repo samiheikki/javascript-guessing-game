@@ -171,6 +171,10 @@ body {
   align-items: center;
 }
 
+_:-ms-fullscreen, :root #app {
+  margin-top: 0px !important;
+}
+
 .logo {
   width: 100px;
   height: 100px
