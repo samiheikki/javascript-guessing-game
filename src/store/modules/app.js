@@ -8,6 +8,7 @@ const state = {
   answerCount: 0,
   amount: 0,
   currentLogo: {},
+  previousLogo: {},
   options: [],
   gameFinished: false,
   startTime: new Date().getTime(),
@@ -21,6 +22,7 @@ const getters = {
   logos: state => state.logos,
   answerCount: state => state.answerCount,
   currentLogo: state => state.currentLogo,
+  previousLogo: state => state.previousLogo,
   options: state => state.options,
   gameFinished: state => state.gameFinished,
   amount: state => state.amount,
@@ -52,11 +54,13 @@ const actions = {
       callback()
     })
   },
-  setCurrentLogo ({ commit }, currentLogo) {
+  setCurrentLogo ({ commit, state }, currentLogo) {
+    const previousLogo = state.currentLogo
+    commit(types.SET_PREVIOUS_LOGO, { previousLogo })
     commit(types.SET_CURRENT_LOGO, { currentLogo })
   },
   setOptions ({ commit, state }) {
-    const options = api.getAnswerOptions(state.logos, state.amount, state.currentLogo.id)
+    const options = api.getAnswerOptions(state.logos, state.amount, state.currentLogo.id, state.previousLogo.id)
     commit(types.SET_OPTIONS, { options })
   },
   increaseAnswerCount ({ commit }) {
@@ -70,12 +74,14 @@ const actions = {
     const count = 0
     const amount = logos.length
     const currentLogo = logos[count]
+    const previousLogo = {}
     const options = api.getAnswerOptions(logos, amount, currentLogo.id)
 
     commit(types.SET_LOGOS, { logos })
     commit(types.SET_AMOUNT, { amount })
     commit(types.SET_ANSWER_COUNT, { count })
     commit(types.SET_CURRENT_LOGO, { currentLogo })
+    commit(types.SET_PREVIOUS_LOGO, { previousLogo })
     commit(types.SET_OPTIONS, { options })
     commit(types.START_GAME)
   },
@@ -101,6 +107,9 @@ const mutations = {
   },
   [types.SET_CURRENT_LOGO] (state, { currentLogo }) {
     state.currentLogo = currentLogo
+  },
+  [types.SET_PREVIOUS_LOGO] (state, { previousLogo }) {
+    state.previousLogo = previousLogo
   },
   [types.SET_OPTIONS] (state, { options }) {
     state.options = options

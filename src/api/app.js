@@ -28,13 +28,13 @@ export default {
     })
     return array
   },
-  getAnswerOptions: function (logos, amount, currentId) {
+  getAnswerOptions: function (logos, amount, currentId, previousId) {
     let optionNumbers = []
     optionNumbers.push(currentId)
 
     while (optionNumbers.length < 4) {
       let randomNumber = Math.floor(Math.random() * amount)
-      if (!optionNumbers.includes(randomNumber)) {
+      if (!optionNumbers.includes(randomNumber) && (!previousId || previousId !== randomNumber)) {
         optionNumbers.push(randomNumber)
       }
     }
