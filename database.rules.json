@@ -1,6 +1,13 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
+    "scores": {
+    	".read": true,
+    	".write": "auth != null",
+      ".indexOn": "answerCount"
+  	},
+  	"users": {
+    	".read": false,
+    	".write": "auth != null"
+  	}
   }
 }
