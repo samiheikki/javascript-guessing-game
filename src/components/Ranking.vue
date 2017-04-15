@@ -15,7 +15,7 @@
       <div class="score-row" v-for="(score, index) in highScores">
         <h2 class="score-number">#{{index+1}}</h2>
         <div class="score-row-details">
-          <h3>{{score.name}}</h3>
+          <h3>{{score.name || 'Anonymous'}}</h3>
           <span class="extra-detail">{{score.answerCount}} / {{score.amount}}</span>
         </div>
       </div>

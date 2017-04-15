@@ -11,7 +11,7 @@
     <div class="menu-content" v-if="dropdownOpen && user">
       <div class="dropdown-menu">
         <div class="dropdown-header">
-          Signed in as <strong class="dropdown-name">{{user.displayName}}</strong>
+          Signed in as <strong class="dropdown-name">{{user.displayName || user.email || 'Anonymous'}}</strong>
         </div>
         <div class="dropdown-divider">
         </div>
