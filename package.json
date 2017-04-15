@@ -12,6 +12,7 @@
     "rename-images": "gulp rename-images"
   },
   "dependencies": {
+    "es6-promise": "^4.1.0",
     "firebase": "^3.7.3",
     "howler": "^2.0.1",
     "vue": "^2.0.1",
