@@ -94,12 +94,13 @@ export default {
       // Save only logged in users scores
       if (this.user) {
         // Make object of values as it might change before saving
+        const name = this.user.displayName || this.user.email.substring(0, this.user.email.indexOf('@'))
         const objToDb = {
           answerCount: this.answerCount,
           amount: this.amount,
           startTime: this.startTime,
           endTime: this.endTime,
-          name: this.user.displayName
+          name: name
         }
         // See if there is a previous score
         firebase.database().ref('/scores/' + this.user.uid).once('value').then((snapshot) => {
