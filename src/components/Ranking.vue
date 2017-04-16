@@ -45,6 +45,7 @@ export default {
 .scores-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .score-row {
   display: flex;
@@ -68,6 +69,7 @@ export default {
   display: block;
   text-align: left;
   margin-left: 0px;
+  color: #bbbbbb;
 }
 h1 {
   border-bottom: 1px solid;
