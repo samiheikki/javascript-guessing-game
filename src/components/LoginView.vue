@@ -78,7 +78,12 @@ export default {
 .login-root {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 75px;
+}
+@media screen and (max-width:447px) {
+  .login-root {
+    right: 0;
+  }
 }
 button {
 	width: 140px;
