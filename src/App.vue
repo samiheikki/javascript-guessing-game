@@ -115,7 +115,8 @@ export default {
       const higherScore = newScore.answerCount > oldScore.answerCount
       const sameScore = newScore.answerCount === oldScore.answerCount
       const betterTime = (newScore.endTime - newScore.startTime) < (oldScore.endTime - oldScore.startTime)
-      return higherScore || (sameScore && betterTime)
+      const isNotCheating = (newScore.endTime - newScore.startTime) > (this.answerCount * 1000)
+      return isNotCheating && (higherScore || (sameScore && betterTime))
     },
     getHighScores: function () {
       firebase.database()
