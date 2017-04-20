@@ -80,11 +80,6 @@ export default {
   top: 0;
   right: 75px;
 }
-@media screen and (max-width:447px) {
-  .login-root {
-    right: 0;
-  }
-}
 button {
 	width: 140px;
   background-color: #000;
@@ -98,6 +93,15 @@ button {
   outline: none;
   cursor: pointer;
   margin: 8px;
+}
+@media screen and (max-width:447px) {
+  .login-root {
+    right: 0;
+  }
+  button {
+    width: 70px;
+    padding: 10px;
+  }
 }
 button:focus {
   outline: 2px solid #66BB6A !important;

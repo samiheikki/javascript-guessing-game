@@ -195,5 +195,8 @@ _:-ms-fullscreen, :root #app {
   .credits {
     display: none;
   }
+  #app {
+    margin-top: 0px;
+  }
 }
 </style>
