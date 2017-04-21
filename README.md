@@ -51,3 +51,4 @@ Thank you to the following awesome people for sending PRs :heart: :
 - [@dapetcu21](https://github.com/dapetcu21)
 - [@ssurve](https://github.com/ssurve)
 - [@pjbaert](https://github.com/pjbaert)
+- [@WeiChiaChang](https://github.com/WeiChiaChang)
