@@ -2,7 +2,7 @@
   <div class="login-root" v-if="firebaseFeedback">
     <button type="button" name="button" v-on:click="logIn" v-if="!user">Sign in with GitHub</button>
     <a href="#" v-on:click="openDropdown" v-if="user">
-      <img :src="user.photoURL" :alt="displayName">
+      <img :src="user.photoURL" :alt="user.displayName">
       <svg fill="#66BB6A" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 10l5 5 5-5z"/>
         <path d="M0 0h24v24H0z" fill="none"/>
