@@ -171,6 +171,9 @@
     "name": "Duel"
   },
   {
+    "name": "Duo"
+  },
+  {
     "name": "Durandal"
   },
   {
@@ -178,6 +181,9 @@
   },
   {
     "name": "EchoJS"
+  },
+  {
+    "name": "Electrode"
   },
   {
     "name": "Electron"
@@ -190,6 +196,9 @@
   },
   {
     "name": "Ember"
+  },
+  {
+    "name": "Ender"
   },
   {
     "name": "Enquirer"
@@ -516,6 +525,9 @@
     "name": "Riot"
   },
   {
+    "name": "Rivets"
+  },
+  {
     "name": "RollupJS"
   },
   {
@@ -573,6 +585,9 @@
     "name": "Stapesjs"
   },
   {
+    "name": "StealJS"
+  },
+  {
     "name": "Stylus"
   },
   {
@@ -628,6 +643,9 @@
   },
   {
     "name": "Volo"
+  },
+  {
+    "name": "Vows"
   },
   {
     "name": "Vue"
