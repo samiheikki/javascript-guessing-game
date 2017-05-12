@@ -87,6 +87,9 @@
     "name": "Breakdance"
   },
   {
+    "name": "Britecharts"
+  },
+  {
     "name": "Brocolli"
   },
   {
@@ -243,9 +246,6 @@
     "name": "Flux"
   },
   {
-    "name": "Fly"
-  },
-  {
     "name": "Foam"
   },
   {
@@ -304,6 +304,9 @@
   },
   {
     "name": "InquirerJS"
+  },
+  {
+    "name": "Insomnia"
   },
   {
     "name": "InterledgerJS"
@@ -676,6 +679,9 @@
   },
   {
     "name": "Wakanda"
+  },
+  {
+    "name": "Wallaby.js"
   },
   {
     "name": "WebGL"
