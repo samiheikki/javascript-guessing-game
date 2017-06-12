@@ -567,6 +567,9 @@
     "name": "Redux"
   },
   {
+    "name": "Redux-Saga"
+  },
+  {
     "name": "Redux_Offline"
   },
   {
