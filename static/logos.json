@@ -558,13 +558,13 @@
     "name": "Reactide"
   },
   {
+    "name": "React-Move"
+  },
+  {
     "name": "React-Router"
   },
   {
     "name": "React-Sizes"
-  },
-  {
-    "name": "React.Move"
   },
   {
     "name": "Redux"
