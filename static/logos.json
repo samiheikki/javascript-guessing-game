@@ -5,7 +5,7 @@
   },
   {
     "name": "AgilityJS",
-    "url": "https://gist.github.com/pindia/3166678"
+    "url": "https://github.com/arturadib/agility"
   },
   {
     "name": "Ampersand",
@@ -13,15 +13,15 @@
   },
   {
     "name": "Amplitude",
-    "url": "https://github.com/521dimensions/amplitudejs"
+    "url": "https://521dimensions.com/open-source/amplitudejs"
   },
   {
     "name": "Angular2",
-    "url": "https://angular.io/docs/js/latest/cookbook/ts-to-js.html"
+    "url": "https://angular.io/"
   },
   {
     "name": "AngularJS",
-    "url": "https://www.w3schools.com/angular/"
+    "url": "https://angularjs.org/"
   },
   {
     "name": "Angular-Meteor",
@@ -29,11 +29,11 @@
   },
   {
     "name": "animeJS",
-    "url": "https://github.com/juliangarnier/anime"
+    "url": "http://animejs.com/"
   },
   {
     "name": "Appium",
-    "url": "http://appium.io/getting-started.html"
+    "url": "http://appium.io/"
   },
   {
     "name": "AriaTemplates",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Async",
-    "url": "https://github.com/caolan/async"
+    "url": "http://caolan.github.io/async/"
   },
   {
     "name": "AtmaJS",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Atom",
-    "url": "https://atom.io/packages/atom-ternjs"
+    "url": "https://atom.io/"
   },
   {
     "name": "Aurelia",
@@ -65,7 +65,7 @@
   },
   {
     "name": "AutobahnJS",
-    "url": "https://github.com/crossbario/autobahn-js"
+    "url": "http://crossbar.io/autobahn/"
   },
   {
     "name": "Babel",
@@ -85,7 +85,7 @@
   },
   {
     "name": "Base",
-    "url": "http://dean.edwards.name/weblog/2006/03/base/"
+    "url": "http://node-base.github.io/base/"
   },
   {
     "name": "BatmanJS",
@@ -93,7 +93,7 @@
   },
   {
     "name": "Blaze_CSS",
-    "url": "http://blazejs.org/"
+    "url": "http://blazecss.com/"
   },
   {
     "name": "Bliss",
@@ -149,7 +149,7 @@
   },
   {
     "name": "Cabbie",
-    "url": "https://github.com/ForbesLindesay/cabbie"
+    "url": "https://cabbiejs.org/"
   },
   {
     "name": "CanJS",
@@ -157,7 +157,7 @@
   },
   {
     "name": "Caporal",
-    "url": "https://github.com/mattallty/Caporal.js%3F"
+    "url": "https://github.com/mattallty/Caporal.js?"
   },
   {
     "name": "Cappuccino",
@@ -165,7 +165,7 @@
   },
   {
     "name": "Cell",
-    "url": "https://www.w3schools.com/jsref/coll_table_cells.asp"
+    "url": "https://www.celljs.org/"
   },
   {
     "name": "Chai",
@@ -185,19 +185,19 @@
   },
   {
     "name": "CodeClimate",
-    "url": "http://blog.codeclimate.com/blog/2013/10/24/code-climate-for-javascript/"
+    "url": "https://docs.codeclimate.com/"
   },
   {
     "name": "CoffeeScript",
-    "url": "http://js2.coffee/"
+    "url": "http://coffeescript.org/"
   },
   {
     "name": "CommonJS",
-    "url": "https://addyosmani.com/writing-modular-js/"
+    "url": "http://www.commonjs.org/"
   },
   {
     "name": "Cordova",
-    "url": "https://github.com/apache/cordova-js"
+    "url": "https://cordova.apache.org/"
   },
   {
     "name": "CreateJS",
@@ -245,7 +245,7 @@
   },
   {
     "name": "DHTMLX",
-    "url": "https://dhtmlx.com/blog/using-dhtmlxscheduler-with-node-js/"
+    "url": "https://dhtmlx.com/"
   },
   {
     "name": "Docsify",
@@ -257,7 +257,7 @@
   },
   {
     "name": "DoneJS",
-    "url": "https://www.w3schools.com/nodejs/"
+    "url": "https://donejs.com/"
   },
   {
     "name": "Duel",
@@ -269,7 +269,7 @@
   },
   {
     "name": "Durandal",
-    "url": "http://durandaljs.com/documentation/Binding-Plain-Javascript-Objects.html"
+    "url": "http://durandaljs.com/"
   },
   {
     "name": "Dutier",
@@ -372,14 +372,6 @@
     "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/javascript.html"
   },
   {
-    "name": "Generact",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators"
-  },
-  {
-    "name": "Generate",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators"
-  },
-  {
     "name": "Glamorous",
     "url": "https://github.com/paypal/glamorous"
   },
@@ -389,11 +381,11 @@
   },
   {
     "name": "GnosisJS",
-    "url": "https://github.com/ConsenSys/gnosis.js/"
+    "url": "https://docs.gnosis.pm/en/latest/"
   },
   {
     "name": "GreenSock",
-    "url": "https://greensock.com/get-started-js"
+    "url": "https://greensock.com/"
   },
   {
     "name": "Grunt",
@@ -429,7 +421,7 @@
   },
   {
     "name": "Holmes",
-    "url": "https://github.com/Haroenv/holmes"
+    "url": "https://haroen.me/holmes/"
   },
   {
     "name": "HowlerJS",
@@ -465,7 +457,7 @@
   },
   {
     "name": "Ionic",
-    "url": "https://ionicframework.com/docs/api/"
+    "url": "https://ionicframework.com/"
   },
   {
     "name": "Jasmine",
@@ -481,15 +473,15 @@
   },
   {
     "name": "jQuery",
-    "url": "https://www.w3schools.com/jquery/jquery_get_started.asp"
+    "url": "https://jquery.com/"
   },
   {
     "name": "jQueryMobile",
-    "url": "https://jquerymobile.com/download/"
+    "url": "https://jquerymobile.com/"
   },
   {
     "name": "jQueryUI",
-    "url": "https://jqueryui.com/autocomplete/"
+    "url": "https://jqueryui.com/"
   },
   {
     "name": "js_of_ocaml",
@@ -506,10 +498,6 @@
   {
     "name": "Jspm",
     "url": "http://jspm.io/"
-  },
-  {
-    "name": "JSTransformer",
-    "url": "https://github.com/laracasts/PHP-Vars-To-Js-Transformer"
   },
   {
     "name": "JSweet",
@@ -577,7 +565,7 @@
   },
   {
     "name": "Materialize",
-    "url": "http://materializecss.com/getting-started.html"
+    "url": "http://materializecss.com/"
   },
   {
     "name": "Matreshka",
@@ -621,7 +609,7 @@
   },
   {
     "name": "Moon",
-    "url": "https://github.com/KingPixil/moon"
+    "url": "http://moonjs.ga/"
   },
   {
     "name": "NativeScript",
@@ -633,7 +621,7 @@
   },
   {
     "name": "Neutrino",
-    "url": "https://davidwalsh.name/neutrino"
+    "url": "https://neutrino.js.org/"
   },
   {
     "name": "Nightwatch",
@@ -645,11 +633,11 @@
   },
   {
     "name": "NodeJS",
-    "url": "https://www.w3schools.com/nodejs/"
+    "url": "https://nodejs.org/"
   },
   {
     "name": "Node-RED",
-    "url": "https://nodered.org/docs/creating-nodes/node-js"
+    "url": "https://nodered.org/"
   },
   {
     "name": "npm",
@@ -733,7 +721,7 @@
   },
   {
     "name": "PureScript",
-    "url": "https://github.com/purescript-contrib/purescript-js-date"
+    "url": "http://www.purescript.org/"
   },
   {
     "name": "PyJS",
@@ -769,19 +757,15 @@
   },
   {
     "name": "Reactide",
-    "url": "https://facebook.github.io/react/"
+    "url": "http://reactide.io/"
   },
   {
     "name": "React-Move",
-    "url": "https://stackoverflow.com/questions/34420643/moving-a-dom-element-item-out-of-a-react-js-component"
+    "url": "https://react-move.js.org/#/story/readme-documentation"
   },
   {
     "name": "React-Router",
     "url": "https://github.com/ReactTraining/react-router"
-  },
-  {
-    "name": "React-Sizes",
-    "url": "https://gist.github.com/Restuta/cda69e50a853aa64912d"
   },
   {
     "name": "Redux",
@@ -793,7 +777,7 @@
   },
   {
     "name": "Redux_Offline",
-    "url": "http://redux.js.org/"
+    "url": "https://hackernoon.com/introducing-redux-offline-offline-first-architecture-for-progressive-web-applications-and-react-68c5167ecfe0"
   },
   {
     "name": "Relay",
@@ -817,7 +801,7 @@
   },
   {
     "name": "rltm.js",
-    "url": "https://www.reddit.com/r/javascript/comments/66bxya/rltmjs_swap_between_socketio_and_pubnub/"
+    "url": "http://rltmjs.com/"
   },
   {
     "name": "RollupJS",
@@ -849,7 +833,7 @@
   },
   {
     "name": "Sentry",
-    "url": "https://github.com/getsentry/raven-js"
+    "url": "https://sentry.io/welcome/"
   },
   {
     "name": "Sinon",
@@ -877,7 +861,7 @@
   },
   {
     "name": "slim.js",
-    "url": "https://stackoverflow.com/questions/35743980/what-is-slim-in-file-slim-js"
+    "url": "http://slimjs.com/"
   },
   {
     "name": "Slush",
@@ -913,7 +897,7 @@
   },
   {
     "name": "Storybook",
-    "url": "https://github.com/storybooks/storybook"
+    "url": "https://storybook.js.org/"
   },
   {
     "name": "Stylus",
@@ -942,14 +926,6 @@
   {
     "name": "TinyMCE",
     "url": "https://www.tinymce.com/"
-  },
-  {
-    "name": "Titanium",
-    "url": "http://www.appcelerator.com/mobile-app-development-products/"
-  },
-  {
-    "name": "Toolkit",
-    "url": "https://philogb.github.io/jit/"
   },
   {
     "name": "TotalJS",
@@ -988,20 +964,16 @@
     "url": "http://unitjs.com/"
   },
   {
-    "name": "Update",
-    "url": "https://stackoverflow.com/questions/32414/how-can-i-force-clients-to-refresh-javascript-files"
-  },
-  {
     "name": "V8",
     "url": "https://developers.google.com/v8/"
   },
   {
     "name": "Vaadin",
-    "url": "https://vaadin.com/docs/-/part/framework/gwt/gwt-javascript.html"
+    "url": "https://vaadin.com/home"
   },
   {
     "name": "Verb",
-    "url": "http://verbnurbs.com/"
+    "url": "https://github.com/verbose/verb-generate-readme"
   },
   {
     "name": "Volo",
@@ -1041,7 +1013,7 @@
   },
   {
     "name": "Webpack",
-    "url": "https://webpack.github.io/docs/tutorials/getting-started/"
+    "url": "https://webpack.js.org/"
   },
   {
     "name": "WhitestormJS",
@@ -1052,10 +1024,13 @@
     "url": "http://try.buildwinjs.com/"
   },
   {
+<<<<<<< HEAD
     "name": "Wiretie",
     "url": "https://github.com/synacor/wiretie"
   },
   {
+=======
+>>>>>>> Fixing manually some of the links and removing some logos
     "name": "Workbox",
     "url": "https://workboxjs.org/"
   },
@@ -1077,7 +1052,7 @@
   },
   {
     "name": "ZangoDB",
-    "url": "https://mongodb.github.io/node-mongodb-native/"
+    "url": "https://erikolson186.github.io/zangodb/"
   },
   {
     "name": "ZeptoJS",
