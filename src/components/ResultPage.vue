@@ -26,12 +26,24 @@
         See High Scores
       </h3>
     </router-link>
+    <div class="learning-suggetsion">
+      <a v-bind:href="currentLogo.url" target="_blank">
+        <js-logo size="55"></js-logo>
+      </a>
+      <p>I am <strong>{{currentLogo.name}}!</strong> Click me to learn more.</p>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+
+import JsLogo from './JsLogo'
+
 export default {
+  components: {
+    JsLogo
+  },
   data () {
     return {
       insults: [
@@ -60,7 +72,8 @@ export default {
   computed: {
     ...mapGetters({
       amount: 'amount',
-      answerCount: 'answerCount'
+      answerCount: 'answerCount',
+      currentLogo: 'currentLogo'
     }),
     feedback: function () {
       const progress = (this.answerCount / this.amount) * 100 || 0
@@ -87,8 +100,11 @@ export default {
 .container {
   max-width: 600px;
 }
-h1 {
+h1, p {
   color: #66BB6A;
+}
+p {
+  margin: 0;
 }
 .button {
   margin: 0 auto 20px;
@@ -170,9 +186,19 @@ h1 {
 .ranking-link:hover {
   text-decoration: underline;
 }
+.learning-suggetsion > a > div {
+  margin: 20px;
+}
+
 @media screen and (max-width:620px) {
   .container {
     margin: 0 16px 0 16px;
   }
 }
+@media screen and (min-width: 448px) and (max-width: 587px) {
+  .container {
+    margin-top: 60px;
+  }
+}
+
 </style>
