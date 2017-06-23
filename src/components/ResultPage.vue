@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 ref="insult" v-bind:class="{ 'long-insult': isLongInsult }">{{insult}}</h1>
+    <h1 v-bind:class="{ 'long-insult': isLongInsult }">{{insult}}</h1>
     <h2>{{answerCount}} / {{amount}}</h2>
     <button class="ripple-button button" v-on:click="restartGame">
       Restart
@@ -30,7 +30,11 @@
       <a v-bind:href="currentLogo.url" target="_blank">
         <js-logo :size="55"></js-logo>
       </a>
-      <p>I am <strong>{{currentLogo.name}}!</strong> Click me to learn more.</p>
+      <p>
+        I am 
+        <a v-bind:href="currentLogo.url" target="_blank"><strong>{{currentLogo.name}}!</strong></a> 
+        Click me to learn more.
+      </p>
     </div>
   </div>
 </template>
@@ -180,14 +184,14 @@ p {
   display: inline-block;
   padding: 2px 3px 0 20px;
 }
-.ranking-link {
+.ranking-link, .learning-suggestion a {
   text-decoration: none;
   color: #66BB6A;
 }
 .ranking-link > h3 {
   margin: 0;
 }
-.ranking-link:hover {
+.ranking-link:hover, .learning-suggestion a:hover {
   text-decoration: underline;
 }
 .learning-suggestion > a > div {

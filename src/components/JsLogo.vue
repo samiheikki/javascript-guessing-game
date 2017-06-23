@@ -41,7 +41,7 @@ export default {
       }
     },
     altContext: function () {
-      return this.gameFinished ? 'Learn about this logo library' : 'Guess this logo'
+      return this.gameFinished ? 'Learn about this JavaScript library' : 'Guess this logo'
     }
   },
   mounted: function () {
