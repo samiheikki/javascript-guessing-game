@@ -264,9 +264,6 @@
     "name": "Flight"
   },
   {
-    "name": "Flight-React"
-  },
-  {
     "name": "Flow"
   },
   {
@@ -580,6 +577,9 @@
   },
   {
     "name": "Reactide"
+  },
+  {
+    "name": "React-Flight"
   },
   {
     "name": "React-Move"
