@@ -272,6 +272,10 @@
     "url": "http://durandaljs.com/"
   },
   {
+    "name": "Dutier",
+    "url": "https://github.com/luisvinicius167/dutier"
+  },
+  {
     "name": "ECharts",
     "url": "https://ecomfe.github.io/echarts/index-en.html"
   },
@@ -366,6 +370,14 @@
   {
     "name": "Foundation",
     "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/javascript.html"
+  },
+  {
+    "name": "Generact",
+    "url": "https://github.com/diegohaz/generact"
+  },
+  {
+    "name": "Generate",
+    "url": "https://github.com/generate"
   },
   {
     "name": "Glamorous",
@@ -494,6 +506,10 @@
   {
     "name": "Jspm",
     "url": "http://jspm.io/"
+  },
+  {
+    "name": "JSTransformer",
+    "url": "https://github.com/jstransformers/jstransformer"
   },
   {
     "name": "JSweet",
@@ -764,6 +780,10 @@
     "url": "https://github.com/ReactTraining/react-router"
   },
   {
+    "name": "React-Sizes",
+    "url": "https://github.com/renatorib/react-sizes"
+  },
+  {
     "name": "Redux",
     "url": "http://redux.js.org/"
   },
@@ -924,6 +944,14 @@
     "url": "https://www.tinymce.com/"
   },
   {
+    "name": "Titanium",
+    "url": "http://www.appcelerator.com/titanium/titanium-sdk/3/"
+  },
+  {
+    "name": "Toolkit",
+    "url": "https://github.com/node-toolkit"
+  },
+  {
     "name": "TotalJS",
     "url": "https://www.totaljs.com/"
   },
@@ -958,6 +986,10 @@
   {
     "name": "UnitJS",
     "url": "http://unitjs.com/"
+  },
+  {
+    "name": "Update",
+    "url": "http://update.github.io/update/"
   },
   {
     "name": "V8",
@@ -1018,6 +1050,10 @@
   {
     "name": "winJS",
     "url": "http://try.buildwinjs.com/"
+  },
+  {
+    "name": "Wiretie",
+    "url": "https://github.com/synacor/wiretie"
   },
   {
     "name": "Workbox",
