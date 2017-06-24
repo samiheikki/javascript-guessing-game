@@ -35,7 +35,7 @@ export default {
         return undefined
       }
       if (this.prod) { // Base64 version
-        return '../static/logos/' + window.btoa(this.currentLogo.name) + '.png'
+        return '../static/logos/' + this.currentLogo.uuid + '.png'
       } else {
         return '../static/logos/' + this.currentLogo.name.toLowerCase() + '.png'
       }
