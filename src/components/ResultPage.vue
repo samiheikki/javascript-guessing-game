@@ -26,7 +26,7 @@
         See High Scores
       </h3>
     </router-link>
-    <div class="learning-suggestion">
+    <div class="learning-suggestion" v-if="answerCount !== amount">
       <a v-bind:href="currentLogo.url" target="_blank">
         <js-logo :size="55"></js-logo>
       </a>
