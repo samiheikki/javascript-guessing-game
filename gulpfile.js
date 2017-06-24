@@ -1,5 +1,6 @@
 'use strict';
 var gulp = require('gulp');
+const uuidv4 = require('uuid/v4');
 
 gulp.task('generate-service-worker', function(callback) {
   var path = require('path');
@@ -16,12 +17,10 @@ gulp.task('rename-images', function(callback) {
   var fs = require('fs');
   var logos = JSON.parse(fs.readFileSync('./static/logos.json'));
   logos.forEach((logo) => {
-    const base64 = new Buffer(logo.name).toString('base64');
-    fs.rename('./dist/static/logos/' + logo.name + '.png', './dist/static/logos/' + base64 + '.png', err => {
-      if (err) {
-        console.log(err);
-      }
-    });
+    const uuid = uuidv4();
+    fs.renameSync('./dist/static/logos/' + logo.name + '.png', './dist/static/logos/' + uuid + '.png');
+    logo.uuid = uuid;
   });
+  fs.writeFileSync('./dist/static/logos.json', JSON.stringify(logos, null, 2)); 
   callback();
 });
