@@ -60,6 +60,10 @@
     "url": "https://atom.io/"
   },
   {
+    "name": "Aura",
+    "url": "https://github.com/aurajs/aura"
+  },
+  {
     "name": "Aurelia",
     "url": "http://aurelia.io/"
   },
