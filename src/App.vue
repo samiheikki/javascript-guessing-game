@@ -177,11 +177,6 @@ _:-ms-fullscreen, :root #app {
   margin-top: 0px !important;
 }
 
-.logo {
-  width: 100px;
-  height: 100px
-}
-
 @media screen and (max-height:500px) {
   .credits {
     display: none;

@@ -1,818 +1,1090 @@
 [
   {
-    "name": "Adonis"
+    "name": "Adonis",
+    "url": "http://www.adonisjs.com/"
   },
   {
-    "name": "AgilityJS"
+    "name": "AgilityJS",
+    "url": "https://github.com/arturadib/agility"
   },
   {
-    "name": "Ampersand"
+    "name": "Ampersand",
+    "url": "https://ampersandjs.com/"
   },
   {
-    "name": "Amplitude"
+    "name": "Amplitude",
+    "url": "https://521dimensions.com/open-source/amplitudejs"
   },
   {
-    "name": "Angular2"
+    "name": "Angular2",
+    "url": "https://angular.io/"
   },
   {
-    "name": "AngularJS"
+    "name": "AngularJS",
+    "url": "https://angularjs.org/"
   },
   {
-    "name": "Angular-Meteor"
+    "name": "Angular-Meteor",
+    "url": "https://angular-meteor.com/"
   },
   {
-    "name": "animeJS"
+    "name": "animeJS",
+    "url": "http://animejs.com/"
   },
   {
-    "name": "Appium"
+    "name": "Appium",
+    "url": "http://appium.io/"
   },
   {
-    "name": "AriaTemplates"
+    "name": "AriaTemplates",
+    "url": "http://ariatemplates.com/"
   },
   {
-    "name": "Artillery"
+    "name": "Artillery",
+    "url": "https://artillery.io/"
   },
   {
-    "name": "Assemble"
+    "name": "Assemble",
+    "url": "http://assemble.io/"
   },
   {
-    "name": "Async"
+    "name": "Async",
+    "url": "http://caolan.github.io/async/"
   },
   {
-    "name": "AtmaJS"
+    "name": "AtmaJS",
+    "url": "https://github.com/atmajs"
   },
   {
-    "name": "Atom"
+    "name": "Atom",
+    "url": "https://atom.io/"
   },
   {
-    "name": "Aurelia"
+    "name": "Aurelia",
+    "url": "http://aurelia.io/"
   },
   {
-    "name": "AutobahnJS"
+    "name": "AutobahnJS",
+    "url": "http://crossbar.io/autobahn/"
   },
   {
-    "name": "Babel"
+    "name": "Babel",
+    "url": "https://babeljs.io/"
   },
   {
-    "name": "BabylonJS"
+    "name": "BabylonJS",
+    "url": "https://www.babylonjs.com/"
   },
   {
-    "name": "Backbone"
+    "name": "Backbone",
+    "url": "http://backbonejs.org/"
   },
   {
-    "name": "Barba.js"
+    "name": "Barba.js",
+    "url": "http://barbajs.org/"
   },
   {
-    "name": "Base"
+    "name": "Base",
+    "url": "http://node-base.github.io/base/"
   },
   {
-    "name": "BatmanJS"
+    "name": "BatmanJS",
+    "url": "http://batmanjs.org/"
   },
   {
-    "name": "Blaze_CSS"
+    "name": "Blaze_CSS",
+    "url": "http://blazecss.com/"
   },
   {
-    "name": "Bliss"
+    "name": "Bliss",
+    "url": "http://blissfuljs.com/"
   },
   {
-    "name": "Bluebird"
+    "name": "Bluebird",
+    "url": "http://bluebirdjs.com/"
   },
   {
-    "name": "Bobril"
+    "name": "Bobril",
+    "url": "https://github.com/Bobris/Bobril"
   },
   {
-    "name": "Bootstrap"
+    "name": "Bootstrap",
+    "url": "http://getbootstrap.com/javascript/"
   },
   {
-    "name": "Bosonic"
+    "name": "Bosonic",
+    "url": "http://bosonic.github.io/"
   },
   {
-    "name": "Bower"
+    "name": "Bower",
+    "url": "https://bower.io/"
   },
   {
-    "name": "Brackets"
+    "name": "Brackets",
+    "url": "http://brackets.io/"
   },
   {
-    "name": "Breakdance"
+    "name": "Breakdance",
+    "url": "https://github.com/cubiclabs/breakdance-js"
   },
   {
-    "name": "Britecharts"
+    "name": "Britecharts",
+    "url": "https://github.com/eventbrite/britecharts"
   },
   {
-    "name": "Brocolli"
+    "name": "Brocolli",
+    "url": "http://broccolijs.com/"
   },
   {
-    "name": "Browserify"
+    "name": "Browserify",
+    "url": "http://browserify.org/"
   },
   {
-    "name": "Brunch"
+    "name": "Brunch",
+    "url": "http://brunch.io/"
   },
   {
-    "name": "Butternut"
+    "name": "Butternut",
+    "url": "https://github.com/Rich-Harris/butternut"
   },
   {
-    "name": "Cabbie"
+    "name": "Cabbie",
+    "url": "https://cabbiejs.org/"
   },
   {
-    "name": "CanJS"
+    "name": "CanJS",
+    "url": "https://canjs.com/"
   },
   {
-    "name": "Caporal"
+    "name": "Caporal",
+    "url": "https://github.com/mattallty/Caporal.js?"
   },
   {
-    "name": "Cappuccino"
+    "name": "Cappuccino",
+    "url": "http://www.cappuccino-project.org/"
   },
   {
-    "name": "Cell"
+    "name": "Cell",
+    "url": "https://www.celljs.org/"
   },
   {
-    "name": "Cesium"
+    "name": "Cesium",
+    "url": "https://cesiumjs.org/"
   },
   {
-    "name": "Chai"
+    "name": "Chai",
+    "url": "http://chaijs.com/"
   },
   {
-    "name": "Chaplin"
+    "name": "Chaplin",
+    "url": "http://chaplinjs.org/"
   },
   {
-    "name": "ChartJS"
+    "name": "ChartJS",
+    "url": "http://www.chartjs.org/"
   },
   {
-    "name": "Clementine"
+    "name": "Clementine",
+    "url": "http://www.clementinejs.com/"
   },
   {
-    "name": "CodeClimate"
+    "name": "CodeClimate",
+    "url": "https://docs.codeclimate.com/"
   },
   {
-    "name": "CoffeeScript"
+    "name": "CoffeeScript",
+    "url": "http://coffeescript.org/"
   },
   {
-    "name": "CommonJS"
+    "name": "CommonJS",
+    "url": "http://www.commonjs.org/"
   },
   {
-    "name": "Cordova"
+    "name": "Cordova",
+    "url": "https://cordova.apache.org/"
   },
   {
-    "name": "CreateJS"
+    "name": "CreateJS",
+    "url": "http://createjs.com/"
   },
   {
-    "name": "CujoJS"
+    "name": "CujoJS",
+    "url": "http://cujojs.com/"
   },
   {
-    "name": "CycleJS"
+    "name": "CycleJS",
+    "url": "https://cycle.js.org/"
   },
   {
-    "name": "Cyclow"
+    "name": "Cyclow",
+    "url": "https://cycle.js.org/"
   },
   {
-    "name": "Cypress"
+    "name": "Cypress",
+    "url": "https://www.cypress.io/"
   },
   {
-    "name": "Cytoscape"
+    "name": "Cytoscape",
+    "url": "http://js.cytoscape.org/"
   },
   {
-    "name": "D3"
+    "name": "D3",
+    "url": "https://d3js.org/"
   },
   {
-    "name": "DC"
+    "name": "DC",
+    "url": "https://dc-js.github.io/dc.js/"
   },
   {
-    "name": "Deku"
+    "name": "Deku",
+    "url": "https://github.com/anthonyshort/deku"
   },
   {
-    "name": "Delorean"
+    "name": "Delorean",
+    "url": "https://github.com/f/delorean"
   },
   {
-    "name": "DerbyJS"
+    "name": "DerbyJS",
+    "url": "http://derbyjs.com/"
   },
   {
-    "name": "DHTMLX"
+    "name": "DHTMLX",
+    "url": "https://dhtmlx.com/"
   },
   {
-    "name": "Docsify"
+    "name": "Docsify",
+    "url": "https://docsify.js.org/"
   },
   {
-    "name": "Dojo"
+    "name": "Dojo",
+    "url": "https://dojotoolkit.org/"
   },
   {
-    "name": "DoneJS"
+    "name": "DoneJS",
+    "url": "https://donejs.com/"
   },
   {
-    "name": "Duel"
+    "name": "Duel",
+    "url": "http://www.duelengine.org/"
   },
   {
-    "name": "Duo"
+    "name": "Duo",
+    "url": "http://duojs.org/"
   },
   {
-    "name": "Durandal"
+    "name": "Durandal",
+    "url": "http://durandaljs.com/"
   },
   {
-    "name": "Dutier"
+    "name": "Dutier",
+    "url": "https://github.com/luisvinicius167/dutier"
   },
   {
-    "name": "ECharts"
+    "name": "ECharts",
+    "url": "https://ecomfe.github.io/echarts/index-en.html"
   },
   {
-    "name": "EchoJS"
+    "name": "EchoJS",
+    "url": "http://www.echojs.com/"
   },
   {
-    "name": "Electrode"
+    "name": "Electrode",
+    "url": "https://github.com/electrode-io"
   },
   {
-    "name": "Electron"
+    "name": "Electron",
+    "url": "https://electron.atom.io/"
   },
   {
-    "name": "Elm"
+    "name": "Elm",
+    "url": "https://guide.elm-lang.org/interop/javascript.html"
   },
   {
-    "name": "EmailJS"
+    "name": "EmailJS",
+    "url": "https://www.emailjs.com/"
   },
   {
-    "name": "Ember"
+    "name": "Ember",
+    "url": "https://www.emberjs.com/"
   },
   {
-    "name": "Ender"
+    "name": "Ender",
+    "url": "http://enderjs.com/"
   },
   {
-    "name": "Enquirer"
+    "name": "Enquirer",
+    "url": "https://github.com/SBoudrias/Inquirer.js/"
   },
   {
-    "name": "Enyo"
+    "name": "Enyo",
+    "url": "http://enyojs.com/"
   },
   {
-    "name": "Epoch"
+    "name": "Epoch",
+    "url": "https://github.com/epochjs/epoch"
   },
   {
-    "name": "ES6"
+    "name": "ES6",
+    "url": "http://es6-features.org/"
   },
   {
-    "name": "ESLint"
+    "name": "ESLint",
+    "url": "http://eslint.org/"
   },
   {
-    "name": "esnext"
+    "name": "esnext",
+    "url": "https://github.com/esnext/esnext"
   },
   {
-    "name": "ExpressJS"
+    "name": "ExpressJS",
+    "url": "https://expressjs.com/"
   },
   {
-    "name": "ExtJS"
+    "name": "ExtJS",
+    "url": "https://www.sencha.com/products/extjs/"
   },
   {
-    "name": "FakerJS"
+    "name": "FakerJS",
+    "url": "https://github.com/marak/Faker.js/"
   },
   {
-    "name": "Firebase"
+    "name": "Firebase",
+    "url": "https://firebase.google.com/docs/web/setup"
   },
   {
-    "name": "Flight"
+    "name": "Flight",
+    "url": "https://flightjs.github.io/"
   },
   {
-    "name": "Flow"
+    "name": "Flow",
+    "url": "https://flow.org/"
   },
   {
-    "name": "Flux"
+    "name": "Flux",
+    "url": "https://facebook.github.io/react/blog/2014/05/06/flux.html"
   },
   {
-    "name": "Fly"
+    "name": "Fly",
+    "url": "https://github.com/flyjs/fly"
   },
   {
-    "name": "Foam"
+    "name": "Foam",
+    "url": "https://github.com/foam-framework/foam"
   },
   {
-    "name": "Foundation"
+    "name": "Foundation",
+    "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/javascript.html"
   },
   {
-    "name": "Generact"
+    "name": "Generact",
+    "url": "https://github.com/diegohaz/generact"
   },
   {
-    "name": "Generate"
+    "name": "Generate",
+    "url": "https://github.com/generate"
   },
   {
-    "name": "Glamorous"
+    "name": "Glamorous",
+    "url": "https://github.com/paypal/glamorous"
   },
   {
-    "name": "Globalize"
+    "name": "Globalize",
+    "url": "https://github.com/globalizejs/globalize"
   },
   {
-    "name": "GnosisJS"
+    "name": "GnosisJS",
+    "url": "https://docs.gnosis.pm/en/latest/"
   },
   {
-    "name": "GreenSock"
+    "name": "GreenSock",
+    "url": "https://greensock.com/"
   },
   {
-    "name": "Grunt"
+    "name": "Grunt",
+    "url": "https://gruntjs.com/"
   },
   {
-    "name": "Gulp"
+    "name": "Gulp",
+    "url": "http://gulpjs.com/"
   },
   {
-    "name": "Gun"
+    "name": "Gun",
+    "url": "http://gun.js.org/"
   },
   {
-    "name": "Gwt"
+    "name": "Gwt",
+    "url": "http://www.gwtproject.org/doc/latest/DevGuideCodingBasicsJSNI.html"
   },
   {
-    "name": "Handlebars"
+    "name": "Handlebars",
+    "url": "http://handlebarsjs.com/"
   },
   {
-    "name": "Handsontable"
+    "name": "Handsontable",
+    "url": "https://handsontable.com/"
   },
   {
-    "name": "Haul"
+    "name": "Haul",
+    "url": "https://github.com/callstack-io/haul"
   },
   {
-    "name": "Highcharts"
+    "name": "Highcharts",
+    "url": "https://www.highcharts.com/"
   },
   {
-    "name": "Holmes"
+    "name": "Holmes",
+    "url": "https://haroen.me/holmes/"
   },
   {
-    "name": "HowlerJS"
+    "name": "HowlerJS",
+    "url": "https://howlerjs.com/"
   },
   {
-    "name": "HyperApp"
+    "name": "HyperApp",
+    "url": "https://github.com/hyperapp/hyperapp"
   },
   {
-    "name": "Immutable"
+    "name": "Immutable",
+    "url": "https://facebook.github.io/immutable-js/"
   },
   {
-    "name": "Inferno"
+    "name": "Inferno",
+    "url": "https://github.com/infernojs/inferno"
   },
   {
-    "name": "InquirerJS"
+    "name": "InquirerJS",
+    "url": "https://github.com/SBoudrias/Inquirer.js/"
   },
   {
-    "name": "Insomnia"
+    "name": "Insomnia",
+    "url": "https://insomnia.rest/"
   },
   {
-    "name": "InterledgerJS"
+    "name": "InterledgerJS",
+    "url": "http://interledgerjs.org/"
   },
   {
-    "name": "Intern"
+    "name": "Intern",
+    "url": "https://theintern.github.io/"
   },
   {
-    "name": "Ionic"
+    "name": "Ionic",
+    "url": "https://ionicframework.com/"
   },
   {
-    "name": "Jasmine"
+    "name": "Jasmine",
+    "url": "https://jasmine.github.io/"
   },
   {
-    "name": "JerryScript"
+    "name": "JerryScript",
+    "url": "https://github.com/jerryscript-project/jerryscript"
   },
   {
-    "name": "Jest"
+    "name": "Jest",
+    "url": "https://facebook.github.io/jest/"
   },
   {
-    "name": "jQuery"
+    "name": "jQuery",
+    "url": "https://jquery.com/"
   },
   {
-    "name": "jQueryMobile"
+    "name": "jQueryMobile",
+    "url": "https://jquerymobile.com/"
   },
   {
-    "name": "jQueryUI"
+    "name": "jQueryUI",
+    "url": "https://jqueryui.com/"
   },
   {
-    "name": "js_of_ocaml"
+    "name": "js_of_ocaml",
+    "url": "http://ocsigen.org/js_of_ocaml/"
   },
   {
-    "name": "JSBlocks"
+    "name": "JSBlocks",
+    "url": "http://jsblocks.com/"
   },
   {
-    "name": "JSHint"
+    "name": "JSHint",
+    "url": "http://jshint.com/"
   },
   {
-    "name": "Jspm"
+    "name": "Jspm",
+    "url": "http://jspm.io/"
   },
   {
-    "name": "JSTransformer"
+    "name": "JSTransformer",
+    "url": "https://github.com/jstransformers/jstransformer"
   },
   {
-    "name": "JSweet"
+    "name": "JSweet",
+    "url": "http://www.jsweet.org/"
   },
   {
-    "name": "JSX"
+    "name": "JSX",
+    "url": "https://facebook.github.io/react/docs/jsx-in-depth.html"
   },
   {
-    "name": "Jumpsuit"
+    "name": "Jumpsuit",
+    "url": "https://github.com/jumpsuit/jumpsuit"
   },
   {
-    "name": "Karma"
+    "name": "Karma",
+    "url": "https://karma-runner.github.io/"
   },
   {
-    "name": "KendoUI"
+    "name": "KendoUI",
+    "url": "http://demos.telerik.com/kendo-ui/"
   },
   {
-    "name": "KeyStone"
+    "name": "KeyStone",
+    "url": "http://keystonejs.com/"
   },
   {
-    "name": "Knockout"
+    "name": "Knockout",
+    "url": "http://knockoutjs.com/"
   },
   {
-    "name": "Konva"
+    "name": "Konva",
+    "url": "https://konvajs.github.io/"
   },
   {
-    "name": "KrakenJS"
+    "name": "KrakenJS",
+    "url": "https://github.com/krakenjs/kraken-js"
   },
   {
-    "name": "Leaflet"
+    "name": "Leaflet",
+    "url": "http://leafletjs.com/"
   },
   {
-    "name": "Lerna"
+    "name": "Lerna",
+    "url": "https://lernajs.io/"
   },
   {
-    "name": "Less"
+    "name": "Less",
+    "url": "http://lesscss.org/"
   },
   {
-    "name": "Lighthouse"
+    "name": "Lighthouse",
+    "url": "https://developers.google.com/web/tools/lighthouse/"
   },
   {
-    "name": "Lodash"
+    "name": "Lodash",
+    "url": "https://lodash.com/"
   },
   {
-    "name": "MarionetteJS"
+    "name": "MarionetteJS",
+    "url": "https://marionettejs.com/"
   },
   {
-    "name": "Mark.JS"
+    "name": "Mark.JS",
+    "url": "https://markjs.io/"
   },
   {
-    "name": "Materialize"
+    "name": "Materialize",
+    "url": "http://materializecss.com/"
   },
   {
-    "name": "Matreshka"
+    "name": "Matreshka",
+    "url": "https://ru.matreshka.io/"
   },
   {
-    "name": "Mavo"
+    "name": "Mavo",
+    "url": "https://mavo.io/"
   },
   {
-    "name": "Meteor"
+    "name": "Meteor",
+    "url": "https://www.meteor.com/"
   },
   {
-    "name": "Metro"
+    "name": "Metro",
+    "url": "http://www.drewgreenwell.com/projects/metrojs"
   },
   {
-    "name": "Mithril"
+    "name": "Mithril",
+    "url": "https://mithril.js.org/"
   },
   {
-    "name": "Mobx"
+    "name": "Mobx",
+    "url": "https://github.com/mobxjs/mobx"
   },
   {
-    "name": "Mocha"
+    "name": "Mocha",
+    "url": "https://mochajs.org/"
   },
   {
-    "name": "Modernizr"
+    "name": "Modernizr",
+    "url": "https://modernizr.com/"
   },
   {
-    "name": "MoJS"
+    "name": "MoJS",
+    "url": "http://mojs.io/"
   },
   {
-    "name": "MomentJS"
+    "name": "MomentJS",
+    "url": "https://momentjs.com/"
   },
   {
-    "name": "Moon"
+    "name": "Moon",
+    "url": "http://moonjs.ga/"
   },
   {
-    "name": "NativeScript"
+    "name": "NativeScript",
+    "url": "https://www.nativescript.org/"
   },
   {
-    "name": "NativeScript-Angular"
+    "name": "NativeScript-Angular",
+    "url": "https://docs.nativescript.org/tutorial/ng-chapter-0"
   },
   {
-    "name": "Neutrino"
+    "name": "Neutrino",
+    "url": "https://neutrino.js.org/"
   },
   {
-    "name": "Nightwatch"
+    "name": "Nightwatch",
+    "url": "http://nightwatchjs.org/"
   },
   {
-    "name": "Nodal"
+    "name": "Nodal",
+    "url": "http://nodaljs.com/"
   },
   {
-    "name": "NodeJS"
+    "name": "NodeJS",
+    "url": "https://nodejs.org/"
   },
   {
-    "name": "Node-RED"
+    "name": "Node-RED",
+    "url": "https://nodered.org/"
   },
   {
-    "name": "npm"
+    "name": "npm",
+    "url": "https://www.npmjs.com/"
   },
   {
-    "name": "NuclearJS"
+    "name": "NuclearJS",
+    "url": "https://optimizely.github.io/nuclear-js/"
   },
   {
-    "name": "Nuxt"
+    "name": "Nuxt",
+    "url": "https://nuxtjs.org/"
   },
   {
-    "name": "OfflineJS"
+    "name": "OfflineJS",
+    "url": "http://github.hubspot.com/offline/docs/welcome/"
   },
   {
-    "name": "Omniscient"
+    "name": "Omniscient",
+    "url": "http://omniscientjs.github.io/"
   },
   {
-    "name": "PhantomJS"
+    "name": "PhantomJS",
+    "url": "http://phantomjs.org/"
   },
   {
-    "name": "Phaser"
+    "name": "Phaser",
+    "url": "https://phaser.io/"
   },
   {
-    "name": "PixiJS"
+    "name": "PixiJS",
+    "url": "http://www.pixijs.com/"
   },
   {
-    "name": "PEP"
+    "name": "PEP",
+    "url": "http://pep.briangonzalez.org/"
   },
   {
-    "name": "PKG"
+    "name": "PKG",
+    "url": "https://github.com/zeit/pkg"
   },
   {
-    "name": "Polished"
+    "name": "Polished",
+    "url": "https://github.com/styled-components/polished"
   },
   {
-    "name": "Polymer"
+    "name": "Polymer",
+    "url": "https://www.polymer-project.org/"
   },
   {
-    "name": "Popper.JS"
+    "name": "Popper.JS",
+    "url": "https://popper.js.org/"
   },
   {
-    "name": "PostCSS"
+    "name": "PostCSS",
+    "url": "https://github.com/postcss/postcss-js"
   },
   {
-    "name": "PostHTML"
+    "name": "PostHTML",
+    "url": "https://github.com/posthtml"
   },
   {
-    "name": "Preact"
+    "name": "Preact",
+    "url": "https://preactjs.com/"
   },
   {
-    "name": "Prettier"
+    "name": "Prettier",
+    "url": "https://github.com/prettier/prettier"
   },
   {
-    "name": "PrimeNG"
+    "name": "PrimeNG",
+    "url": "https://www.npmjs.com/package/primeng"
   },
   {
-    "name": "Prototype"
+    "name": "Prototype",
+    "url": "http://prototypejs.org/"
   },
   {
-    "name": "Protractor"
+    "name": "Protractor",
+    "url": "http://www.protractortest.org/"
   },
   {
-    "name": "PureScript"
+    "name": "PureScript",
+    "url": "http://www.purescript.org/"
   },
   {
-    "name": "PyJS"
+    "name": "PyJS",
+    "url": "http://pyjs.org/"
   },
   {
-    "name": "Q"
+    "name": "Q",
+    "url": "https://github.com/kriskowal/q"
   },
   {
-    "name": "Quasar"
+    "name": "Quasar",
+    "url": "http://quasar-framework.org/"
   },
   {
-    "name": "Qunit"
+    "name": "Qunit",
+    "url": "https://qunitjs.com/"
   },
   {
-    "name": "RactiveJS"
+    "name": "RactiveJS",
+    "url": "https://ractive.js.org/"
   },
   {
-    "name": "Ramda"
+    "name": "Ramda",
+    "url": "http://ramdajs.com/"
   },
   {
-    "name": "Re-DOM"
+    "name": "Re-DOM",
+    "url": "https://redom.js.org/"
   },
   {
-    "name": "React"
+    "name": "React",
+    "url": "https://facebook.github.io/react/"
   },
   {
-    "name": "Reactide"
+    "name": "Reactide",
+    "url": "http://reactide.io/"
   },
   {
-    "name": "React-Move"
+    "name": "React-Move",
+    "url": "https://react-move.js.org/#/story/readme-documentation"
   },
   {
-    "name": "React-Router"
+    "name": "React-Router",
+    "url": "https://github.com/ReactTraining/react-router"
   },
   {
-    "name": "React-Sizes"
+    "name": "React-Sizes",
+    "url": "https://github.com/renatorib/react-sizes"
   },
   {
-    "name": "Redux"
+    "name": "Redux",
+    "url": "http://redux.js.org/"
   },
   {
-    "name": "Redux-Saga"
+    "name": "Redux-Saga",
+    "url": "https://github.com/redux-saga/redux-saga"
   },
   {
-    "name": "Redux_Offline"
+    "name": "Redux_Offline",
+    "url": "https://hackernoon.com/introducing-redux-offline-offline-first-architecture-for-progressive-web-applications-and-react-68c5167ecfe0"
   },
   {
-    "name": "Relay"
+    "name": "Relay",
+    "url": "https://facebook.github.io/relay/"
   },
   {
-    "name": "RequireJS"
+    "name": "RequireJS",
+    "url": "http://requirejs.org/"
   },
   {
-    "name": "RevealJS"
+    "name": "RevealJS",
+    "url": "http://lab.hakim.se/reveal-js/"
   },
   {
-    "name": "Riot"
+    "name": "Riot",
+    "url": "http://riotjs.com/"
   },
   {
-    "name": "Rivets"
+    "name": "Rivets",
+    "url": "http://rivetsjs.com/"
   },
   {
-    "name": "rltm.js"
+    "name": "rltm.js",
+    "url": "http://rltmjs.com/"
   },
   {
-    "name": "RollupJS"
+    "name": "RollupJS",
+    "url": "https://rollupjs.org/"
   },
   {
-    "name": "RxDB"
+    "name": "RxDB",
+    "url": "https://github.com/pubkey/rxdb"
   },
   {
-    "name": "RxJS"
+    "name": "RxJS",
+    "url": "https://github.com/Reactive-Extensions/RxJS"
   },
   {
-    "name": "Sails"
+    "name": "Sails",
+    "url": "http://sailsjs.com/"
   },
   {
-    "name": "SammyJS"
+    "name": "SammyJS",
+    "url": "http://sammyjs.org/"
   },
   {
-    "name": "Semantic-UI"
+    "name": "Semantic-UI",
+    "url": "https://semantic-ui.com/"
   },
   {
-    "name": "Seneca"
+    "name": "Seneca",
+    "url": "http://senecajs.org/"
   },
   {
-    "name": "Sentry"
+    "name": "Sentry",
+    "url": "https://sentry.io/welcome/"
   },
   {
-    "name": "Sinon"
+    "name": "Sinon",
+    "url": "http://sinonjs.org/"
   },
   {
-    "name": "Sizzle"
+    "name": "Sizzle",
+    "url": "https://sizzlejs.com/"
   },
   {
-    "name": "SkateJS"
+    "name": "SkateJS",
+    "url": "https://github.com/skatejs/skatejs"
   },
   {
-    "name": "SkelJS"
+    "name": "SkelJS",
+    "url": "https://github.com/ajlkn/skel"
   },
   {
-    "name": "Slate"
+    "name": "Slate",
+    "url": "https://github.com/ianstormtaylor/slate"
   },
   {
-    "name": "Slick"
+    "name": "Slick",
+    "url": "http://kenwheeler.github.io/slick/"
   },
   {
-    "name": "slim.js"
+    "name": "slim.js",
+    "url": "http://slimjs.com/"
   },
   {
-    "name": "Slush"
+    "name": "Slush",
+    "url": "http://slushjs.github.io/"
   },
   {
-    "name": "SocketIO"
+    "name": "SocketIO",
+    "url": "https://socket.io/"
   },
   {
-    "name": "SocketStream"
+    "name": "SocketStream",
+    "url": "https://github.com/socketstream/socketstream"
   },
   {
-    "name": "Spine"
+    "name": "Spine",
+    "url": "http://spine.github.io/"
   },
   {
-    "name": "Sproutcore"
+    "name": "Sproutcore",
+    "url": "http://sproutcore.com/"
   },
   {
-    "name": "StandardJS"
+    "name": "StandardJS",
+    "url": "https://standardjs.com/"
   },
   {
-    "name": "Stapesjs"
+    "name": "Stapesjs",
+    "url": "https://hay.github.io/stapes/"
   },
   {
-    "name": "StealJS"
+    "name": "StealJS",
+    "url": "https://stealjs.com/"
   },
   {
-    "name": "Storybook"
+    "name": "Storybook",
+    "url": "https://storybook.js.org/"
   },
   {
-    "name": "Stylus"
+    "name": "Stylus",
+    "url": "http://stylus-lang.com/docs/js.html"
   },
   {
-    "name": "Sugar"
+    "name": "Sugar",
+    "url": "https://sugarjs.com/"
   },
   {
-    "name": "Svelte"
+    "name": "Svelte",
+    "url": "https://github.com/sveltejs/svelte"
   },
   {
-    "name": "SystemJS"
+    "name": "SystemJS",
+    "url": "https://github.com/systemjs/systemjs"
   },
   {
-    "name": "Tape"
+    "name": "Tape",
+    "url": "https://github.com/substack/tape"
   },
   {
-    "name": "ThreeJS"
+    "name": "ThreeJS",
+    "url": "https://threejs.org/"
   },
   {
-    "name": "TinyMCE"
+    "name": "TinyMCE",
+    "url": "https://www.tinymce.com/"
   },
   {
-    "name": "Titanium"
+    "name": "Titanium",
+    "url": "http://www.appcelerator.com/titanium/titanium-sdk/3/"
   },
   {
-    "name": "Toolkit"
+    "name": "Toolkit",
+    "url": "https://github.com/node-toolkit"
   },
   {
-    "name": "TotalJS"
+    "name": "TotalJS",
+    "url": "https://www.totaljs.com/"
   },
   {
-    "name": "Tradeship"
+    "name": "Tradeship",
+    "url": "https://github.com/karthikv/tradeship"
   },
   {
-    "name": "Trails"
+    "name": "Trails",
+    "url": "https://github.com/trailsjs/trails"
   },
   {
-    "name": "TurnJS"
+    "name": "TurnJS",
+    "url": "http://www.turnjs.com/"
   },
   {
-    "name": "TypeScript"
+    "name": "TypeScript",
+    "url": "https://www.typescriptlang.org/"
   },
   {
-    "name": "ulid"
+    "name": "ulid",
+    "url": "https://github.com/alizain/ulid"
   },
   {
-    "name": "Umbrella"
+    "name": "Umbrella",
+    "url": "https://umbrellajs.com/"
   },
   {
-    "name": "UnderscoreJS"
+    "name": "UnderscoreJS",
+    "url": "http://underscorejs.org/"
   },
   {
-    "name": "UnitJS"
+    "name": "UnitJS",
+    "url": "http://unitjs.com/"
   },
   {
-    "name": "Update"
+    "name": "Update",
+    "url": "http://update.github.io/update/"
   },
   {
-    "name": "V8"
+    "name": "V8",
+    "url": "https://developers.google.com/v8/"
   },
   {
-    "name": "Vaadin"
+    "name": "Vaadin",
+    "url": "https://vaadin.com/home"
   },
   {
-    "name": "Verb"
+    "name": "Verb",
+    "url": "https://github.com/verbose/verb-generate-readme"
   },
   {
-    "name": "Volo"
+    "name": "Volo",
+    "url": "http://volojs.org/"
   },
   {
-    "name": "Vows"
+    "name": "Vows",
+    "url": "http://vowsjs.org/"
   },
   {
-    "name": "Vue"
+    "name": "Vue",
+    "url": "https://vuejs.org/"
   },
   {
-    "name": "Vuetify.js"
+    "name": "Vuetify.js",
+    "url": "https://vuetifyjs.com/"
   },
   {
-    "name": "VX"
+    "name": "VX",
+    "url": "https://vx-demo.now.sh/"
   },
   {
-    "name": "Wakanda"
+    "name": "Wakanda",
+    "url": "https://wakanda.github.io/"
   },
   {
-    "name": "Wallaby.js"
+    "name": "Wallaby.js",
+    "url": "https://wallabyjs.com/"
   },
   {
-    "name": "WebGL"
+    "name": "WebGL",
+    "url": "https://en.wikipedia.org/wiki/WebGL/"
   },
   {
-    "name": "Webix"
+    "name": "Webix",
+    "url": "https://webix.com/"
   },
   {
-    "name": "Webpack"
+    "name": "Webpack",
+    "url": "https://webpack.js.org/"
   },
   {
-    "name": "WhitestormJS"
+    "name": "WhitestormJS",
+    "url": "https://github.com/WhitestormJS"
   },
   {
-    "name": "winJS"
+    "name": "winJS",
+    "url": "http://try.buildwinjs.com/"
   },
   {
-    "name": "Wiretie"
+    "name": "Wiretie",
+    "url": "https://github.com/synacor/wiretie"
   },
   {
-    "name": "Workbox"
+    "name": "Workbox",
+    "url": "https://workboxjs.org/"
   },
   {
-    "name": "X-tag"
+    "name": "X-tag",
+    "url": "https://x-tag.github.io/"
   },
   {
-    "name": "Yarn"
+    "name": "Yarn",
+    "url": "https://yarnpkg.com/"
   },
   {
-    "name": "Yeoman"
+    "name": "Yeoman",
+    "url": "http://yeoman.io/"
   },
   {
-    "name": "Yui"
+    "name": "Yui",
+    "url": "https://yuilibrary.com/"
   },
   {
-    "name": "ZangoDB"
+    "name": "ZangoDB",
+    "url": "https://erikolson186.github.io/zangodb/"
   },
   {
-    "name": "ZeptoJS"
+    "name": "ZeptoJS",
+    "url": "http://zeptojs.com/"
   }
 ]
