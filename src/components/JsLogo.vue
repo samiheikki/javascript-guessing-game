@@ -1,7 +1,11 @@
 <template>
   <div class="container">
     <transition name="fade">
-      <img class="logo" v-bind:src="logoUrl" v-if="show" alt="Guess this logo">
+      <img class="logo" 
+        v-bind:src="logoUrl" 
+        v-if="show" 
+        v-bind:style="{ height: size + 'px', width: size + 'px' }" 
+        v-bind:alt="altContext">
     </transition>
   </div>
 </template>
@@ -15,19 +19,29 @@ export default {
       prod: process.env.NODE_ENV === 'production'
     }
   },
+  props: {
+    size: {
+      type: Number,
+      default: 100
+    }
+  },
   computed: {
     ...mapGetters({
-      currentLogo: 'currentLogo'
+      currentLogo: 'currentLogo',
+      gameFinished: 'gameFinished'
     }),
     logoUrl: function () {
       if (!this.currentLogo.name) {
         return undefined
       }
       if (this.prod) { // Base64 version
-        return '../static/logos/' + window.btoa(this.currentLogo.name) + '.png'
+        return '../static/logos/' + this.currentLogo.uuid + '.png'
       } else {
         return '../static/logos/' + this.currentLogo.name.toLowerCase() + '.png'
       }
+    },
+    altContext: function () {
+      return this.gameFinished ? 'Learn about this JavaScript library' : 'Guess this logo'
     }
   },
   mounted: function () {

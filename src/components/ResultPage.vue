@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>{{feedback}}</h1>
+    <h1 v-bind:class="{ 'long-insult': isLongInsult }">{{insult}}</h1>
     <h2>{{answerCount}} / {{amount}}</h2>
     <button class="ripple-button button" v-on:click="restartGame">
       Restart
@@ -26,12 +26,28 @@
         See High Scores
       </h3>
     </router-link>
+    <div class="learning-suggestion" v-if="answerCount !== amount">
+      <a v-bind:href="currentLogo.url" target="_blank">
+        <js-logo :size="55"></js-logo>
+      </a>
+      <p>
+        I am 
+        <a v-bind:href="currentLogo.url" target="_blank"><strong>{{currentLogo.name}}!</strong></a> 
+        Click me to learn more.
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+
+import JsLogo from './JsLogo'
+
 export default {
+  components: {
+    JsLogo
+  },
   data () {
     return {
       insults: [
@@ -60,9 +76,10 @@ export default {
   computed: {
     ...mapGetters({
       amount: 'amount',
-      answerCount: 'answerCount'
+      answerCount: 'answerCount',
+      currentLogo: 'currentLogo'
     }),
-    feedback: function () {
+    insult: function () {
       const progress = (this.answerCount / this.amount) * 100 || 0
       if (progress < 1) {
         return 'Do you even JavaScript, bro?'
@@ -75,6 +92,9 @@ export default {
     },
     twitterText: function () {
       return `You know there are too many JS libraries when there is a game for it 🎯 \n I got ${this.answerCount}/${this.amount}. Try it out! https://javascript-game.firebaseapp.com`
+    },
+    isLongInsult: function () {
+      return this.insult.length > 60
     }
   },
   methods: mapActions([
@@ -86,9 +106,13 @@ export default {
 <style scoped>
 .container {
   max-width: 600px;
+  margin-top: 80px;
 }
-h1 {
+h1, p {
   color: #66BB6A;
+}
+p {
+  margin: 0;
 }
 .button {
   margin: 0 auto 20px;
@@ -160,19 +184,38 @@ h1 {
   display: inline-block;
   padding: 2px 3px 0 20px;
 }
-.ranking-link {
+.ranking-link, .learning-suggestion a {
   text-decoration: none;
   color: #66BB6A;
 }
 .ranking-link > h3 {
   margin: 0;
 }
-.ranking-link:hover {
+.ranking-link:hover, .learning-suggestion a:hover {
   text-decoration: underline;
+}
+.learning-suggestion > a > div {
+  margin: 20px;
+}
+
+@media screen and (max-width:447px) {
+  .long-insult {
+    font-size: 22px;
+  }
+  .custom-tweet-button, .custom-github-button {
+    margin: 0.5em auto;
+  }
+}
+@media screen and (min-width:448px) and (max-width:546px) {
+  .long-insult {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width:620px) {
   .container {
-    margin: 0 16px 0 16px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 }
+
 </style>
