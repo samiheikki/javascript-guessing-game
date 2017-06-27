@@ -476,6 +476,10 @@
     "url": "https://ionicframework.com/"
   },
   {
+    "name": "Istanbul",
+    "url": "https://github.com/istanbuljs"
+  },
+  {
     "name": "Jasmine",
     "url": "https://jasmine.github.io/"
   },
