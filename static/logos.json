@@ -1072,6 +1072,10 @@
     "url": "https://workboxjs.org/"
   },
   {
+    "name": "XO",
+    "url": "https://github.com/sindresorhus/xo"
+  },
+  {
     "name": "X-tag",
     "url": "https://x-tag.github.io/"
   },
