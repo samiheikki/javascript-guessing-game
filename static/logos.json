@@ -952,6 +952,10 @@
     "url": "https://github.com/sveltejs/svelte"
   },
   {
+    "name": "Swip",
+    "url": "https://github.com/paulsonnentag/swip"
+  },
+  {
     "name": "SystemJS",
     "url": "https://github.com/systemjs/systemjs"
   },
