@@ -800,6 +800,10 @@
     "url": "https://github.com/renatorib/react-sizes"
   },
   {
+    "name": "Redbird",
+    "url": "https://github.com/OptimalBits/redbird"
+  },
+  {
     "name": "Redux",
     "url": "http://redux.js.org/"
   },
