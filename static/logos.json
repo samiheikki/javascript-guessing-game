@@ -648,6 +648,10 @@
     "url": "https://docs.nativescript.org/tutorial/ng-chapter-0"
   },
   {
+    "name": "Next.js",
+    "url": "https://github.com/zeit/next.js"
+  },
+  {
     "name": "Neutrino",
     "url": "https://neutrino.js.org/"
   },
