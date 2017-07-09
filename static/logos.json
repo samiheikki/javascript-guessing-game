@@ -188,6 +188,10 @@
     "url": "http://www.chartjs.org/"
   },
   {
+    "name": "Chartist",
+    "url": "https://gionkunz.github.io/chartist-js/"
+  },
+  {
     "name": "Clementine",
     "url": "http://www.clementinejs.com/"
   },
