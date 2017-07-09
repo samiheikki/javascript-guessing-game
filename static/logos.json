@@ -720,6 +720,10 @@
     "url": "https://github.com/zeit/pkg"
   },
   {
+    "name": "Plotly.js",
+    "url": "https://plot.ly/javascript/"
+  },
+  {
     "name": "Polished",
     "url": "https://github.com/styled-components/polished"
   },
