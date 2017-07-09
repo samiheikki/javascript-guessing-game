@@ -188,6 +188,10 @@
     "url": "http://www.chartjs.org/"
   },
   {
+    "name": "Chartist",
+    "url": "https://gionkunz.github.io/chartist-js/"
+  },
+  {
     "name": "Clementine",
     "url": "http://www.clementinejs.com/"
   },
@@ -394,6 +398,10 @@
   {
     "name": "Glamorous",
     "url": "https://github.com/paypal/glamorous"
+  },
+  {
+    "name": "Glimmer",
+    "url": "https://glimmerjs.com/"
   },
   {
     "name": "Globalize",
@@ -648,6 +656,10 @@
     "url": "https://docs.nativescript.org/tutorial/ng-chapter-0"
   },
   {
+    "name": "Next.js",
+    "url": "https://github.com/zeit/next.js"
+  },
+  {
     "name": "Neutrino",
     "url": "https://neutrino.js.org/"
   },
@@ -706,6 +718,10 @@
   {
     "name": "PKG",
     "url": "https://github.com/zeit/pkg"
+  },
+  {
+    "name": "Plotly.js",
+    "url": "https://plot.ly/javascript/"
   },
   {
     "name": "Polished",
@@ -938,6 +954,10 @@
   {
     "name": "Storybook",
     "url": "https://storybook.js.org/"
+  },
+  {
+    "name": "StrMan",
+    "url": "https://dleitee.github.io/strman/"
   },
   {
     "name": "Styletron",
