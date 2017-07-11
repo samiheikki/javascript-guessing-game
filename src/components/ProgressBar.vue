@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" :answer-count="answerCount" :amount="amount" id="progress">
     <div class="progress" v-bind:style="{ width: progress + '%' }">
     </div>
   </div>

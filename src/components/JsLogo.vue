@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <transition name="fade">
-      <img class="logo" 
-        v-bind:src="logoUrl" 
-        v-if="show" 
-        v-bind:style="{ height: size + 'px', width: size + 'px' }" 
+      <img class="logo"
+        v-bind:src="logoUrl"
+        v-if="show"
+        v-bind:style="{ height: size + 'px', width: size + 'px' }"
         v-bind:alt="altContext">
     </transition>
   </div>
@@ -34,11 +34,8 @@ export default {
       if (!this.currentLogo.name) {
         return undefined
       }
-      if (this.prod) { // Base64 version
-        return '../static/logos/' + this.currentLogo.uuid + '.png'
-      } else {
-        return '../static/logos/' + this.currentLogo.name.toLowerCase() + '.png'
-      }
+
+      return '../static/logos/' + (this.prod ? this.currentLogo.uuid : this.currentLogo.name.toLowerCase()) + '.png'
     },
     altContext: function () {
       return this.gameFinished ? 'Learn about this JavaScript library' : 'Guess this logo'
