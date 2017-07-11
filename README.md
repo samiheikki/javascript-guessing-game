@@ -27,6 +27,9 @@ yarn install
 # serve with hot reload at localhost:8080
 yarn run dev
 
+# run e2e tests
+yarn run test
+
 # build for production with minification and service workers
 yarn run build
 ```
