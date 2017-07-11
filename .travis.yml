@@ -3,6 +3,10 @@ dist: trusty
 language: node_js
 node_js: stable
 
+cache:
+  directories:
+    - node_modules
+
 addons:
   firefox: latest
   google-chrome: latest
