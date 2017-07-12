@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/samiheikki/javascript-guessing-game.svg?branch=master)](https://travis-ci.org/samiheikki/javascript-guessing-game)
+
 # JavaScript Guessing Game
 
 > You know there are too many JS libraries when there is a game for it
