@@ -700,6 +700,14 @@
     "url": "http://omniscientjs.github.io/"
   },
   {
+    "name": "Pell",
+    "url": "https://jaredreich.com/pell"
+  },
+  {
+    "name": "PEP",
+    "url": "http://pep.briangonzalez.org/"
+  },
+  {
     "name": "PhantomJS",
     "url": "http://phantomjs.org/"
   },
@@ -710,10 +718,6 @@
   {
     "name": "PixiJS",
     "url": "http://www.pixijs.com/"
-  },
-  {
-    "name": "PEP",
-    "url": "http://pep.briangonzalez.org/"
   },
   {
     "name": "PKG",
