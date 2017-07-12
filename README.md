@@ -59,4 +59,5 @@ Thank you to the following awesome people for sending PRs :heart: :
 - [@WeiChiaChang](https://github.com/WeiChiaChang)
 - [@maxvcode](https://github.com/maxvcode)
 - [@leocaseiro](https://github.com/leocaseiro)
+- [@saulis](https://github.com/saulis)
 
