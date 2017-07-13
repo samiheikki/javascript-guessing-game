@@ -10,7 +10,9 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build-sw": "gulp generate-service-worker",
     "rename-images": "gulp rename-images",
-    "test": "node test/e2e/runner.js"
+    "e2e": "node test/e2e/runner.js",
+    "bundlesize": "node build/build.js && bundlesize",
+    "test": "npm run e2e && npm run bundlesize"
   },
   "dependencies": {
     "es6-promise": "^4.1.0",
@@ -32,6 +34,7 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
+    "bundlesize": "^0.7.1",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
     "chromedriver": "^2.27.2",
@@ -98,5 +101,15 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "bundlesize": [
+    {
+      "path": "./dist/static/js/vendor.*.js",
+      "maxSize": "180 Kb"
+    },
+    {
+      "path": "./dist/static/css/app.*.css",
+      "maxSize": "5 Kb"
+    }
   ]
 }
