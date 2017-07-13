@@ -10,7 +10,9 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build-sw": "gulp generate-service-worker",
     "rename-images": "gulp rename-images",
-    "test": "node test/e2e/runner.js && bundlesize"
+    "e2e": "node test/e2e/runner.js",
+    "bundlesize": "npm run build && bundlesize",
+    "test": "npm run e2e && npm run bundlesize"
   },
   "dependencies": {
     "es6-promise": "^4.1.0",
