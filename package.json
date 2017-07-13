@@ -11,7 +11,7 @@
     "build-sw": "gulp generate-service-worker",
     "rename-images": "gulp rename-images",
     "e2e": "node test/e2e/runner.js",
-    "bundlesize": "npm run build && bundlesize",
+    "bundlesize": "node build/build.js && bundlesize",
     "test": "npm run e2e && npm run bundlesize"
   },
   "dependencies": {
