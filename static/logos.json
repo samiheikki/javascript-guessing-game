@@ -392,6 +392,10 @@
     "url": "http://foundation.zurb.com/sites/docs/v/5.5.3/javascript.html"
   },
   {
+    "name": "Gatsby",
+    "url": "https://www.gatsbyjs.org/"
+  },
+  {
     "name": "Generact",
     "url": "https://github.com/diegohaz/generact"
   },
