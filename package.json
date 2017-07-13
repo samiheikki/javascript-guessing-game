@@ -106,6 +106,10 @@
     {
       "path": "./dist/static/js/vendor.*.js",
       "maxSize": "180 Kb"
+    },
+    {
+      "path": "./dist/static/css/app.*.css",
+      "maxSize": "5 Kb"
     }
   ]
 }
