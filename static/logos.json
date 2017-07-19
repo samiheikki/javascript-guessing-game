@@ -856,6 +856,10 @@
     "url": "https://hackernoon.com/introducing-redux-offline-offline-first-architecture-for-progressive-web-applications-and-react-68c5167ecfe0"
   },
   {
+    "name": "Rekit",
+    "url": "http://rekit.js.org/"
+  },
+  {
     "name": "Relay",
     "url": "https://facebook.github.io/relay/"
   },
