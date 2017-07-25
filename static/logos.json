@@ -644,6 +644,10 @@
     "url": "http://www.drewgreenwell.com/projects/metrojs"
   },
   {
+    "name": "Mewt",
+    "url": "https://github.com/sdgluck/mewt"
+  },
+  {
     "name": "Mithril",
     "url": "https://mithril.js.org/"
   },
