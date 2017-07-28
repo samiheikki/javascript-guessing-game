@@ -572,6 +572,10 @@
     "url": "https://karma-runner.github.io/"
   },
   {
+    "name": "Kea",
+    "url": "https://kea.js.org/"
+  },
+  {
     "name": "KendoUI",
     "url": "http://demos.telerik.com/kendo-ui/"
   },
