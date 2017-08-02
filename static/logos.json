@@ -1028,6 +1028,10 @@
     "url": "https://github.com/systemjs/systemjs"
   },
   {
+    "name": "Tabris.js",
+    "url": "https://tabrisjs.com/"
+  },
+  {
     "name": "Tape",
     "url": "https://github.com/substack/tape"
   },
