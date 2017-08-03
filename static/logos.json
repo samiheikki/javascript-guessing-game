@@ -84,6 +84,10 @@
     "url": "http://backbonejs.org/"
   },
   {
+    "name": "Backpack",
+    "url": "https://github.com/palmerhq/backpack"
+  },
+  {
     "name": "Bacon.JS",
     "url": "https://baconjs.github.io/"
   },
