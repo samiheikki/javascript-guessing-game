@@ -2,7 +2,7 @@
 
 # JavaScript Guessing Game
 
-> You know there are too many JS libraries when there is a game for it
+> You know there are too many JavaScript libraries when there is a game for it
 
 ## Description
 
