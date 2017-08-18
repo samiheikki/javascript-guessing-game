@@ -836,6 +836,10 @@
     "url": "http://www.protractortest.org/"
   },
   {
+    "name": "Puppeteer",
+    "url": "https://github.com/GoogleChrome/puppeteer"
+  },
+  {
     "name": "PureScript",
     "url": "http://www.purescript.org/"
   },
