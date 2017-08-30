@@ -1208,6 +1208,10 @@
     "url": "https://webpack.js.org/"
   },
   {
+    "name": "Webtorrent",
+    "url": "https://github.com/webtorrent/webtorrent"
+  },
+  {
     "name": "WhitestormJS",
     "url": "https://github.com/WhitestormJS"
   },
