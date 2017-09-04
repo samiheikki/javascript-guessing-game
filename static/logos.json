@@ -940,6 +940,10 @@
     "url": "https://facebook.github.io/relay/"
   },
   {
+    "name": "Repatch",
+    "url": "https://github.com/jaystack/repatch"
+  },
+  {
     "name": "RequireJS",
     "url": "http://requirejs.org/"
   },
