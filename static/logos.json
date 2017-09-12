@@ -396,6 +396,10 @@
     "url": "https://github.com/marak/Faker.js/"
   },
   {
+    "name": "Fastify",
+    "url": "http://www.fastify.io/"
+  },
+  {
     "name": "Firebase",
     "url": "https://firebase.google.com/docs/web/setup"
   },
