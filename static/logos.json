@@ -744,6 +744,10 @@
     "url": "http://nemo.js.org/"
   },
   {
+    "name": "Nest",
+    "url": "http://nestjs.com/"
+  },
+  {
     "name": "Next.js",
     "url": "https://github.com/zeit/next.js"
   },
