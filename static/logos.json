@@ -1152,6 +1152,10 @@
     "url": "https://github.com/trailsjs/trails"
   },
   {
+    "name": "Turf",
+    "url": "http://turfjs.org/"
+  },
+  {
     "name": "TurnJS",
     "url": "http://www.turnjs.com/"
   },
