@@ -404,6 +404,10 @@
     "url": "https://firebase.google.com/docs/web/setup"
   },
   {
+    "name": "Fkill",
+    "url": "https://github.com/sindresorhus/fkill-cli"
+  },
+  {
     "name": "Flight",
     "url": "https://flightjs.github.io/"
   },
