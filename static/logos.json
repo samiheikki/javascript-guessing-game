@@ -908,6 +908,10 @@
     "url": "http://ramdajs.com/"
   },
   {
+    "name": "Rax",
+    "url": "https://github.com/alibaba/rax"
+  },
+  {
     "name": "Re-DOM",
     "url": "https://redom.js.org/"
   },
