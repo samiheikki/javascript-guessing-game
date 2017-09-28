@@ -1212,6 +1212,10 @@
     "url": "https://vaadin.com/home"
   },
   {
+    "name": "Vant",
+    "url": "https://github.com/youzan/vant"
+  },
+  {
     "name": "Verb",
     "url": "https://github.com/verbose/verb-generate-readme"
   },
