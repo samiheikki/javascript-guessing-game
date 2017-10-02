@@ -312,6 +312,10 @@
     "url": "https://donejs.com/"
   },
   {
+    "name": "Draggable",
+    "url": "https://shopify.github.io/draggable/"
+  },
+  {
     "name": "Dragula",
     "url": "https://github.com/bevacqua/dragula"
   },
