@@ -1272,6 +1272,10 @@
     "url": "https://webpack.js.org/"
   },
   {
+    "name": "WebRx",
+    "url": "http://webrxjs.org/"
+  },  
+  {
     "name": "Webtorrent",
     "url": "https://github.com/webtorrent/webtorrent"
   },
