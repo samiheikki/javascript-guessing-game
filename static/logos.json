@@ -1048,6 +1048,10 @@
     "url": "https://sentry.io/welcome/"
   },
   {
+    "name": "Sequelize",
+    "url": "http://docs.sequelizejs.com/"
+  },
+  {
     "name": "Sinon",
     "url": "http://sinonjs.org/"
   },
