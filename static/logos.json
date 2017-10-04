@@ -1116,6 +1116,10 @@
     "url": "https://dleitee.github.io/strman/"
   },
   {
+    "name": "Strudel",
+    "url": "http://strudeljs.org/"
+  },
+  {
     "name": "Styletron",
     "url": "http://styletron.js.org/"
   },
@@ -1274,7 +1278,7 @@
   {
     "name": "WebRx",
     "url": "http://webrxjs.org/"
-  },  
+  },
   {
     "name": "Webtorrent",
     "url": "https://github.com/webtorrent/webtorrent"
