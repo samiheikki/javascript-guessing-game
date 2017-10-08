@@ -964,6 +964,10 @@
     "url": "https://github.com/renatorib/react-sizes"
   },
   {
+    "name": "React-Static",
+    "url": "https://github.com/nozzle/react-static"
+  },
+  {
     "name": "Redbird",
     "url": "https://github.com/OptimalBits/redbird"
   },
