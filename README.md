@@ -60,4 +60,5 @@ Thank you to the following awesome people for sending PRs :heart: :
 - [@maxvcode](https://github.com/maxvcode)
 - [@leocaseiro](https://github.com/leocaseiro)
 - [@saulis](https://github.com/saulis)
+- [@Clonex](https://github.com/clonex)
 
