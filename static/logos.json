@@ -1060,6 +1060,10 @@
     "url": "http://senecajs.org/"
   },
   {
+    "name": "SentinelJS",
+    "url": "https://github.com/muicss/sentineljs"
+  },
+  {
     "name": "Sentry",
     "url": "https://sentry.io/welcome/"
   },
