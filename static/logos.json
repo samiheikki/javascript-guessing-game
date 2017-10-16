@@ -1056,6 +1056,10 @@
     "url": "https://semantic-ui.com/"
   },
   {
+    "name": "Semantic-UI-React",
+    "url": "https://react.semantic-ui.com/"
+  },
+  {
     "name": "Seneca",
     "url": "http://senecajs.org/"
   },
