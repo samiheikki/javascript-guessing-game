@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="flex-container" v-if="show">
-      <ripple-button class="button" v-for="option in options" :text="option.name" :id="option.id" v-on:button-click="answer"></ripple-button>
+      <ripple-button class="button" :key="option.id" v-for="option in options" :text="option.name" :id="option.id" v-on:button-click="answer"></ripple-button>
     </div>
   </div>
 </template>
