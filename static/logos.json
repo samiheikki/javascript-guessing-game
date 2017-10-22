@@ -736,6 +736,10 @@
     "url": "https://github.com/mobxjs/mobx"
   },
   {
+    "name": "MobX-State-Tree",
+    "url": "https://github.com/mobxjs/mobx-state-tree"
+  },
+  {
     "name": "Mocha",
     "url": "https://mochajs.org/"
   },
