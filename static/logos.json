@@ -37,11 +37,15 @@
   },
   {
     "name": "AnyChartJS",
-    "url": "https://www.anychart.com/"  
+    "url": "https://www.anychart.com/"
   },
   {
     "name": "Appium",
     "url": "http://appium.io/"
+  },
+  {
+    "name": "Appraise",
+    "url": "http://appraise.qa"
   },
   {
     "name": "AriaTemplates",
