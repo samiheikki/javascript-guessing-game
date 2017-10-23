@@ -37,7 +37,7 @@
   },
   {
     "name": "AnyChartJS",
-    "url": "https://www.anychart.com/"  
+    "url": "https://www.anychart.com/"
   },
   {
     "name": "Appium",
@@ -1142,6 +1142,10 @@
   {
     "name": "Spine",
     "url": "http://spine.github.io/"
+  },
+  {
+    "name": "Spirit",
+    "url": "https://github.com/spirit/spirit"
   },
   {
     "name": "Sproutcore",
