@@ -1180,6 +1180,10 @@
     "url": "https://storybook.js.org/"
   },
   {
+    "name": "Strapi",
+    "url": "https://github.com/strapi/strapi"
+  },
+  {
     "name": "StrMan",
     "url": "https://dleitee.github.io/strman/"
   },
