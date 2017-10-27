@@ -816,6 +816,10 @@
     "url": "https://nodejs.org/"
   },
   {
+    "name": "Nodemon",
+    "url": "https://nodemon.io/"
+  },
+  {
     "name": "Node-RED",
     "url": "https://nodered.org/"
   },
