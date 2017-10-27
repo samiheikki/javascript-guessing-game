@@ -18,7 +18,7 @@ gulp.task('rename-images', function(callback) {
   var logos = JSON.parse(fs.readFileSync('./static/logos.json'));
   logos.forEach((logo) => {
     const uuid = uuidv4();
-    fs.renameSync('./dist/static/logos/' + logo.name + '.png', './dist/static/logos/' + uuid + '.png');
+    fs.renameSync('./dist/static/logos/' + logo.name.toLowerCase() + '.png', './dist/static/logos/' + uuid + '.png');
     logo.uuid = uuid;
   });
   fs.writeFileSync('./dist/static/logos.json', JSON.stringify(logos, null, 2)); 
