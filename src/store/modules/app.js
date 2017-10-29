@@ -35,7 +35,7 @@ const getters = {
 // actions
 const actions = {
   initializeLogos ({ commit }, callback) {
-    api.getJSON('static/logos.json', (error, tempLogos) => {
+    api.getJSON('static/logos.json', [], (error, tempLogos) => {
       if (typeof tempLogos === 'string') { // IE11 fix
         tempLogos = JSON.parse(tempLogos)
       }

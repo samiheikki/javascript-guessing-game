@@ -13,6 +13,8 @@ import * as firebase from 'firebase'
 import 'firebase/auth'
 import { mapGetters, mapActions } from 'vuex'
 
+import api from './api/app'
+
 import ProgressBar from './components/ProgressBar'
 import Credits from './components/Credits'
 import SoundToggle from './components/SoundToggle'
@@ -77,13 +79,27 @@ export default {
 
       firebase.auth().onAuthStateChanged((user) => {
         if (user) {
-          firebase.database().ref('users/' + user.uid).set({
-            name: user.displayName,
-            email: user.email,
-            photo_url: user.photoURL
-          }).then(() => {
-            this.setUser(user)
-            this.setFirebaseFeedback()
+          // (hisabimbola) TODO: improve this method so it's not called everytime,
+          // if we already have the username.
+          // I don't think we should call it again
+          api.getGithubUsername(user.email, (err, username) => {
+            if (err) {
+              // handle error
+            }
+            if (username) {
+              user.updateProfile({
+                displayName: username
+              })
+            }
+            firebase.database().ref('users/' + user.uid).set({
+              name: user.displayName,
+              username,
+              email: user.email,
+              photo_url: user.photoURL
+            }).then(() => {
+              this.setUser(user)
+              this.setFirebaseFeedback()
+            })
           })
         } else {
           this.setFirebaseFeedback()
