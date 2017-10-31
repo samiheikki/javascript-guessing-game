@@ -628,6 +628,10 @@
     "url": "http://jspm.io/"
   },
   {
+    "name": "JSRobot",
+    "url": "http://jspm.io/"
+  },
+  {
     "name": "JSTransformer",
     "url": "https://github.com/jstransformers/jstransformer"
   },
