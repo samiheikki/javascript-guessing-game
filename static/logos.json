@@ -1212,6 +1212,10 @@
     "url": "https://github.com/sveltejs/svelte"
   },
   {
+    "name": "SVGR",
+    "url": "https://github.com/smooth-code/svgr"
+  },
+  {
     "name": "Swip",
     "url": "https://github.com/paulsonnentag/swip"
   },
