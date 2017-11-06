@@ -1120,6 +1120,10 @@
     "url": "http://docs.sequelizejs.com/"
   },
   {
+    "name": "Server.JS",
+    "url": "https://serverjs.io/"
+  },
+  {
     "name": "Sinon",
     "url": "http://sinonjs.org/"
   },
