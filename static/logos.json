@@ -1008,6 +1008,10 @@
     "url": "https://github.com/renatorib/react-sizes"
   },
   {
+    "name": "React-Slingshot",
+    "url": "https://github.com/coryhouse/react-slingshot"
+  },
+  {
     "name": "React-Static",
     "url": "https://github.com/nozzle/react-static"
   },
