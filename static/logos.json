@@ -272,6 +272,10 @@
     "url": "https://github.com/CVarisco/create-component-app"
   },
   {
+    "name": "Critical",
+    "url": "https://github.com/addyosmani/critical"
+  },
+  {
     "name": "CujoJS",
     "url": "http://cujojs.com/"
   },
