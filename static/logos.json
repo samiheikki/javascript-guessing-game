@@ -440,6 +440,10 @@
     "url": "https://github.com/marak/Faker.js/"
   },
   {
+    "name": "Falcor",
+    "url": "http://netflix.github.io/falcor/"
+  },
+  {
     "name": "Fastify",
     "url": "http://www.fastify.io/"
   },
