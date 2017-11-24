@@ -840,6 +840,10 @@
     "url": "https://nodejs.org/"
   },
   {
+    "name": "Nodemailer",
+    "url": "https://nodemailer.com/"
+  },
+  {
     "name": "Nodemon",
     "url": "https://nodemon.io/"
   },
