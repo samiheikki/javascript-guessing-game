@@ -348,6 +348,10 @@
     "url": "https://donejs.com/"
   },
   {
+    "name": "Downshift",
+    "url": "https://github.com/paypal/downshift"
+  },
+  {
     "name": "Draggable",
     "url": "https://shopify.github.io/draggable/"
   },
