@@ -380,6 +380,10 @@
     "url": "http://www.echojs.com/"
   },
   {
+    "name": "Egg",
+    "url": "https://github.com/eggjs/egg/"
+  },
+  {
     "name": "Electrode",
     "url": "https://github.com/electrode-io"
   },
