@@ -348,6 +348,10 @@
     "url": "https://donejs.com/"
   },
   {
+    "name": "Downshift",
+    "url": "https://github.com/paypal/downshift"
+  },
+  {
     "name": "Draggable",
     "url": "https://shopify.github.io/draggable/"
   },
@@ -378,6 +382,10 @@
   {
     "name": "EchoJS",
     "url": "http://www.echojs.com/"
+  },
+  {
+    "name": "Egg",
+    "url": "https://github.com/eggjs/egg/"
   },
   {
     "name": "Electrode",
