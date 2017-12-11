@@ -896,6 +896,10 @@
     "url": "http://omniscientjs.github.io/"
   },
   {
+    "name": "Parcel",
+    "url": "https://parceljs.org/"
+  },
+  {
     "name": "Passport",
     "url": "http://www.passportjs.org/"
   },
