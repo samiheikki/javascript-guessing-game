@@ -1032,6 +1032,10 @@
     "url": "http://reactide.io/"
   },
   {
+    "name": "ReactOpt",
+    "url": "https://github.com/reactopt/reactopt"
+  },
+  {
     "name": "React-Cosmos",
     "url": "https://github.com/react-cosmos/react-cosmos"
   },
