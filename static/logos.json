@@ -784,6 +784,10 @@
     "url": "https://github.com/sdgluck/mewt"
   },
   {
+    "name": "Microbundle",
+    "url": "https://github.com/developit/microbundle"
+  },
+  {
     "name": "Mithril",
     "url": "https://mithril.js.org/"
   },
