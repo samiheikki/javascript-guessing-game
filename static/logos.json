@@ -796,6 +796,10 @@
     "url": "https://mithril.js.org/"
   },
   {
+    "name": "Mitt",
+    "url": "https://github.com/developit/mitt"
+  },
+  {
     "name": "Mobx",
     "url": "https://github.com/mobxjs/mobx"
   },
