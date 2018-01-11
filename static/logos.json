@@ -1376,6 +1376,10 @@
     "url": "http://underscorejs.org/"
   },
   {
+    "name": "Unfetch",
+    "url": "https://github.com/developit/unfetch"
+  },
+  {
     "name": "Unistore",
     "url": "https://github.com/developit/unistore"
   },
