@@ -4,6 +4,10 @@
     "url": "http://www.adonisjs.com/"
   },
   {
+    "name": "After",
+    "url": "https://github.com/jaredpalmer/after.js"
+  },
+  {
     "name": "AgilityJS",
     "url": "https://github.com/arturadib/agility"
   },
