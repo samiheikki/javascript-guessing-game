@@ -1012,6 +1012,10 @@
     "url": "http://www.purescript.org/"
   },
   {
+    "name": "PurgeCSS",
+    "url": "https://www.purgecss.com/"
+  },
+  {
     "name": "PyJS",
     "url": "http://pyjs.org/"
   },
