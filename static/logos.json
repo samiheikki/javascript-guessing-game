@@ -1252,6 +1252,10 @@
     "url": "https://github.com/socketstream/socketstream"
   },
   {
+    "name": "Sockette",
+    "url": "https://github.com/lukeed/sockette"
+  },
+  {
     "name": "Spine",
     "url": "http://spine.github.io/"
   },
