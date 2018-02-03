@@ -1336,6 +1336,10 @@
     "url": "https://github.com/substack/tape"
   },
   {
+    "name": "Taskr",
+    "url": "https://github.com/lukeed/taskr"
+  },
+  {
     "name": "ThreeJS",
     "url": "https://threejs.org/"
   },
