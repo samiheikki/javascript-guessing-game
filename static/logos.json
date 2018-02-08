@@ -916,6 +916,10 @@
     "url": "http://omniscientjs.github.io/"
   },
   {
+    "name": "p5.js",
+    "url": "https://p5js.org/"
+  },
+  {
     "name": "Parcel",
     "url": "https://parceljs.org/"
   },
