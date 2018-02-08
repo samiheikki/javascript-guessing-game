@@ -64,4 +64,5 @@ Thank you to the following awesome people for sending PRs :heart: :
 - [@biozid-0208](https://github.com/biozid-0208)
 - [@mattiamanzati](https://github.com/mattiamanzati)
 - [@MaizerGomes](https://github.com/maizergomes)
+- [@alfill](https://github.com/alfill)
 
