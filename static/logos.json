@@ -928,6 +928,10 @@
     "url": "https://github.com/styled-components/polished"
   },
   {
+    "name": "Polka",
+    "url": "https://github.com/lukeed/polka"
+  },
+  {
     "name": "Polymer",
     "url": "https://www.polymer-project.org/"
   },
