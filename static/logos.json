@@ -96,6 +96,10 @@
     "url": "https://github.com/postcss/autoprefixer"
   },
   {
+    "name": "Awaity.js",
+    "url": "https://github.com/asfktz/Awaity.js"
+  },
+  {
     "name": "Babel",
     "url": "https://babeljs.io/"
   },
