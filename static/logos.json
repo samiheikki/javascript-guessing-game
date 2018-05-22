@@ -556,6 +556,10 @@
     "url": "http://www.graphicsjs.org/"
   },
   {
+    "name": "GraphQLCSS",
+    "url": "https://github.com/braposo/graphql-css"
+  },
+  {
     "name": "GreenSock",
     "url": "https://greensock.com/"
   },
