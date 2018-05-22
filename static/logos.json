@@ -680,6 +680,10 @@
     "url": "http://jsblocks.com/"
   },
   {
+    "name": "JSDOM",
+    "url": "https://github.com/jsdom/jsdom"
+  },
+  {
     "name": "JSHint",
     "url": "http://jshint.com/"
   },
