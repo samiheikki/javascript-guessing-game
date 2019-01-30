@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/samiheikki/javascript-guessing-game.svg?branch=master)](https://travis-ci.org/samiheikki/javascript-guessing-game)
+[![Build Status](https://travis-ci.org/samiheikki/javascript-guessing-game.svg?branch=master)](https://travis-ci.org/samiheikki/javascript-guessing-game) [![Greenkeeper badge](https://badges.greenkeeper.io/alfill/javascript-guessing-game.svg)](https://greenkeeper.io/)
 
 # JavaScript Guessing Game
 
