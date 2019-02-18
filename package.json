@@ -15,7 +15,7 @@
     "test": "npm run e2e && npm run bundlesize"
   },
   "dependencies": {
-    "es6-promise": "^4.1.0",
+    "es6-promise": "^4.2.6",
     "firebase": "^5.8.1",
     "howler": "^2.0.1",
     "request": "^2.81.0",
