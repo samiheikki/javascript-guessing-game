@@ -69,7 +69,7 @@
     "karma-spec-reporter": "0.0.32",
     "karma-webpack": "^3.0.5",
     "lolex": "^3.0.0",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.0",
     "nightwatch": "^1.0.18",
     "opn": "^5.4.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
