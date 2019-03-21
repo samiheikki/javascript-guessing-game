@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "es6-promise": "^4.2.6",
-    "firebase": "^5.9.0",
+    "firebase": "^5.9.1",
     "howler": "^2.1.1",
     "request": "^2.88.0",
     "vue": "^2.6.9",
