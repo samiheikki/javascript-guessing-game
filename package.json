@@ -73,7 +73,7 @@
     "nightwatch": "^1.0.19",
     "opn": "^5.5.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "ora": "^3.2.0",
+    "ora": "^3.3.0",
     "phantomjs-prebuilt": "^2.1.14",
     "rimraf": "^2.6.3",
     "selenium-server": "^3.141.59",
