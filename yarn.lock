@@ -6861,10 +6861,10 @@ optjs@~3.2.2:
   resolved "https://registry.yarnpkg.com/optjs/-/optjs-3.2.2.tgz#69a6ce89c442a44403141ad2f9b370bd5bb6f4ee"
   integrity sha1-aabOicRCpEQDFBrS+bNwvVu29O4=
 
-ora@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/ora/-/ora-3.2.0.tgz#67e98a7e11f7f0ac95deaaaf11bb04de3d09e481"
-  integrity sha512-XHMZA5WieCbtg+tu0uPF8CjvwQdNzKCX6BVh3N6GFsEXH40mTk5dsw/ya1lBTUGJslcEFJFQ8cBhOgkkZXQtMA==
+ora@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-3.3.0.tgz#9b3b6b03ba2dac40c7c7ce144cca76a0f1abb351"
+  integrity sha512-DTFh3rat9CftF9ldG++sa7ci6KocASWvm6aqNzuXnl8uNCkDprM39f8oZwnXnWoNIcbLYeBuPrruQ4+0+Bf0PA==
   dependencies:
     chalk "^2.4.2"
     cli-cursor "^2.1.0"
