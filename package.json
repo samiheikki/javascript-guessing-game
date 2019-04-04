@@ -71,7 +71,7 @@
     "lolex": "^3.1.0",
     "mocha": "^6.0.2",
     "nightwatch": "^1.0.19",
-    "opn": "^5.5.0",
+    "opn": "^6.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "ora": "^3.2.0",
     "phantomjs-prebuilt": "^2.1.14",
