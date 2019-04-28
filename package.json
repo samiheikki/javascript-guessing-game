@@ -68,7 +68,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.32",
     "karma-webpack": "^3.0.5",
-    "lolex": "^3.1.0",
+    "lolex": "^4.0.1",
     "mocha": "^6.1.4",
     "nightwatch": "^1.0.19",
     "opn": "^6.0.0",
